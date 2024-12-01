@@ -1,0 +1,1116 @@
+{
+  "id": "clktvryf7005ajn0faf63oldh",
+  "version": "3",
+  "icon": null,
+  "name": "Funil 01",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "ym4q6nvizne4suzusrc2ym3p",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "22HP69iipkLjJDTUcc1AWW",
+          "type": "start",
+          "label": "Start",
+          "groupId": "ym4q6nvizne4suzusrc2ym3p",
+          "outgoingEdgeId": "lbynj5o283vrwme3v4j9p475"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1356.25,
+        "y": -516.42
+      }
+    },
+    {
+      "id": "b3rjkj5k069ym0t59tenl69e",
+      "title": "Group #10",
+      "blocks": [
+        {
+          "id": "i22o6eusvh95szvjg12t5q1t",
+          "type": "text input",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Nome"
+            },
+            "variableId": "vlakrqlbe2asuxmtgd1vd8orf"
+          }
+        },
+        {
+          "id": "y6lsnz0qkf0q9uobxzblgg03",
+          "type": "Wait",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "w8liv7cpzrcuy1w0860gypad",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/w8liv7cpzrcuy1w0860gypad?v=1690991062398"
+          },
+          "groupId": "b3rjkj5k069ym0t59tenl69e"
+        },
+        {
+          "id": "a93y3b82u0xx89hq8a8dan1j",
+          "type": "Wait",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "secondsToWaitFor": "18"
+          }
+        },
+        {
+          "id": "yav24e90afppf0geb5eywxfc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Name}} Me diga qual e o maior problema que você está tendo atualmente!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "b3rjkj5k069ym0t59tenl69e"
+        },
+        {
+          "id": "ridrv1bv14c52wjjq9z1p5qs",
+          "type": "text input",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Informação"
+            },
+            "variableId": "vlt5nbaqau86l9763vl3lnand"
+          }
+        },
+        {
+          "id": "vxrhzgjh2dj7l1z0uzp8ap0a",
+          "type": "Wait",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "eljxu39cu1hqqkajnrycm4sj",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/eljxu39cu1hqqkajnrycm4sj?v=1690991413316"
+          },
+          "groupId": "b3rjkj5k069ym0t59tenl69e"
+        },
+        {
+          "id": "mxi68k23601av0jln1lgpyu8",
+          "type": "Wait",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "secondsToWaitFor": "30"
+          }
+        },
+        {
+          "id": "myz53i1cz6p1urq0vyce24mw",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Name}} Já deixando bem claro para você, o tratamento "
+                  },
+                  {
+                    "bold": true,
+                    "text": "dotado máximo",
+                    "underline": true
+                  },
+                  {
+                    "text": " e um procedimento que veio direto dos Estados Unidos e foi recentemente aprovado pela Anvisa aqui no Brasil."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "b3rjkj5k069ym0t59tenl69e"
+        },
+        {
+          "id": "xp6rsfgiontjvi4abm2ka4bc",
+          "type": "Wait",
+          "groupId": "b3rjkj5k069ym0t59tenl69e",
+          "options": {
+            "secondsToWaitFor": "5"
+          },
+          "outgoingEdgeId": "zgv0ov6bzttf3krqwrdr9s2r"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -83.78,
+        "y": -845.5
+      }
+    },
+    {
+      "id": "adgwa008awadiej8jdi4ml49",
+      "title": "Prova Socia",
+      "blocks": [
+        {
+          "id": "trhvqtof29xn494ujkuh8q2h",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E já estamos tendo pessoas com ótimos resultados, vou lhe enviar um video que recebemos de um de nossos clientes após usar o nosso tratamento."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "adgwa008awadiej8jdi4ml49"
+        },
+        {
+          "id": "zqv28dihqz5viwf36vatm0tp",
+          "type": "Wait",
+          "groupId": "adgwa008awadiej8jdi4ml49",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "ycjkomzu5rs9h75pzh28xpev",
+          "type": "video",
+          "content": {
+            "id": "851338055",
+            "url": "https://vimeo.com/851338055?share=copy",
+            "type": "vimeo"
+          },
+          "groupId": "adgwa008awadiej8jdi4ml49"
+        },
+        {
+          "id": "pt6e5a5umdof1l4ioz299wba",
+          "type": "Wait",
+          "groupId": "adgwa008awadiej8jdi4ml49",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "tfp5aeju1mcebj69axyrr8fq",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/tfp5aeju1mcebj69axyrr8fq?v=1690992663854"
+          },
+          "groupId": "adgwa008awadiej8jdi4ml49"
+        },
+        {
+          "id": "z9y2hvpl34qhuxbscxfqtdyc",
+          "type": "Wait",
+          "groupId": "adgwa008awadiej8jdi4ml49",
+          "options": {
+            "secondsToWaitFor": "4"
+          },
+          "outgoingEdgeId": "fojqhe48gy4k6dgoqg6n6aee"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 313.8,
+        "y": -798.73
+      }
+    },
+    {
+      "id": "qqtpac543h2d37re2w78skg5",
+      "title": "Prova social 2",
+      "blocks": [
+        {
+          "id": "t08y7ctb8u650wwakrioamjj",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/t08y7ctb8u650wwakrioamjj?v=1690992721402"
+          },
+          "groupId": "qqtpac543h2d37re2w78skg5"
+        },
+        {
+          "id": "jrtbbybtm3qtb0eeol8w7spa",
+          "type": "Wait",
+          "groupId": "qqtpac543h2d37re2w78skg5",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "xvjo2otiv9ipl9ramtvmz3tk",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/xvjo2otiv9ipl9ramtvmz3tk?v=1690992869022"
+          },
+          "groupId": "qqtpac543h2d37re2w78skg5"
+        },
+        {
+          "id": "yofz3blsxm2ksweuskp9s4av",
+          "type": "Wait",
+          "groupId": "qqtpac543h2d37re2w78skg5",
+          "options": {
+            "secondsToWaitFor": "40"
+          }
+        },
+        {
+          "id": "e7l20vkqju0xix6g6gig5gdm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Todas essas pessoas que tiveram resultados com o "
+                  },
+                  {
+                    "text": "Dotado Máximo",
+                    "underline": true
+                  },
+                  {
+                    "text": " estavam com problemas semelhantes ao seu, e em apenas "
+                  },
+                  {
+                    "bold": true,
+                    "text": "1 semana "
+                  },
+                  {
+                    "text": "conseguiram recuperar a sua "
+                  },
+                  {
+                    "bold": true,
+                    "text": "dignidade!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qqtpac543h2d37re2w78skg5"
+        },
+        {
+          "id": "gnww6dinps74s0hphgqsln0f",
+          "type": "Wait",
+          "groupId": "qqtpac543h2d37re2w78skg5",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "kldq25maugwbe161dx6mwnn9",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/kldq25maugwbe161dx6mwnn9?v=1690993048291"
+          },
+          "groupId": "qqtpac543h2d37re2w78skg5"
+        },
+        {
+          "id": "z36vchhrqzfep3tblk4loc6g",
+          "type": "Wait",
+          "groupId": "qqtpac543h2d37re2w78skg5",
+          "options": {
+            "secondsToWaitFor": "30"
+          },
+          "outgoingEdgeId": "uyrgaqh72qflxg2v79l0z6ar"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 728.05,
+        "y": -805.22
+      }
+    },
+    {
+      "id": "fc2mynavf07qz0i4f3u1fpme",
+      "title": "Group #30",
+      "blocks": [
+        {
+          "id": "xxndsuepa5jdmnnxofyt2088",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Name}} Agora eu quero saber de você! Vai continuar sofrendo e se sentindo humilhado por conta desse seu probema ( {{Problema}}  ) ou vai  iniciar o tratamento e mudar a sua vida sexual de uma vez por todas?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fc2mynavf07qz0i4f3u1fpme"
+        },
+        {
+          "id": "tnyam4xv7bczydjwctph4iui",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "bfk5li8oqqthalyz5w23zgac",
+              "type": 0,
+              "blockId": "tnyam4xv7bczydjwctph4iui",
+              "content": "Quero fazer o tratamento!",
+              "outgoingEdgeId": "rlj953j4a8ng8shi14nxclr6"
+            },
+            {
+              "id": "xn4fx6mtw7dh4lqfl2x5nckf",
+              "type": 0,
+              "blockId": "tnyam4xv7bczydjwctph4iui",
+              "content": "No momento não quero.",
+              "outgoingEdgeId": "szwi7ynrvojhagsrwublxn9e",
+              "displayCondition": {
+                "isEnabled": false
+              }
+            }
+          ],
+          "groupId": "fc2mynavf07qz0i4f3u1fpme",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1060.71,
+        "y": -804.39
+      }
+    },
+    {
+      "id": "u6praf5wkcwbvk71277tudyo",
+      "title": "Group #32",
+      "blocks": [
+        {
+          "id": "kffyjifu4t0qlvxbpehpe4fg",
+          "type": "Wait",
+          "groupId": "u6praf5wkcwbvk71277tudyo",
+          "options": {
+            "secondsToWaitFor": "5"
+          },
+          "outgoingEdgeId": "woqy0oca7a95tojk9m66aozp"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1573.28,
+        "y": -840.68
+      }
+    },
+    {
+      "id": "ol43j0pwamfyiagf80umbeo0",
+      "title": "Group #34",
+      "blocks": [
+        {
+          "id": "ytig3hm9d0obvzngo1na4x9l",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ótimo, então vamos iniciar o seu tratamento!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ol43j0pwamfyiagf80umbeo0",
+          "outgoingEdgeId": "tigr5uwdzdi6pev9wvbef2wb"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1929,
+        "y": -852.38
+      }
+    },
+    {
+      "id": "sjfdyjk9lhh1df66ecgvzzo7",
+      "title": "Group #36",
+      "blocks": [
+        {
+          "id": "itfzum5zwcboum1utowuhuks",
+          "type": "Wait",
+          "groupId": "sjfdyjk9lhh1df66ecgvzzo7",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "wd1if2yal8ul2pskbr74gimc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O nosso tratamento e um dos com os melhores custo beneficio do Brasil, e para ficar ainda melhor, hoje nos estamos com a "
+                  },
+                  {
+                    "bold": true,
+                    "text": "promoção de 50% Off. ",
+                    "underline": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "sjfdyjk9lhh1df66ecgvzzo7"
+        },
+        {
+          "id": "v3tmi47uhp4cr54thfqnlcqn",
+          "type": "Wait",
+          "groupId": "sjfdyjk9lhh1df66ecgvzzo7",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "akpz37yl6rbn8hyujnpdul7o",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Apenas hoje você pode aproveitar essa super promoção de R$394,00 Por apenas 12x De R$ 19,78  OU R$ 197,00 Avista!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "sjfdyjk9lhh1df66ecgvzzo7"
+        },
+        {
+          "id": "idthiwl0zu7j95pf961jqluk",
+          "type": "Wait",
+          "groupId": "sjfdyjk9lhh1df66ecgvzzo7",
+          "options": {
+            "secondsToWaitFor": "8"
+          },
+          "outgoingEdgeId": "jg4apvalnmpfcre1rmzwh5wu"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2275.19,
+        "y": -881.72
+      }
+    },
+    {
+      "id": "has293e48wr14c48wprqvw2i",
+      "title": "Group #40",
+      "blocks": [
+        {
+          "id": "j7kjnt1slqzvu8qszoxmw2vv",
+          "type": "Redirect",
+          "groupId": "has293e48wr14c48wprqvw2i",
+          "options": {
+            "url": "https://app.monetizze.com.br/r/BQM1700150",
+            "isNewTab": false
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3031.64,
+        "y": -639.94
+      }
+    },
+    {
+      "id": "l71c5sily6c3z7mppjo1ijh3",
+      "title": "Group #42",
+      "blocks": [
+        {
+          "id": "h0p4m05phqqdf0v6v5kf3fo3",
+          "type": "Pixel",
+          "groupId": "l71c5sily6c3z7mppjo1ijh3",
+          "options": {
+            "params": [],
+            "pixelId": "264406956331736",
+            "eventType": "ViewContent",
+            "isInitSkip": true
+          },
+          "outgoingEdgeId": "x0rbl6kmfaoyqxjnt8h5sefs"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1267.83,
+        "y": -1005.25
+      }
+    },
+    {
+      "id": "rkgxangvxeqjhbehwkl49m4o",
+      "title": "Group #43",
+      "blocks": [
+        {
+          "id": "vfusnkozhltre1pn4h8d28sz",
+          "type": "Wait",
+          "groupId": "rkgxangvxeqjhbehwkl49m4o",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "fi7o74lxlssqzpjd634fdsvz",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Name}} vai realmente continuar deixando sua parceira na mão?  Pior ainda e ela ir buscar prazer em outro homem e você levar um CHIFRE!!!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rkgxangvxeqjhbehwkl49m4o"
+        },
+        {
+          "id": "ak1kmcku04c2qtqdwgjt543f",
+          "type": "Wait",
+          "groupId": "rkgxangvxeqjhbehwkl49m4o",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "aiywpbs2814y8xfooqswptz9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Essa e a hora de tomar sua descisão! "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rkgxangvxeqjhbehwkl49m4o"
+        },
+        {
+          "id": "dxpdd4s6tb2kypucatldga7w",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "aplh4g6j2h1f20tlw0qsrnlf",
+              "type": 0,
+              "blockId": "dxpdd4s6tb2kypucatldga7w",
+              "content": "Quero Voltar a ter potencia!",
+              "outgoingEdgeId": "m8obpbw85y45d7h1507szzjo"
+            },
+            {
+              "id": "kpe149qrtqshv18nd9nj4g5r",
+              "type": 0,
+              "blockId": "dxpdd4s6tb2kypucatldga7w",
+              "content": "Não quero.",
+              "outgoingEdgeId": "e0l7a7srdyc5bl28222rcj66"
+            }
+          ],
+          "groupId": "rkgxangvxeqjhbehwkl49m4o",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1407.33,
+        "y": -357.75
+      }
+    },
+    {
+      "id": "w0lophz2a6r6p3ev2hwa0ecb",
+      "title": "Group #47",
+      "blocks": [
+        {
+          "id": "k98ac75uns06vhv7wy6ueaqj",
+          "type": "Wait",
+          "groupId": "w0lophz2a6r6p3ev2hwa0ecb",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "dycvf5jyf0za66lnwwa84whs",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ok! Atendimento finalizado, tenha uma exelente semana."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "w0lophz2a6r6p3ev2hwa0ecb"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1953.83,
+        "y": 197.66
+      }
+    },
+    {
+      "id": "jlp6fgbhtkp5g3u9kbqkp3vs",
+      "title": "Group #49",
+      "blocks": [
+        {
+          "id": "bqhbdpwqbovp5raveu1s2xvi",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "jtcs0nz39ukv6a6b447ulawc",
+              "type": 0,
+              "blockId": "bqhbdpwqbovp5raveu1s2xvi",
+              "content": "Clique aqui para aproveitar essa OFERTA e voltar a ter potencia!",
+              "outgoingEdgeId": "k2b6rvt3okef6rzzxvu8ubjp"
+            }
+          ],
+          "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "ejnabtovnjdf1vqabzwksywu",
+          "type": "Wait",
+          "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "rzhke05xtqv4sll2kfunxabg",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E a sua hora de ter resultados igual ao do Junior!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs"
+        },
+        {
+          "id": "kh7jo8n1yn9h9vym3e6aj4t3",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/kh7jo8n1yn9h9vym3e6aj4t3?v=1691005578815"
+          },
+          "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2658.08,
+        "y": -885
+      }
+    },
+    {
+      "id": "vnodtewkbdj3cznjhsijs9i3",
+      "title": "Group #50",
+      "blocks": [
+        {
+          "id": "sc1y8VwDabNJgiVTBi4qtif",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\nBem vindo ao nosso consultório virtual. "
+                  },
+                  {
+                    "bold": true,
+                    "text": "EM SEGUNDOS O Dr. Fernando VAI LHE ATENDER!",
+                    "underline": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3"
+        },
+        {
+          "id": "s2fad5em7idnzf80bbgqu48b",
+          "type": "Wait",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "yfz81ir4o7ltw56vzy1ae2cd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\nOlá, meu nome é Dr. Fernando Vaz, sou especialista em urologia."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3"
+        },
+        {
+          "id": "k2usd9npg46gxnnsh9s5uy1h",
+          "type": "Wait",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "sgtE2Sy7cKykac9B223Kq9R",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Antes de começar me diga seu nome."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3"
+        },
+        {
+          "id": "sqEsMo747LTDnY9FjQcEwUv",
+          "type": "text input",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Nome"
+            },
+            "variableId": "giiLFGw5xXBCHzvp1qAbdX"
+          }
+        },
+        {
+          "id": "xeujwki9p9f0muhyopzedrwc",
+          "type": "Wait",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "nvyrzkjrhpdgadprj9afsyg3",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/nvyrzkjrhpdgadprj9afsyg3?v=1690990173816"
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3"
+        },
+        {
+          "id": "dckm1n23m02mkl6q7la56fod",
+          "type": "Wait",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "secondsToWaitFor": "17"
+          }
+        },
+        {
+          "id": "nqlw0a0co5pjp2mpsyab8lb8",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/blocks/nqlw0a0co5pjp2mpsyab8lb8?v=1690990494885"
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3"
+        },
+        {
+          "id": "h4v1hcinb0y3id86jvmv9xkh",
+          "type": "Wait",
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "options": {
+            "secondsToWaitFor": "19"
+          }
+        },
+        {
+          "id": "ghvjfqubq5q80fg47i8fea4r",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{Name}} Me diga o nome do medicamento ou tratamento, caso já tenha feito, se não usou ou não fez nem um tratamento, simplesmente diga que não fez."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vnodtewkbdj3cznjhsijs9i3",
+          "outgoingEdgeId": "rmq1r2hwdvubrejzhbm286ic"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -456.5,
+        "y": -856.58
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "giiLFGw5xXBCHzvp1qAbdX",
+      "name": "Name"
+    },
+    {
+      "id": "v3VFChNVSCXQ2rXv4DrJ8Ah",
+      "name": "Email"
+    },
+    {
+      "id": "vlakrqlbe2asuxmtgd1vd8orf",
+      "name": "nome do tratamento"
+    },
+    {
+      "id": "vlt5nbaqau86l9763vl3lnand",
+      "name": "Problema"
+    }
+  ],
+  "edges": [
+    {
+      "id": "zgv0ov6bzttf3krqwrdr9s2r",
+      "to": {
+        "groupId": "adgwa008awadiej8jdi4ml49"
+      },
+      "from": {
+        "blockId": "xp6rsfgiontjvi4abm2ka4bc",
+        "groupId": "b3rjkj5k069ym0t59tenl69e"
+      }
+    },
+    {
+      "id": "fojqhe48gy4k6dgoqg6n6aee",
+      "to": {
+        "groupId": "qqtpac543h2d37re2w78skg5"
+      },
+      "from": {
+        "blockId": "z9y2hvpl34qhuxbscxfqtdyc",
+        "groupId": "adgwa008awadiej8jdi4ml49"
+      }
+    },
+    {
+      "id": "uyrgaqh72qflxg2v79l0z6ar",
+      "to": {
+        "groupId": "fc2mynavf07qz0i4f3u1fpme"
+      },
+      "from": {
+        "blockId": "z36vchhrqzfep3tblk4loc6g",
+        "groupId": "qqtpac543h2d37re2w78skg5"
+      }
+    },
+    {
+      "id": "rlj953j4a8ng8shi14nxclr6",
+      "to": {
+        "groupId": "u6praf5wkcwbvk71277tudyo"
+      },
+      "from": {
+        "itemId": "bfk5li8oqqthalyz5w23zgac",
+        "blockId": "tnyam4xv7bczydjwctph4iui",
+        "groupId": "fc2mynavf07qz0i4f3u1fpme"
+      }
+    },
+    {
+      "id": "woqy0oca7a95tojk9m66aozp",
+      "to": {
+        "groupId": "ol43j0pwamfyiagf80umbeo0"
+      },
+      "from": {
+        "blockId": "kffyjifu4t0qlvxbpehpe4fg",
+        "groupId": "u6praf5wkcwbvk71277tudyo"
+      }
+    },
+    {
+      "id": "m8obpbw85y45d7h1507szzjo",
+      "to": {
+        "groupId": "ol43j0pwamfyiagf80umbeo0"
+      },
+      "from": {
+        "itemId": "aplh4g6j2h1f20tlw0qsrnlf",
+        "blockId": "dxpdd4s6tb2kypucatldga7w",
+        "groupId": "rkgxangvxeqjhbehwkl49m4o"
+      }
+    },
+    {
+      "id": "e0l7a7srdyc5bl28222rcj66",
+      "to": {
+        "groupId": "w0lophz2a6r6p3ev2hwa0ecb"
+      },
+      "from": {
+        "itemId": "kpe149qrtqshv18nd9nj4g5r",
+        "blockId": "dxpdd4s6tb2kypucatldga7w",
+        "groupId": "rkgxangvxeqjhbehwkl49m4o"
+      }
+    },
+    {
+      "id": "k2b6rvt3okef6rzzxvu8ubjp",
+      "to": {
+        "groupId": "has293e48wr14c48wprqvw2i"
+      },
+      "from": {
+        "itemId": "jtcs0nz39ukv6a6b447ulawc",
+        "blockId": "bqhbdpwqbovp5raveu1s2xvi",
+        "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs"
+      }
+    },
+    {
+      "id": "x0rbl6kmfaoyqxjnt8h5sefs",
+      "to": {
+        "groupId": "vnodtewkbdj3cznjhsijs9i3"
+      },
+      "from": {
+        "blockId": "h0p4m05phqqdf0v6v5kf3fo3",
+        "groupId": "l71c5sily6c3z7mppjo1ijh3"
+      }
+    },
+    {
+      "id": "rmq1r2hwdvubrejzhbm286ic",
+      "to": {
+        "groupId": "b3rjkj5k069ym0t59tenl69e"
+      },
+      "from": {
+        "blockId": "ghvjfqubq5q80fg47i8fea4r",
+        "groupId": "vnodtewkbdj3cznjhsijs9i3"
+      }
+    },
+    {
+      "id": "tigr5uwdzdi6pev9wvbef2wb",
+      "to": {
+        "groupId": "sjfdyjk9lhh1df66ecgvzzo7"
+      },
+      "from": {
+        "blockId": "ytig3hm9d0obvzngo1na4x9l",
+        "groupId": "ol43j0pwamfyiagf80umbeo0"
+      }
+    },
+    {
+      "id": "szwi7ynrvojhagsrwublxn9e",
+      "to": {
+        "groupId": "rkgxangvxeqjhbehwkl49m4o"
+      },
+      "from": {
+        "itemId": "xn4fx6mtw7dh4lqfl2x5nckf",
+        "blockId": "tnyam4xv7bczydjwctph4iui",
+        "groupId": "fc2mynavf07qz0i4f3u1fpme"
+      }
+    },
+    {
+      "id": "jg4apvalnmpfcre1rmzwh5wu",
+      "to": {
+        "groupId": "jlp6fgbhtkp5g3u9kbqkp3vs"
+      },
+      "from": {
+        "blockId": "idthiwl0zu7j95pf961jqluk",
+        "groupId": "sjfdyjk9lhh1df66ecgvzzo7"
+      }
+    },
+    {
+      "id": "lbynj5o283vrwme3v4j9p475",
+      "to": {
+        "groupId": "vnodtewkbdj3cznjhsijs9i3"
+      },
+      "from": {
+        "blockId": "22HP69iipkLjJDTUcc1AWW",
+        "groupId": "ym4q6nvizne4suzusrc2ym3p"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#9095A0"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#0042DA"
+      },
+      "hostAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/hostAvatar?v=1690997682717",
+        "isEnabled": true
+      },
+      "guestAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/guestAvatar?v=1690997832294",
+        "isEnabled": true
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#F7F8FF"
+      },
+      "guestBubbles": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#FF8E21"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/background?v=1690997980258"
+      }
+    }
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": true,
+      "isResultSavingEnabled": true,
+      "isHideQueryParamsEnabled": true,
+      "isNewResultOnRefreshEnabled": true
+    },
+    "metadata": {
+      "title": "WhatsApp",
+      "favIconUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/kjb6laoes986l70tsurcs35l/favIcon?v=1690998159824",
+      "description": "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}

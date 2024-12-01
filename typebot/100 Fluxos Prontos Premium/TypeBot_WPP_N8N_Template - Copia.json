@@ -1,0 +1,532 @@
+{
+  "name": "TypeBot WPP Template",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "69815a1a-e479-4b3c-9369-ac77d6a0a37d",
+        "options": {}
+      },
+      "id": "0cd1a1d7-f664-4fbc-80d3-5d3ac5e3987f",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        140,
+        380
+      ],
+      "webhookId": "6ce4b8d7-4785-4ab8-af1e-9d3931182d30"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.wook }}",
+              "value2": "RECEIVE_MESSAGE"
+            }
+          ]
+        }
+      },
+      "id": "50a10163-26aa-47c6-8a87-20d53bc3a2a5",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        560,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.content }}",
+              "value2": "iniciar"
+            }
+          ]
+        }
+      },
+      "id": "06a719d0-d3c1-42d4-94a7-56435e8319f4",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        780,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "#",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"startParams\": {\n    \"typebot\": \"wpp\",\n    \"isPreview\": false\n  }\n}",
+        "options": {}
+      },
+      "id": "632d096e-e7f7-4536-8cad-6800b8d25384",
+      "name": "Inicia Bot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1060,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "#",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "session",
+              "value": "bot"
+            },
+            {
+              "name": "number",
+              "value": "={{ $node[\"Phone e Mensagem\"].json[\"phone\"] }}"
+            },
+            {
+              "name": "text",
+              "value": "={{ $json.messages[0].content.richText[0].children[0].text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5f843c7e-925a-40fa-a8b9-89943ecb5dbb",
+      "name": "Envia Mensagem 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1860,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "phone",
+              "value": "={{ $json.body.from }}"
+            },
+            {
+              "name": "mensagem",
+              "value": "={{ $json.body.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "76cd7877-5e73-4f14-8ecd-fbb799adf8d6",
+      "name": "Phone e Mensagem",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        360,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo",
+          "mode": "list",
+          "cachedResultName": "SID Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "SID",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "1"
+            }
+          ]
+        },
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "detectAutomatically"
+            }
+          }
+        }
+      },
+      "id": "f2a68b28-94ee-47d7-ab9e-7466d906be40",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1060,
+        440
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo",
+          "mode": "list",
+          "cachedResultName": "SID Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "SID",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uniqY_zImA-iEeHMggbMAAN_FG9EyO-egIq8cyxjzuo/edit#gid=0"
+        },
+        "columnToMatchOn": "ID",
+        "valueToMatchOn": "1",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "SID",
+              "fieldValue": "={{ $json.sessionId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5b39b716-7c89-4727-90f7-0ff8b20d0995",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1340,
+        160
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "#",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "session",
+              "value": "bot"
+            },
+            {
+              "name": "number",
+              "value": "={{ $node[\"Phone e Mensagem\"].json[\"phone\"] }}"
+            },
+            {
+              "name": "text",
+              "value": "={{ $json.saida }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c359305d-ac63-46b0-8b56-3d197d7fff47",
+      "name": "Envia Mensagem ",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        2140,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "#",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"message\": \"{{ $node[\"Phone e Mensagem\"].json[\"phone\"] }}\",\n  \"sessionId\": \"{{ $json.sessionId }}\"\n}\n",
+        "options": {}
+      },
+      "id": "6507b913-a877-4bf8-bd43-d17209d4dde7",
+      "name": "Typebot Phone",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1600,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "@",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer "
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"message\": \"{{ $node.Webhook.json.body.content }}\",\n  \"sessionId\": \"{{ $json[\"SID\"] }}\"\n}\n ",
+        "options": {}
+      },
+      "id": "28f85dc8-94e5-41ee-90ad-836d8769f119",
+      "name": "TypeBot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1320,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.messages[0].content.richText[0].children[0].text }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "ad4dcf69-2ebe-4ec4-a7e6-6802b7dfe5bf",
+      "name": "Verifica Mensagem",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "saida",
+              "value": "={{ $json.messages[0].content.richText[0].children[0].text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d9df339a-83fb-46a6-80ae-b78e650a6354",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        440
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Phone e Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Inicia Bot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inicia Bot": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phone e Mensagem": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "TypeBot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Typebot Phone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typebot Phone": {
+      "main": [
+        [
+          {
+            "node": "Envia Mensagem 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TypeBot": {
+      "main": [
+        [
+          {
+            "node": "Verifica Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica Mensagem": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Envia Mensagem ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "63f95696-80b7-46db-b1ae-b9fc1a78ac10",
+  "id": "3",
+  "meta": {
+    "instanceId": "13d3914140f312b07c949393e0baf58f51daee5daeb332b5f247b9e1612adaf0"
+  },
+  "tags": []
+}

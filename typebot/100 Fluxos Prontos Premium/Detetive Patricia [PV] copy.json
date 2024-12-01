@@ -1,0 +1,1723 @@
+{
+  "id": "clkul0tln0030ld0fgus5ra4j",
+  "version": "3",
+  "icon": null,
+  "name": "Detetive Patricia [PV] copy",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "y3rjukxlgycm0hfqdpbe58w5",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "frezmwrqcok3ro4l3zudx0od",
+          "type": "start",
+          "label": "Start",
+          "groupId": "y3rjukxlgycm0hfqdpbe58w5",
+          "outgoingEdgeId": "dzjj6yzu4vt2354yvsly2tll"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -3912.36,
+        "y": -226.31
+      }
+    },
+    {
+      "id": "gpvq7lemguc6umieiaru8nu3",
+      "title": "",
+      "blocks": [
+        {
+          "id": "l3bk85n0xc5iyu34zgmail7v",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Quer ver as imagens capturadas?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "hw9evmqzyefzzu1zdzd1jjje",
+          "type": "text input",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          }
+        },
+        {
+          "id": "qhxxufuglzt3l1p3hxh4cmbo",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "21 "
+                  },
+                  {
+                    "text": "fotos encontradas."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "hl367zezj2iql5gseyn1o09i",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "qs1puh5ngyucliemvmh4xtso",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/fzwrkqh3344zyjoc7jdifwnv?v=1687133784708"
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "ouzmtlsinkjzdkxja9kkz7w0",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "znvpht02tipktwj0usxyfa3v",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/znvpht02tipktwj0usxyfa3v?v=1687473516452"
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "vfrwi1zogg3xfv2z5sw73wab",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "14"
+          }
+        },
+        {
+          "id": "cgkp9bz7txcmy2vipbo81zwr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Quer que eu te envie "
+                  },
+                  {
+                    "bold": true,
+                    "text": "todos arquivos coletados"
+                  },
+                  {
+                    "text": " no celular dele?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "p6x678tq38ccodm82a66kvfy",
+          "type": "text input",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          }
+        },
+        {
+          "id": "xksm582yf59oam63gq6gicj5",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "mswz18n306xcqvdl9orirqfa",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Eu não cobro nada pela consulta "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "que fizemos no celular dele..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "inv9spw3mgu2y3ldssp918va",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "vxasy5vrrgunpp9h9fkujci4",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/vxasy5vrrgunpp9h9fkujci4?v=1687647025847"
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "hqtr28yw9ql5shmtm0jp0g04",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "13"
+          }
+        },
+        {
+          "id": "egvs07h2bnbmo0n2fokvb82z",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/egvs07h2bnbmo0n2fokvb82z?v=1687647099931"
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "pm64c7vvjynmw9pltmobsjr0",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "cx0xo052mxyv4bwv3fz0m8fv",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A taxa para "
+                  },
+                  {
+                    "bold": true,
+                    "text": "pegar"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "todas"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "as"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "provas"
+                  },
+                  {
+                    "text": " é de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "apenas"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "R$39,90"
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "tdyl40h9f1gguzqjms01fd51",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "vjt3765psb28r2xafpkva4qz",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/vjt3765psb28r2xafpkva4qz?v=1687647337881"
+          },
+          "groupId": "gpvq7lemguc6umieiaru8nu3"
+        },
+        {
+          "id": "puq0n729vjjt2dhflli46aly",
+          "type": "Wait",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "secondsToWaitFor": "15"
+          }
+        },
+        {
+          "id": "ap022zhcrwpnr8v5x20fuuo3",
+          "type": "Redirect",
+          "groupId": "gpvq7lemguc6umieiaru8nu3",
+          "options": {
+            "url": "https://app.monetizze.com.br/checkout/KGG316527",
+            "isNewTab": false
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1553.73,
+        "y": -212.15
+      }
+    },
+    {
+      "id": "ourygcpco7niovwxxsaa4gaj",
+      "title": "",
+      "blocks": [
+        {
+          "id": "tjk6afup0bc48jokz12b3por",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Detetive Patrícia entrou na conversa...",
+                    "italic": true,
+                    "underline": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ourygcpco7niovwxxsaa4gaj"
+        },
+        {
+          "id": "gz4kfzlvccme6mtpay7tsz2y",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, tudo bem? "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ourygcpco7niovwxxsaa4gaj"
+        },
+        {
+          "id": "zp52eolzf8wbnsb9dwblt51l",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Gostaria de ver o que tem "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "no celular do seu parceiro?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ourygcpco7niovwxxsaa4gaj"
+        },
+        {
+          "id": "v86irim1p914uavr7tlbghfd",
+          "type": "text input",
+          "groupId": "ourygcpco7niovwxxsaa4gaj",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "zbnex5d4san1eleoofxwnjng"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -3535.11,
+        "y": -215.02
+      }
+    },
+    {
+      "id": "ntaz3qe8i0yzmhcjqim8cw3w",
+      "title": "",
+      "blocks": [
+        {
+          "id": "e3viwgf9lp41x07x45z1hm35",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Digite o número de celular do {{NOME DO PARCEIRO}}."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "r4fp3wyimbp3s4qc45wrxbr2",
+          "type": "phone number input",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Ex: (11) 998887766"
+            },
+            "variableId": "vio5ico5yic9q5ltrgeatu1qi",
+            "defaultCountryCode": "BR",
+            "retryMessageContent": "Parece que você digitou o número errado, tente de novo."
+          }
+        },
+        {
+          "id": "w0t7cqrokynpu074qx7ry8yb",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "omxyimcu1tjfeqq38qtpjpzn",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/omxyimcu1tjfeqq38qtpjpzn?v=1687639876573"
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "zprh5ohizgw14lx0g2zyg116",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "urtwvlw2e6qtiaoomwbx5hn2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Identificando aparelho...",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "gqeyofj2jccfjb9nnklohj7y",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "a1k6ymg048hg886mxwxlay53",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tentativa de conexão: falhou!",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "el84v6xdd4gsgg63tj52wil1",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "yeoizpa1phbwm23eo3lu8dy1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tentativa de conexão: falhou!",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "dt7ox0e8enmelpoot36qajgn",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "x1eozjtipadi0pheyen1oksd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Conexão realizada com sucesso.",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "d03bzcdvbtcyutgwmc02bo4u",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "cw7zd537imha1h15jd0htxck",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/kc2qy5ees6afbmn7i15qbvo5?v=1687644389534"
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "lz1zj2jlstqt07l9bmnba4uj",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "v5ieif811r0iwwie6yj3610q",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Baixando todas as mensagens, áudios e arquivos comprometedores...",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "t08roe8ja9le8w94a631iad4",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "jshfntic0kyif98ohoje6q6z",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Download concluído e conexão encerrada.",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "teinsrxmjsncn93y1y7fd3in",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "urt5pbsyxoasgmlu16k5vlfm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "As notícias não são muito boas..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "zt5jk8io4mh8qe9h55315eyw",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "oxov1ovqjbujqo2q7pam589d",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Posso te enviar o relatório?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "pe09fe9dtsmczdb0q1aitay5",
+          "type": "text input",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          }
+        },
+        {
+          "id": "c9sy4q46shgnd6i1b08tap90",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Nosso sistema "
+                  },
+                  {
+                    "bold": true,
+                    "text": "encontrou"
+                  },
+                  {
+                    "text": " "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "os"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "seguintes"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "dados..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "rc53iubfjgirrr0kdn0t4x0t",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "smflyxu81358hcaddbxdzc8a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "89 "
+                  },
+                  {
+                    "text": "mensagens com a palavra: "
+                  },
+                  {
+                    "text": "{{NOME DA MULHER}}",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "n6ugh821r8uebodkbwmmoxbg",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "c70f5ucpy2e4o21j7zit60zn",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "126"
+                  },
+                  {
+                    "text": " mensagens com a palavra: \""
+                  },
+                  {
+                    "text": "amor",
+                    "italic": true
+                  },
+                  {
+                    "text": "\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "ix0uy5q8gvs52f6vxbs75hc5",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "wypzmr3zgeqip55yxpy0b4tj",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "47"
+                  },
+                  {
+                    "text": " mensagens com a palavra: \""
+                  },
+                  {
+                    "text": "gostosa",
+                    "italic": true
+                  },
+                  {
+                    "text": "\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "g93h7pa06ooppc2rl1xygfgg",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "u04frgpb2t2rep2ty9f2oanx",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "9"
+                  },
+                  {
+                    "text": " mensagens com a palavra: \""
+                  },
+                  {
+                    "text": "bucetinha",
+                    "italic": true
+                  },
+                  {
+                    "text": "\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "ywb35udz6ssb0vtawdkcir48",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "wmv5hzm06qekiq2naumqqd2p",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "12"
+                  },
+                  {
+                    "text": " mensagens com a palavra: \""
+                  },
+                  {
+                    "text": "motel",
+                    "italic": true
+                  },
+                  {
+                    "text": "\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "fn5b0jt7qja0l32xhu1i3408",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "gmu8mwj934zsrx9pj8xrtwvn",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "37 "
+                  },
+                  {
+                    "text": "áudios comprometedores"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "a3k1sjpiqpf8einso6v8tpeq",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "rarwm8gme7bftxcqmdmgad68",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "21"
+                  },
+                  {
+                    "text": " fotos de nudez"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "a3cufkfrvqqh68vv7asqjed9",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "fjnlns419wu0lom5afmlvvy3",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O sistema me liberou "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "2 áudios de graça"
+                  },
+                  {
+                    "text": ". "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Posso te enviar?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "aulhhjfp1wjv6vniga7sodqw",
+          "type": "text input",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          }
+        },
+        {
+          "id": "rbo96vd99ufq9vhn5noz4lng",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "wtqjw221h66rtdyrg8aik47z",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Estou te enviando..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "aru95v5qr6cymb6pmu9btuxg",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/aru95v5qr6cymb6pmu9btuxg?v=1687472049229"
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "stig43wh0gbmongmlwmmo7iy",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "wwyx5hrxh589lxcmkuhnyq1q",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Posso te enviar o outro?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "uw8k69hkrjauji2hqxx4a0h7",
+          "type": "text input",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          }
+        },
+        {
+          "id": "naxrtczh8b3hnlj5nsnn62v8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Lamento por isso..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "ofi6fns24v8cwd8jxaa7iwoq",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "qh8x457ls6xhjoggex6go71g",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/qh8x457ls6xhjoggex6go71g?v=1687472302337"
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "gstwruz4cy1whb61k73c81ak",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "f0uczey2oddjdcqf54w5mooz",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Muito complicado..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "tdqtfo9s5gv9d6au2p4wckdt",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "hrt9pvyaysh6awy422do92ck",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Infelizmente eu "
+                  },
+                  {
+                    "bold": true,
+                    "text": "encontrei"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "mais"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "coisas"
+                  },
+                  {
+                    "text": "..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+        },
+        {
+          "id": "b8e7kl6rmc6ovngy0me7nt5z",
+          "type": "Wait",
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "gm7ak3nciqiyuabyibej9txk",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/bfcfd4kq244h7fio2593uf47?v=1687458868768"
+          },
+          "groupId": "ntaz3qe8i0yzmhcjqim8cw3w",
+          "outgoingEdgeId": "snbq2xcjlf5m1b8ni1xyx2ic"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1991.18,
+        "y": -226.07
+      }
+    },
+    {
+      "id": "t5rze4intilgdwgo77888q0o",
+      "title": "",
+      "blocks": [
+        {
+          "id": "n15e99787s2swtt4k33c9o46",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Qual é o seu nome?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t5rze4intilgdwgo77888q0o"
+        },
+        {
+          "id": "xzn9vehd0qx81g4iswpn0jep",
+          "type": "text input",
+          "groupId": "t5rze4intilgdwgo77888q0o",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite seu nome..."
+            },
+            "variableId": "vbpueqwoqtifmda7jyu4vksmn"
+          }
+        },
+        {
+          "id": "wn6iv60p8zmu4odc41lzp95t",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Muito prazer, {{NOME DA MULHER}}."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t5rze4intilgdwgo77888q0o"
+        },
+        {
+          "id": "lcow1w1xis5aukfz0nel83jg",
+          "type": "Wait",
+          "groupId": "t5rze4intilgdwgo77888q0o",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "uwosqgj2ejmrz6t51mgkrhj7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou te explicar como funciona..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t5rze4intilgdwgo77888q0o"
+        },
+        {
+          "id": "mkaqa8yju2ql6zmcumj34x71",
+          "type": "Wait",
+          "groupId": "t5rze4intilgdwgo77888q0o",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "l6r9x5xyvfroznt8jt3o5sl6",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/blocks/l6r9x5xyvfroznt8jt3o5sl6?v=1687635021104"
+          },
+          "groupId": "t5rze4intilgdwgo77888q0o"
+        },
+        {
+          "id": "z6ufdx12iex00uv0c3qfahmq",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Podemos continuar?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t5rze4intilgdwgo77888q0o"
+        },
+        {
+          "id": "ne9cn534z54wdh6q72qtg8x4",
+          "type": "text input",
+          "groupId": "t5rze4intilgdwgo77888q0o",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "goa9hztd7zlgat46nxafxbyu"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -3148.61,
+        "y": -216.23
+      }
+    },
+    {
+      "id": "t69xo2x1ftnryk0dvvp8ofol",
+      "title": "",
+      "blocks": [
+        {
+          "id": "l4hq9ml0izb63mlpsii5k80f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual é o "
+                  },
+                  {
+                    "bold": true,
+                    "text": "nome do seu parceiro"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t69xo2x1ftnryk0dvvp8ofol"
+        },
+        {
+          "id": "acnrfpvidurs4u2s47fa4se6",
+          "type": "text input",
+          "groupId": "t69xo2x1ftnryk0dvvp8ofol",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite nome do parceiro..."
+            },
+            "variableId": "vfsgbnmi8wwh45n8k5dc6yxl5"
+          }
+        },
+        {
+          "id": "evcet01k4u5oslx656w9sqya",
+          "type": "Wait",
+          "groupId": "t69xo2x1ftnryk0dvvp8ofol",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "v28gkh10qca3kag81hwc5gry",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me conta, você percebeu"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "alguma "
+                  },
+                  {
+                    "bold": true,
+                    "text": "atitude suspeita dele"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t69xo2x1ftnryk0dvvp8ofol"
+        },
+        {
+          "id": "z08ueim7egnrzo0animos9yr",
+          "type": "text input",
+          "groupId": "t69xo2x1ftnryk0dvvp8ofol",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "f1d47kf7nllyw2nzhzxsjx2q"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -2776.95,
+        "y": -212.68
+      }
+    },
+    {
+      "id": "b1gosejmqluhowzrilo1g8od",
+      "title": "",
+      "blocks": [
+        {
+          "id": "dh900nhktoxtvg6chk3tjpcr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Hm, isso me parece suspeito..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "b1gosejmqluhowzrilo1g8od"
+        },
+        {
+          "id": "vfjgjutahxlxojt1rg37w8n9",
+          "type": "Wait",
+          "groupId": "b1gosejmqluhowzrilo1g8od",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "k4uco7zcfawwms2lgkrlupgc",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clj220q6q0032jx0f9fp416py/blocks/k4uco7zcfawwms2lgkrlupgc?v=1687467293019"
+          },
+          "groupId": "b1gosejmqluhowzrilo1g8od"
+        },
+        {
+          "id": "rhjoi58igsnl6hyer47f0uff",
+          "type": "Wait",
+          "groupId": "b1gosejmqluhowzrilo1g8od",
+          "options": {
+            "secondsToWaitFor": "17"
+          }
+        },
+        {
+          "id": "q4l9q6hhlay0nx4y68z9o0dc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você quer que eu veja o "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "que tem no celular dele?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "b1gosejmqluhowzrilo1g8od"
+        },
+        {
+          "id": "m1uwhhi8kibu8p96vyvth4wi",
+          "type": "Wait",
+          "groupId": "b1gosejmqluhowzrilo1g8od",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "uyuot6qqugapd7g7lue00sie",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ele não vai saber de nada..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "b1gosejmqluhowzrilo1g8od"
+        },
+        {
+          "id": "n0ixsc7plnkikpj6sqlbjn0v",
+          "type": "text input",
+          "groupId": "b1gosejmqluhowzrilo1g8od",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "hxrdaynvhciirvwsc62rhs9p"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -2395.2,
+        "y": -210.04
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vbpueqwoqtifmda7jyu4vksmn",
+      "name": "NOME DA MULHER"
+    },
+    {
+      "id": "vfsgbnmi8wwh45n8k5dc6yxl5",
+      "name": "NOME DO PARCEIRO"
+    }
+  ],
+  "edges": [
+    {
+      "id": "snbq2xcjlf5m1b8ni1xyx2ic",
+      "to": {
+        "groupId": "gpvq7lemguc6umieiaru8nu3"
+      },
+      "from": {
+        "blockId": "gm7ak3nciqiyuabyibej9txk",
+        "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+      }
+    },
+    {
+      "id": "dzjj6yzu4vt2354yvsly2tll",
+      "to": {
+        "groupId": "ourygcpco7niovwxxsaa4gaj"
+      },
+      "from": {
+        "blockId": "frezmwrqcok3ro4l3zudx0od",
+        "groupId": "y3rjukxlgycm0hfqdpbe58w5"
+      }
+    },
+    {
+      "id": "goa9hztd7zlgat46nxafxbyu",
+      "to": {
+        "blockId": "l4hq9ml0izb63mlpsii5k80f",
+        "groupId": "t69xo2x1ftnryk0dvvp8ofol"
+      },
+      "from": {
+        "blockId": "ne9cn534z54wdh6q72qtg8x4",
+        "groupId": "t5rze4intilgdwgo77888q0o"
+      }
+    },
+    {
+      "id": "f1d47kf7nllyw2nzhzxsjx2q",
+      "to": {
+        "blockId": "dh900nhktoxtvg6chk3tjpcr",
+        "groupId": "b1gosejmqluhowzrilo1g8od"
+      },
+      "from": {
+        "blockId": "z08ueim7egnrzo0animos9yr",
+        "groupId": "t69xo2x1ftnryk0dvvp8ofol"
+      }
+    },
+    {
+      "id": "zbnex5d4san1eleoofxwnjng",
+      "to": {
+        "blockId": "n15e99787s2swtt4k33c9o46",
+        "groupId": "t5rze4intilgdwgo77888q0o"
+      },
+      "from": {
+        "blockId": "v86irim1p914uavr7tlbghfd",
+        "groupId": "ourygcpco7niovwxxsaa4gaj"
+      }
+    },
+    {
+      "id": "hxrdaynvhciirvwsc62rhs9p",
+      "to": {
+        "blockId": "e3viwgf9lp41x07x45z1hm35",
+        "groupId": "ntaz3qe8i0yzmhcjqim8cw3w"
+      },
+      "from": {
+        "blockId": "n0ixsc7plnkikpj6sqlbjn0v",
+        "groupId": "b1gosejmqluhowzrilo1g8od"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#9095A0"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#035d54"
+      },
+      "roundness": "large",
+      "hostAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/nh7a2lmv9dhewlzwp608te7r/hostAvatar?v=1691033090064",
+        "isEnabled": true
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#F7F8FF"
+      },
+      "guestBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#E1FFC7"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/background?v=1685470080750"
+      }
+    },
+    "customCss": ".typebot-chat-view > .flex:first-child {\n    padding-top: 30px;\n}\n\n.typebot-input {\n    position: fixed;\n    bottom: 0;\n    align-items: center;\n    z-index: 999;\n    right: 0;\n}\n\n.typebot-input .typebot-button {\n    background: #008a7c;\n    border-radius: 50%;\n    color: #fff;\n    position: relative;\n    width: 50px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.typebot-container {\n    background-size: initial!important;\n    background-repeat: repeat-x!important;\n}\n\n.typebot-host-bubble>.bubble-typing {\n  border-radius: 0 5px 5px 5px;\n}\n\n.typebot-host-bubble>.bubble-typing:after {\n    position: absolute;\n    content: \"\";\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 0px 10px 10px 0;\n    border-color: transparent #fff transparent transparent;\n    top: 0;\n    left: -10px;\n}\n\n.typebot-guest-bubble {\n  position: relative;\n  border-radius: 5px 0 5px 5px;\n}\n\n.typebot-guest-bubble:after {\n  position: absolute;\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n}\n\n.typebot-guest-bubble:after {\n    border-width: 0px 0 10px 10px;\n    border-color: transparent transparent transparent #e1ffc7;\n    top: 0;\n    right: -10px;\n    border-style: solid;\n}\n\niframe[src=\"\"] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: relative;\n  width: 100%;\n  height: 100% !important;\n  z-index: 999999;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\na#lite-badge {\n  display: none!important;\n}"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "rememberUser": {
+        "isEnabled": false
+      },
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": false,
+      "isHideQueryParamsEnabled": false
+    },
+    "metadata": {
+      "title": "WhatsApp Web",
+      "imageUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/r84jdu7bjz19lcijs97fohsc/ogImage?v=1687632342887",
+      "favIconUrl": "https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN",
+      "description": "Fale com a Detetive Patrícia e descubra os segredos da sua relação.",
+      "customHeadCode": "<!-- Facebook Pixel Code -->\n<script>\n   !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window, document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n    fbq('init', 'SEUPIXELAQUI');\n    fbq('track', 'PageView');\n    fbq('track', 'ViewContent');\n \n</script>\n<!-- End Facebook Pixel Code -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css\">\n<style>\n  .hide {\n    display: none!important;\n  }\n  typebot-standard {\n    position: relative;\n    z-index: 9999;\n  }\n  #__next {\n    position: relative;\n    z-index: 9999;\n}\n  /* User Bar */\n.user-bar {\n  width: 100%;\n  height: 55px;\n  background: #005e54;\n  color: #fff;\n  padding: 0;\n  font-size: 24px;\n  position: fixed;\n  z-index: 99999;\n  display: block;\n  top: 0;\n}\n\n.user-bar:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.user-bar div {\n    float: left;\n    transform: translateY(-50%);\n    position: relative;\n    top: 50%;\n    margin-left: 10px;\n}\n\n.user-bar .actions {\n  float: right;\n  margin: 0 0 0 20px;\n}\n\n.user-bar .actions.more {\n  margin: 0 12px 0 32px;\n}\n\n.user-bar .actions.attachment {\n  margin: 0 0 0 30px;\n}\n\n.user-bar .actions.attachment i {\n  display: block;\n  transform: rotate(-45deg);\n}\n\n.user-bar .avatar {\n  margin: 0 0 0 5px;\n  width: 36px;\n  height: 36px;\n}\n\n.user-bar .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);\n  display: block;\n  width: 100%;\n}\n\n.user-bar .name {\n  font-size: 17px;\n  font-weight: 600;\n  text-overflow: ellipsis;\n  letter-spacing: 0.3px;\n  margin: 0 0 0 8px;\n  overflow: hidden;\n  white-space: nowrap;\n  width: 150px;\n}\n\n.user-bar .status {\n  display: block;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 0;\n}\n</style>\n\n<script>\nfunction criarBarra() {\n  var userBar = document.createElement(\"div\");\n  userBar.className = \"user-bar\";\n\n  var backButton = document.createElement(\"div\");\n  backButton.className = \"back\";\n  backButton.innerHTML = '<i class=\"zmdi zmdi-arrow-left\"></i>';\n\n  var avatar = document.createElement(\"div\");\n  avatar.className = \"avatar\";\n  avatar.innerHTML = '<img src=\"https://imgur.com/FkHtAeJ.png\" alt=\"Dr Carlos\">';\n\n  var name = document.createElement(\"div\");\n  name.className = \"name\";\n  name.innerHTML = '<span>Detetive Patrícia</span><span class=\"status\">online</span>';\n\n  var moreActions = document.createElement(\"div\");\n  moreActions.className = \"actions more\";\n  moreActions.innerHTML = '<i class=\"zmdi zmdi-more-vert\"></i>';\n\n  var attachmentAction = document.createElement(\"div\");\n  attachmentAction.className = \"actions attachment\";\n  attachmentAction.innerHTML = '<i class=\"zmdi zmdi-attachment-alt\"></i>';\n\n  var phoneAction = document.createElement(\"div\");\n  phoneAction.className = \"actions\";\n  phoneAction.innerHTML = '<i class=\"zmdi zmdi-phone\"></i>';\n\n  userBar.appendChild(backButton);\n  userBar.appendChild(avatar);\n  userBar.appendChild(name);\n  userBar.appendChild(moreActions);\n  userBar.appendChild(attachmentAction);\n  userBar.appendChild(phoneAction);\n\n  var elementoPai = document.querySelector(\"#__next\");\n  if (elementoPai) {\n    elementoPai.insertBefore(userBar, elementoPai.firstChild);\n  }\n}\n\ncriarBarra();\n</script>\n"
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}

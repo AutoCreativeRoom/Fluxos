@@ -1,0 +1,1216 @@
+{
+  "id": "clkg343oy001vl30frbdpmutj",
+  "version": "3",
+  "icon": null,
+  "name": "Andressa Camargo ",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "evimwpciiyj7h2c2qh1vmc1j",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "cx5iel8jxfo4caorf8rnjiw0",
+          "type": "start",
+          "label": "Start",
+          "groupId": "evimwpciiyj7h2c2qh1vmc1j",
+          "outgoingEdgeId": "g7jzg7uoo8u60zyj8gmgwfce"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1804.43,
+        "y": -11.61
+      }
+    },
+    {
+      "id": "wlcwabm787fwsfcao6k6vjou",
+      "title": "",
+      "blocks": [
+        {
+          "id": "kl16bf94mpvm7ux0w9yhaksc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "ESSA "
+                  },
+                  {
+                    "bold": true,
+                    "text": "CONSULTA É",
+                    "underline": true
+                  },
+                  {
+                    "text": " ",
+                    "underline": true
+                  },
+                  {
+                    "bold": true,
+                    "text": "GRATUITA",
+                    "underline": true
+                  },
+                  {
+                    "text": "!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wlcwabm787fwsfcao6k6vjou"
+        },
+        {
+          "id": "ojoiuqw11ol7mluihnpdkffy",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, meu nome é dra. Andressa Camargo..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wlcwabm787fwsfcao6k6vjou"
+        },
+        {
+          "id": "h9jhpsm5w83cfrwtlqtvsd38",
+          "type": "Wait",
+          "groupId": "wlcwabm787fwsfcao6k6vjou",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "wwmbg4a953rnp2ip6l0fleyw",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/wwmbg4a953rnp2ip6l0fleyw?v=1689820642231"
+          },
+          "groupId": "wlcwabm787fwsfcao6k6vjou"
+        },
+        {
+          "id": "amfwk99rwrspc7o6hro0bv7v",
+          "type": "Wait",
+          "groupId": "wlcwabm787fwsfcao6k6vjou",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "g91i1t2tlt9qkl5dvxggin3o",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/g91i1t2tlt9qkl5dvxggin3o?v=1689878388883"
+          },
+          "groupId": "wlcwabm787fwsfcao6k6vjou"
+        },
+        {
+          "id": "dbi2zwoddcnec8xrykof79b8",
+          "type": "Wait",
+          "groupId": "wlcwabm787fwsfcao6k6vjou",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "puv6mq6unlwcs23pvynndrhr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Cansado de gastar dinheiro com produtos que não resolvem o seu intestino preso? Que tal uma solução sem custo? Gostaria de saber mais sobre o nosso desafio "
+                  },
+                  {
+                    "bold": true,
+                    "text": "GRATUITO"
+                  },
+                  {
+                    "text": " de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "tratamento para intestino preso"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wlcwabm787fwsfcao6k6vjou"
+        },
+        {
+          "id": "p4sp15gunqhbipeh83fz7zl1",
+          "type": "Wait",
+          "groupId": "wlcwabm787fwsfcao6k6vjou",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "c8zvdcs07rxg9q2yckyprsyn",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "cigszfogy5e8w000i07vu0rl",
+              "type": 0,
+              "blockId": "c8zvdcs07rxg9q2yckyprsyn",
+              "content": "CLIQUE AQUI PARA SABER MAIS!",
+              "displayCondition": {
+                "isEnabled": false
+              }
+            }
+          ],
+          "groupId": "wlcwabm787fwsfcao6k6vjou",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "z85ggit979khh78gqzvjdroe"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1422.92,
+        "y": 27.22
+      }
+    },
+    {
+      "id": "ymp7u38yj4fge5xxczx7gzx1",
+      "title": "",
+      "blocks": [
+        {
+          "id": "p72v7j6oia4oy91v9dwbeind",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O seu problema é\nparecido com o delas..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "fzfumyw7ixn08k4jnwnxssas",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "vna2xgb4hnyqnvo49jau2dh9",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/vna2xgb4hnyqnvo49jau2dh9?v=1689855508277"
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "tqrx408qz0zt8ecoigbemlvv",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "ki633x8j5205vu2gbt34zwh6",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"Olá Andressa, tudo bem? Eu vim aqui para agradecer pelo desafio de 15 dias que você me proporcionou. Como alguém que já tentou de tudo e sofreu com constipação por mais de 17 anos, sou eternamente grata a você. E além disso, consegui perder 3 quilos nesse processo.\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "ep3y54bihou14gpgthwg09fx",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "rsbwn62djvbnnrko0bh542wc",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/rsbwn62djvbnnrko0bh542wc?v=1690297482563"
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "rzqioqc99t0cd6x83di0r98x",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "pt25tv657uxw5omj9h3gm0ia",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/pt25tv657uxw5omj9h3gm0ia?v=1689855544143"
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "spg2xvw7ec28gd07g7yk5ru9",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "ix73ulz0ln1uv5wqyufycmgu",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"oi Andressa, Depois de 2 meses com a receita da papinha de aveia consegui perder 5 quilos acredita? e olha que nem faço atividade física kkkkkk, obrigadaaaa\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "niwtruqwyxujucy8lssunwqh",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "imo50u2azrg1q0jn7k2gbxlo",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/imo50u2azrg1q0jn7k2gbxlo?v=1689877217750"
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "zui2rgpps5hpl8ojufhjt71p",
+          "type": "Wait",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "secondsToWaitFor": "15"
+          }
+        },
+        {
+          "id": "qlzpncdli50qn183tmygy5zl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Você"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "ficaria"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "feliz"
+                  },
+                  {
+                    "text": " com esses resultados?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+        },
+        {
+          "id": "b2923j6eho3hoitcyt7t2elu",
+          "type": "text input",
+          "groupId": "ymp7u38yj4fge5xxczx7gzx1",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "l22uaj3mkvsxj4wnp52bgi7o"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -644.02,
+        "y": 24.34
+      }
+    },
+    {
+      "id": "xwav8zdu3hejald2bae617to",
+      "title": "",
+      "blocks": [
+        {
+          "id": "jod99kisimo8xbxjd1sfga1q",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou te falar sobre os benefícios de participar..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xwav8zdu3hejald2bae617to"
+        },
+        {
+          "id": "txkzg3nq7zg9xg4ip5kaicx9",
+          "type": "Wait",
+          "groupId": "xwav8zdu3hejald2bae617to",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "f79ru6dedcyjtkkye1yid1v3",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Prevenção de doenças"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Redução de celulite"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Aumento da autoestima"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Auxílio no controle\ndo peso"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Fortalecimento do sistema imunológico"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Redução do inchaço"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Melhora na digestão"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✅ Melhora da pele"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xwav8zdu3hejald2bae617to"
+        },
+        {
+          "id": "ajrb9odpovoh1qrju3wubv7r",
+          "type": "Wait",
+          "groupId": "xwav8zdu3hejald2bae617to",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "mc3tebssu8a88qt6fe51rldk",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Qual"
+                  },
+                  {
+                    "text": " desses "
+                  },
+                  {
+                    "bold": true,
+                    "text": "benefícios"
+                  },
+                  {
+                    "text": " é o "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "principal"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "para"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "você"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xwav8zdu3hejald2bae617to"
+        },
+        {
+          "id": "wxso3jatsxdjkvnamma6mg4a",
+          "type": "text input",
+          "groupId": "xwav8zdu3hejald2bae617to",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "t2f6uoe2to2akl8s8qzudy40"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -248.82,
+        "y": 24.24
+      }
+    },
+    {
+      "id": "y15jp7kwy4a9qqwoindb467p",
+      "title": "",
+      "blocks": [
+        {
+          "id": "nagbcw3jkh0qfwi9ixzkf9u2",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/nagbcw3jkh0qfwi9ixzkf9u2?v=1689856168644"
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "hlmvj6as1sn6ofemd56y8qo9",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "k4efu3ihuewkgqrltk4yq7w2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Veja o relato da Taynan..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "n77t51ddgnxzlotk2k2jd2ox",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "r1fcdhwvzs00dm6t5l2womwb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"Meu médico me disse que se eu não parasse de tomar laxante, eu iria desenvolver problemas sérios no meu intestino. E graças às receitas, agora eu consigo ir no banheiro 2 vezes por dia. Antes, eu costumava ir 2 vezes por semana  tomando o laxante.\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "zastcc8l7h46junigj05grn6",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "fs2wqgnteelwyw6yo0gyx3fn",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Veja o que a Pâmela disse..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "rfkgq6wzessbjef2h5d5fj5v",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "am59op0kfnei8xmbt08syvzd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"eu não to acreditando que deu certo hahahaahah, eu juro que já gastei mais de R$5000 com consultas e remédios e nada resolveu, e com as receitas eu to indo no banheiro todo dia. já perdi 2 quilos e desinchei bastante durante o processo.\""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "rfkgq6wzessbjef2h5d5fj5v",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "rvdyya3lunh0t7ly1840kxlb",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/rvdyya3lunh0t7ly1840kxlb?v=1690298090880"
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "u2bo0kpr20pqogr7eqf2agye",
+          "type": "Wait",
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "joqrj26lqgheb66nnzc5ih55",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Gostaria de participar do "
+                  },
+                  {
+                    "bold": true,
+                    "text": "desafio para combater o intestino preso?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y15jp7kwy4a9qqwoindb467p"
+        },
+        {
+          "id": "ksowcbx72l551ivc7q7w3zk5",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "jdsas9np961u54ch4447ecp3",
+              "type": 0,
+              "blockId": "ksowcbx72l551ivc7q7w3zk5",
+              "content": "CLIQUE AQUI PARA PARTICIPAR!"
+            }
+          ],
+          "groupId": "y15jp7kwy4a9qqwoindb467p",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "avtp8tm3c7c4ot2y8akfcstd"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 120.55,
+        "y": 23.93
+      }
+    },
+    {
+      "id": "askntetdgh0jj9opt0ufi8cp",
+      "title": "",
+      "blocks": [
+        {
+          "id": "qxhdyp7zce3in4k4hozn96ij",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou te explicar "
+                  },
+                  {
+                    "bold": true,
+                    "text": "como"
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "funciona"
+                  },
+                  {
+                    "text": "..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "tn2zoescgbr0qrouqo56920u",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "qvdcoxv14tu0olhkm0x29wyc",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/qvdcoxv14tu0olhkm0x29wyc?v=1690296320556"
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "ud1b4rjos3d0czl174bwar60",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "ldiserru03smmjfmg28kdvgs",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/ldiserru03smmjfmg28kdvgs?v=1690296561080"
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "wa0xh5f6cunazirto9j4z52m",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "buv481l880gljc121rvqsm0z",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/buv481l880gljc121rvqsm0z?v=1690296402425"
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "ytyiaat3uee15ckb1mcyfngq",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "13"
+          }
+        },
+        {
+          "id": "hct58xe3wcqikdk4ihup8b4f",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/hct58xe3wcqikdk4ihup8b4f?v=1690296374017"
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "urfjkd58u1h1qt8rx8etsdv0",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "17"
+          }
+        },
+        {
+          "id": "a4qnj9eybv9jm01d2xk1xobo",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/a4qnj9eybv9jm01d2xk1xobo?v=1690296340113"
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "p8lgbx168xhylcmfdc3s5ctj",
+          "type": "Wait",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "h1j9r3ix9c5n0c7odrdxbvl8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Quantas vezes"
+                  },
+                  {
+                    "text": " por\nsemana "
+                  },
+                  {
+                    "bold": true,
+                    "text": "você vai ao banheiro"
+                  },
+                  {
+                    "text": "?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "askntetdgh0jj9opt0ufi8cp"
+        },
+        {
+          "id": "pftp3s36rd6dygtiq95zn73k",
+          "type": "text input",
+          "groupId": "askntetdgh0jj9opt0ufi8cp",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite aqui..."
+            }
+          },
+          "outgoingEdgeId": "t7bumnhhulijpkl74pk9e6ci"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1034.51,
+        "y": 22.07
+      }
+    },
+    {
+      "id": "af2cjzqq12dairjzmj37o2jy",
+      "title": "",
+      "blocks": [
+        {
+          "id": "kkjllqn4mmi6bv0ov759b7ff",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "kjbfh67z9jjtngekezooid1p",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/kjbfh67z9jjtngekezooid1p?v=1689855845585"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "od1zom0te9g5sonhv7zsz72e",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "9"
+          }
+        },
+        {
+          "id": "m7fdycmddpjjt9fvoh510vr8",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/m7fdycmddpjjt9fvoh510vr8?v=1689855855537"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "gn1jx5x2gpcmz5j1e0lcfc7a",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "13"
+          }
+        },
+        {
+          "id": "tz3xluurjoq5csx9cnue2430",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/tz3xluurjoq5csx9cnue2430?v=1689855929232"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "b5vjefb4ktfxy7uk2v5fvwje",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "lm6882bsbnzo8tjoru33is9k",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/lm6882bsbnzo8tjoru33is9k?v=1689855941294"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "o6puth19ig31g2fzydnoxnr7",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "mxkpmsr1hhiub1g08r3jrh12",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/mxkpmsr1hhiub1g08r3jrh12?v=1689855959161"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "j1y8qct2jstwv04m8yezfgbx",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "ao8v7g5kfcefw6pu25g9u3cs",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/xs63m1gn84pi1m2g12efpt4g/blocks/ao8v7g5kfcefw6pu25g9u3cs?v=1689855994688"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "n1802kj0kas6ryirunlfltmo",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "23"
+          }
+        },
+        {
+          "id": "p84a7mxo9gratngsrgid9e8m",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/iuo4dk7l75txzd5ubytiv2kb/blocks/p84a7mxo9gratngsrgid9e8m?v=1690299218306"
+          },
+          "groupId": "af2cjzqq12dairjzmj37o2jy"
+        },
+        {
+          "id": "r4f7hp5vosdeptsma3p6fef1",
+          "type": "Wait",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "secondsToWaitFor": "16"
+          }
+        },
+        {
+          "id": "vq2wqekzomicwqw9i6kigwwq",
+          "type": "Redirect",
+          "groupId": "af2cjzqq12dairjzmj37o2jy",
+          "options": {
+            "url": "https://pay.kiwify.com.br/LFcyLtx",
+            "isNewTab": false
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 569.68,
+        "y": 21
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vprp91gkcj6ooz2wteh9qrvjn",
+      "name": "NOME"
+    },
+    {
+      "id": "vylhptebpxvgxs98ah9vf9q1p",
+      "name": "PESO"
+    },
+    {
+      "id": "vpel0viottucscnen8zdlejaf",
+      "name": "IDADE"
+    },
+    {
+      "id": "vlnuxmidqsek5hmsy83v55c7h",
+      "name": "PERDER"
+    },
+    {
+      "id": "va2xubuj795oo62rxwti3hudj",
+      "name": "TEMPO"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t7bumnhhulijpkl74pk9e6ci",
+      "to": {
+        "blockId": "p72v7j6oia4oy91v9dwbeind",
+        "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+      },
+      "from": {
+        "blockId": "pftp3s36rd6dygtiq95zn73k",
+        "groupId": "askntetdgh0jj9opt0ufi8cp"
+      }
+    },
+    {
+      "id": "t2f6uoe2to2akl8s8qzudy40",
+      "to": {
+        "blockId": "nagbcw3jkh0qfwi9ixzkf9u2",
+        "groupId": "y15jp7kwy4a9qqwoindb467p"
+      },
+      "from": {
+        "blockId": "wxso3jatsxdjkvnamma6mg4a",
+        "groupId": "xwav8zdu3hejald2bae617to"
+      }
+    },
+    {
+      "id": "z85ggit979khh78gqzvjdroe",
+      "to": {
+        "blockId": "qxhdyp7zce3in4k4hozn96ij",
+        "groupId": "askntetdgh0jj9opt0ufi8cp"
+      },
+      "from": {
+        "blockId": "c8zvdcs07rxg9q2yckyprsyn",
+        "groupId": "wlcwabm787fwsfcao6k6vjou"
+      }
+    },
+    {
+      "id": "g7jzg7uoo8u60zyj8gmgwfce",
+      "to": {
+        "blockId": "kl16bf94mpvm7ux0w9yhaksc",
+        "groupId": "wlcwabm787fwsfcao6k6vjou"
+      },
+      "from": {
+        "blockId": "cx5iel8jxfo4caorf8rnjiw0",
+        "groupId": "evimwpciiyj7h2c2qh1vmc1j"
+      }
+    },
+    {
+      "id": "l22uaj3mkvsxj4wnp52bgi7o",
+      "to": {
+        "blockId": "jod99kisimo8xbxjd1sfga1q",
+        "groupId": "xwav8zdu3hejald2bae617to"
+      },
+      "from": {
+        "blockId": "b2923j6eho3hoitcyt7t2elu",
+        "groupId": "ymp7u38yj4fge5xxczx7gzx1"
+      }
+    },
+    {
+      "id": "avtp8tm3c7c4ot2y8akfcstd",
+      "to": {
+        "groupId": "af2cjzqq12dairjzmj37o2jy"
+      },
+      "from": {
+        "blockId": "ksowcbx72l551ivc7q7w3zk5",
+        "groupId": "y15jp7kwy4a9qqwoindb467p"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#28292a"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#128C7E"
+      },
+      "roundness": "medium",
+      "hostAvatar": {
+        "url": "https://i.postimg.cc/htwy1Y55/medica-copy.png",
+        "isEnabled": true
+      },
+      "guestAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/guestAvatar?v=1685330799682",
+        "isEnabled": false
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF"
+      },
+      "guestBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#e1ffc7"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/background?v=1685470080750"
+      }
+    },
+    "customCss": ".typebot-chat-view > .flex:first-child {\n    padding-top: 30px;\n}\n\n.typebot-input {\n    position: fixed;\n    bottom: 0;\n    align-items: center;\n    z-index: 999;\n    right: 0;\n}\n\n.typebot-input .typebot-button {\n    background: #008a7c;\n    border-radius: 50%;\n    color: #fff;\n    position: relative;\n    width: 50px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.typebot-container {\n    background-size: initial!important;\n    background-repeat: repeat-x!important;\n}\n\n.typebot-host-bubble>.bubble-typing {\n  border-radius: 0 5px 5px 5px;\n}\n\n.typebot-host-bubble>.bubble-typing:after {\n    position: absolute;\n    content: \"\";\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 0px 10px 10px 0;\n    border-color: transparent #fff transparent transparent;\n    top: 0;\n    left: -10px;\n}\n\n.typebot-guest-bubble {\n  position: relative;\n  border-radius: 5px 0 5px 5px;\n}\n\n.typebot-guest-bubble:after {\n  position: absolute;\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n}\n\n.typebot-guest-bubble:after {\n    border-width: 0px 0 10px 10px;\n    border-color: transparent transparent transparent #e1ffc7;\n    top: 0;\n    right: -10px;\n    border-style: solid;\n}\n\niframe[src=\"\"] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: relative;\n  width: 100%;\n  height: 100% !important;\n  z-index: 999999;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\na#lite-badge {\n  display: none!important;\n}"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "rememberUser": {
+        "isEnabled": false
+      },
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": false,
+      "isHideQueryParamsEnabled": false
+    },
+    "metadata": {
+      "title": "WhatsApp Web",
+      "imageUrl": "https://images.unsplash.com/photo-1611077544170-be90a2f68add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHwyN3x8d2VpZ2h0JTIwbG9zc3xlbnwwfDB8fHwxNjg2MjAzMzA4fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "favIconUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/fwlzp9t2f2xjx6o1ru5u4i4z/favIcon?v=1686203350295",
+      "description": "Faça agora sua consulta com Dra. Andressa Camargo no WhatsApp.",
+      "customHeadCode": "<!-- Facebook Pixel Code -->\n<script>\n   !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window, document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n    fbq('init', '657371436300450');\n    fbq('track', 'PageView');\n    fbq('track', 'ViewContent');\n \n</script>\n<!-- End Facebook Pixel Code -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css\">\n<style>\n  .hide {\n    display: none!important;\n  }\n  typebot-standard {\n    position: relative;\n    z-index: 9999;\n  }\n  #__next {\n    position: relative;\n    z-index: 9999;\n}\n  /* User Bar */\n.user-bar {\n  width: 100%;\n  height: 55px;\n  background: #005e54;\n  color: #fff;\n  padding: 0;\n  font-size: 24px;\n  position: fixed;\n  z-index: 99999;\n  display: block;\n  top: 0;\n}\n\n.user-bar:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.user-bar div {\n    float: left;\n    transform: translateY(-50%);\n    position: relative;\n    top: 50%;\n    margin-left: 10px;\n}\n\n.user-bar .actions {\n  float: right;\n  margin: 0 0 0 20px;\n}\n\n.user-bar .actions.more {\n  margin: 0 12px 0 32px;\n}\n\n.user-bar .actions.attachment {\n  margin: 0 0 0 30px;\n}\n\n.user-bar .actions.attachment i {\n  display: block;\n  transform: rotate(-45deg);\n}\n\n.user-bar .avatar {\n  margin: 0 0 0 5px;\n  width: 36px;\n  height: 36px;\n}\n\n.user-bar .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);\n  display: block;\n  width: 100%;\n}\n\n.user-bar .name {\n  font-size: 17px;\n  font-weight: 600;\n  text-overflow: ellipsis;\n  letter-spacing: 0.3px;\n  margin: 0 0 0 8px;\n  overflow: hidden;\n  white-space: nowrap;\n  width: 150px;\n}\n\n.user-bar .status {\n  display: block;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 0;\n}\n</style>\n\n<script>\nfunction criarBarra() {\n  var userBar = document.createElement(\"div\");\n  userBar.className = \"user-bar\";\n\n  var backButton = document.createElement(\"div\");\n  backButton.className = \"back\";\n  backButton.innerHTML = '<i class=\"zmdi zmdi-arrow-left\"></i>';\n\n  var avatar = document.createElement(\"div\");\n  avatar.className = \"avatar\";\n  avatar.innerHTML = '<img src=\"https://i.postimg.cc/htwy1Y55/medica-copy.png\" alt=\"Dra. Andressa Camargo\">';\n\n  var name = document.createElement(\"div\");\n  name.className = \"name\";\n  name.innerHTML = '<span>Dra. Andressa Camarg</span><span class=\"status\">online</span>';\n\n  var moreActions = document.createElement(\"div\");\n  moreActions.className = \"actions more\";\n  moreActions.innerHTML = '<i class=\"zmdi zmdi-more-vert\"></i>';\n\n  var attachmentAction = document.createElement(\"div\");\n  attachmentAction.className = \"actions attachment\";\n  attachmentAction.innerHTML = '<i class=\"zmdi zmdi-attachment-alt\"></i>';\n\n  var phoneAction = document.createElement(\"div\");\n  phoneAction.className = \"actions\";\n  phoneAction.innerHTML = '<i class=\"zmdi zmdi-phone\"></i>';\n\n  userBar.appendChild(backButton);\n  userBar.appendChild(avatar);\n  userBar.appendChild(name);\n  userBar.appendChild(moreActions);\n  userBar.appendChild(attachmentAction);\n  userBar.appendChild(phoneAction);\n\n  var elementoPai = document.querySelector(\"#__next\");\n  if (elementoPai) {\n    elementoPai.insertBefore(userBar, elementoPai.firstChild);\n  }\n}\n\ncriarBarra();\n</script>\n"
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}

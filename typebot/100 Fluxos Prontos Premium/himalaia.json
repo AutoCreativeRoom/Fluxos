@@ -1,0 +1,4329 @@
+{
+  "id": "clkri78qb0005qd5an6dkiatf",
+  "version": "3",
+  "icon": null,
+  "name": "himalaia",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "yv6rhhseuelgn1uot8432gl3",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "f8557i55o2q5bccv5bm1rt4y",
+          "type": "start",
+          "label": "Start",
+          "groupId": "yv6rhhseuelgn1uot8432gl3",
+          "outgoingEdgeId": "tpiixoxh2n1hz0no2hv5exgm"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -22,
+        "y": 42.75
+      }
+    },
+    {
+      "id": "vzgxpp1qqhx16twi0dr94uh2",
+      "title": "INICIO",
+      "blocks": [
+        {
+          "id": "zfad0y1ivr6og8qeoe2xm73n",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Bem vindo ao nosso consultório virtual. "
+                  },
+                  {
+                    "bold": true,
+                    "text": "ESSA",
+                    "underline": true
+                  },
+                  {
+                    "text": " "
+                  },
+                  {
+                    "bold": true,
+                    "text": "AVALIAÇÃO É",
+                    "underline": true
+                  },
+                  {
+                    "text": " ",
+                    "underline": true
+                  },
+                  {
+                    "bold": true,
+                    "text": "GRATUITA",
+                    "underline": true
+                  },
+                  {
+                    "text": "!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+        },
+        {
+          "id": "dm8a4kfmafqzo0ml10wx6xtd",
+          "type": "Wait",
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "oqdkhwn4nsvinq2taj29gn3k",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, meu nome é Dr. Fernando Vaz, sou especialista em urologia.\n"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+        },
+        {
+          "id": "n8sulwcbrmci9hws7jr74bip",
+          "type": "Wait",
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "yuw74j73o800xu9op2tu7mcs",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Posso te enviar aúdios ou você prefere que eu te escreva?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+        },
+        {
+          "id": "iwir4elqqs7d0rwso6a13ybz",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "cnm9qrejvbzg3xqd4a0bvqpy",
+              "type": 0,
+              "blockId": "iwir4elqqs7d0rwso6a13ybz",
+              "content": "Mande Aúdio",
+              "outgoingEdgeId": "d2zprbg63n21fulsypnm3mtl"
+            },
+            {
+              "id": "x5azul4ad41zvnxhdciwidvh",
+              "type": 0,
+              "blockId": "iwir4elqqs7d0rwso6a13ybz",
+              "content": "Melhor Escrever",
+              "outgoingEdgeId": "z5es5dzzb814aq767k544qx5"
+            }
+          ],
+          "groupId": "vzgxpp1qqhx16twi0dr94uh2",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 696,
+        "y": -102.25
+      }
+    },
+    {
+      "id": "s5kdx746w6f976hijht1i8hy",
+      "title": "Group #2",
+      "blocks": [
+        {
+          "id": "pltoxf45qdt198pjzg5qb11u",
+          "type": "Pixel",
+          "groupId": "s5kdx746w6f976hijht1i8hy",
+          "options": {
+            "params": [
+              {
+                "id": "y8mj8w7m2qreai18ihf1l1gn",
+                "key": "content_category",
+                "value": "typebot"
+              }
+            ],
+            "pixelId": "1030107691736212",
+            "eventType": "Lead",
+            "isInitSkip": true
+          },
+          "outgoingEdgeId": "domiy4pjr0d3b81pk7phlmb5"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 340,
+        "y": 45.75
+      }
+    },
+    {
+      "id": "ii57ra20yxhumi8egcwhm7zt",
+      "title": "INICIO FUNIL AUDIO",
+      "blocks": [
+        {
+          "id": "xyg5uj56b4402t3cdm1rhmcr",
+          "type": "Wait",
+          "groupId": "ii57ra20yxhumi8egcwhm7zt",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "t366zf1kvvnoa05c5j3xq41u",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/t366zf1kvvnoa05c5j3xq41u?v=1689769683749"
+          },
+          "groupId": "ii57ra20yxhumi8egcwhm7zt",
+          "outgoingEdgeId": "uoyo6jyesmz761rgaz9r7oa3"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 723.33,
+        "y": -1108.7
+      }
+    },
+    {
+      "id": "fdwny5e61t9l5ropmte5ydoz",
+      "title": "PERGUNTAS ESCREVER",
+      "blocks": [
+        {
+          "id": "opfgal013ci9e4fg8orm6jzy",
+          "type": "Wait",
+          "groupId": "fdwny5e61t9l5ropmte5ydoz",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "p8f1m9ik3vdmjoc1272rrxwe",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Perfeito!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fdwny5e61t9l5ropmte5ydoz"
+        },
+        {
+          "id": "gzlcr57vhr94pj6wbx0c37lj",
+          "type": "Wait",
+          "groupId": "fdwny5e61t9l5ropmte5ydoz",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "mgud2ayh63pyw3rw7b7xh8gk",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Hoje qual o seu maior incomôdo relacionado a ereção hoje? "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Clique na opção que mais afeta você:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fdwny5e61t9l5ropmte5ydoz"
+        },
+        {
+          "id": "o62hj9xx29uttbgiurzjrkot",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "i6o44m1upsyk2r10qhsrguxp",
+              "type": 0,
+              "blockId": "o62hj9xx29uttbgiurzjrkot",
+              "content": "Não tenho tesão",
+              "outgoingEdgeId": "j0il87kb9vyzvjmivxxfw0de"
+            },
+            {
+              "id": "tbut7pu0t8j7ka6wd1s8lmo0",
+              "type": 0,
+              "blockId": "o62hj9xx29uttbgiurzjrkot",
+              "content": "Gozo rápido",
+              "outgoingEdgeId": "dg9qkk4re9dkeqyldfufyo0o"
+            },
+            {
+              "id": "d2p8awep5zipkons73s8mqob",
+              "type": 0,
+              "blockId": "o62hj9xx29uttbgiurzjrkot",
+              "content": "Pênis é pequeno",
+              "outgoingEdgeId": "i18s4nlhis43kw773f5ebf8x"
+            },
+            {
+              "id": "izj15yaso9r1x3q15ttp5b8f",
+              "type": 0,
+              "blockId": "o62hj9xx29uttbgiurzjrkot",
+              "content": "Impotência",
+              "outgoingEdgeId": "llhjkj7j9sdeikqqca2utseq"
+            }
+          ],
+          "groupId": "fdwny5e61t9l5ropmte5ydoz",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1122.03,
+        "y": 568.28
+      }
+    },
+    {
+      "id": "kjpyrh4y9ih0f3g5ssx0392c",
+      "title": "AUDIO PERGUNTAS",
+      "blocks": [
+        {
+          "id": "dbpdv8lt8jwei4av9baj3kf0",
+          "type": "Wait",
+          "groupId": "kjpyrh4y9ih0f3g5ssx0392c",
+          "options": {
+            "secondsToWaitFor": "17"
+          }
+        },
+        {
+          "id": "fhbpetzwpvw7hobt619b1p1w",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Hoje qual o seu maior incomôdo relacionado a ereção? "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Clique na opção que mais afeta você:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+        },
+        {
+          "id": "my56g6xmdxahqxhgck066pg2",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "sjjw4yy3f6sxc9f4qvpqvmt6",
+              "type": 0,
+              "blockId": "my56g6xmdxahqxhgck066pg2",
+              "content": "Não tenho tesão",
+              "outgoingEdgeId": "kqk861v99754ktbn645fs7ie"
+            },
+            {
+              "id": "ldj4etc9e1pen2in8o8jihcf",
+              "type": 0,
+              "blockId": "my56g6xmdxahqxhgck066pg2",
+              "content": "Gozo rápido",
+              "outgoingEdgeId": "h3igorrnvbn3mmladxxsio2g"
+            },
+            {
+              "id": "wf0tc0um5c8wsp8arzf04ggh",
+              "type": 0,
+              "blockId": "my56g6xmdxahqxhgck066pg2",
+              "content": "Pênis é pequeno",
+              "outgoingEdgeId": "w68jl1nnb0c92b8h7n8hywzm"
+            },
+            {
+              "id": "dx2ecbzpo65iq63jumvuy5ch",
+              "type": 0,
+              "blockId": "my56g6xmdxahqxhgck066pg2",
+              "content": "Impotência",
+              "outgoingEdgeId": "fjo1dvvhcoor6g6wysde7g74"
+            }
+          ],
+          "groupId": "kjpyrh4y9ih0f3g5ssx0392c",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 751.66,
+        "y": -819.13
+      }
+    },
+    {
+      "id": "p2yragspq4ktp515seou2mnb",
+      "title": "NÃO TENHO TESÃO",
+      "blocks": [
+        {
+          "id": "e0als10osfvd8fjhmtswikie",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "gyj2zq9ahrdlsmaetqzf4476",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Às vezes é necessário uma injeção de ânimo nas nossas vidas, aquela apimentada no relacionamento."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "modojfy5t4k5tp1nzn6l67bl",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "tx213wrj8lsheel3l0teqo6v",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E a "
+                  },
+                  {
+                    "bold": true,
+                    "text": "libido é a manifestação da sexualidade e do desejo sexual"
+                  },
+                  {
+                    "text": ", e ela é regulada por hormônios, e também por nossas emoções impactando todas as áreas da nossa vida. "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "b22akbv7isw7aqpz3x5alkro",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "r2etilvk2en5ojyf2aph4k8g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Além desses fatores físicos e psicológicos, existem também algumas alterações causadas por disfunção hormonal, doenças renais crônicas"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "j6cnwg1n55b05lw6uhrdz5d2",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "zqypxfd05rmeordem8bvovd6",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Assim como, alguns medicamentos usados para tratamento de diabetes, próstata e ansiedade, trazendo esse desinteresse sexual parcial ou total"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "dykud2lzg90tq21389ybeg5v",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "fhzqjptmnvxy8ssnk0yrqffm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A forma de melhorar essa condição é: dormindo melhor, praticando exercícios físicos e ter uma alimentação rica em antioxidantes, além de minerais como o magnésio e zinco "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "qbc5d4c084in8cpm4bfjus5h",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "svhzrswo1mwtarffw02bt5su",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Facilitando toda a reposição do hormônio masculino e regulando os níveis dos mesmos no organismo"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p2yragspq4ktp515seou2mnb"
+        },
+        {
+          "id": "g8lovbsi4hh5z429wz5sftcz",
+          "type": "Wait",
+          "groupId": "p2yragspq4ktp515seou2mnb",
+          "options": {
+            "secondsToWaitFor": "3"
+          },
+          "outgoingEdgeId": "byodpcxzuwmkbtwzl08zwi9k"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1602.5,
+        "y": -127.46
+      }
+    },
+    {
+      "id": "ipbwufl8ut9oxmzh105bpczk",
+      "title": "Group #6",
+      "blocks": [
+        {
+          "id": "zvup3a63b1t86oddzj7349df",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Conseguiu entender tudo até até aqui?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "v1b0jci3j6rdumk6242o7d6a",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "gtb1tpahqq6bzj05kax6jk7u",
+              "type": 0,
+              "blockId": "v1b0jci3j6rdumk6242o7d6a",
+              "content": "SIM"
+            }
+          ],
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "mjjm45jvelk9ou77g7qid6i8",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "h2arc2k52ay7y2x9k6v260ku",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ótimo!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "kquffs9hp3d57imomlmtf8qv",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "m3q95zacmn14rqro94x77g9a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso você possua mais de 40 anos, é importante ficar atento a essas alterações hormonais e realizar além das dicas já citadas a suplementação desses antioxidantes, vitaminas e minerais"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "iae1p3obd5pytop9n4wszzcn",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "cv36vc03t5fzgp3pvsblf4eb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "É o caso dessa pessoa aqui abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "yyczb88oljz18h80yxzgb1y3",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "zkgl8ku6wutsa5t2471r9xup",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "mu643qrl37e0ehqqyz5xsg3b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse composto suplementar, contém propriedades antioxidantes, vitaminais e minerais essenciais para a saúde do homem, além de ser totalmente natural e livre de efeitos colaterais."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "h2awha4n7156brb4cu416die",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "mtg3wbj6npxjj60kijgutv1b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ipbwufl8ut9oxmzh105bpczk"
+        },
+        {
+          "id": "d9t6lswrvf5lulsjjgydshg3",
+          "type": "Wait",
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "a9hhrpjthtdyw0aa5zcer0xw",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "zmcl7gaqjkxvqsffaajx444d",
+              "type": 0,
+              "blockId": "a9hhrpjthtdyw0aa5zcer0xw",
+              "content": "SIM",
+              "outgoingEdgeId": "tj5ra60au0xrtg948ev02zxy"
+            },
+            {
+              "id": "twd7p49udofgxkjaf84adpqe",
+              "type": 0,
+              "blockId": "a9hhrpjthtdyw0aa5zcer0xw",
+              "content": "NÃO",
+              "outgoingEdgeId": "jqtrq9ctxiruei96vfnhur1a"
+            }
+          ],
+          "groupId": "ipbwufl8ut9oxmzh105bpczk",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2140.42,
+        "y": -50.16
+      }
+    },
+    {
+      "id": "wmpnj56sfbmfqt6f6m60r2g2",
+      "title": "Group #8",
+      "blocks": [
+        {
+          "id": "b23zz6lt0mp7yp7x0x8ikpv3",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "lqqt2snksfewa1yzwmhu9ss3",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou disponibilizar uma amostra grátis desse tratamento para você."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "usngked9cjnbelu692bmicll",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "r13bwp6oq6scl52ikzl373jg",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me informe seu nome completo abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "h1lpawyepnlehvlc5u6jfw3y",
+          "type": "text input",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Seu Nome Completo"
+            },
+            "variableId": "vy064uzle3clxj65p3v12ns81"
+          }
+        },
+        {
+          "id": "c11vzm87y4weyhen0qubldce",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora me informe seu número de telefone/whatsapp abaixo: "
+                  },
+                  {
+                    "bold": true,
+                    "text": "(dessa forma DDD+NUMERO) "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "zouzmnu1dmmhlmx5sw3y4q2d",
+          "type": "phone number input",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "labels": {
+              "button": "Enviar Telefone",
+              "placeholder": "11 9 99009900"
+            },
+            "variableId": "vmre5vzsrq92j6cxhoifggb37",
+            "defaultCountryCode": "BR",
+            "retryMessageContent": "Esse número de telefone não é válido"
+          }
+        },
+        {
+          "id": "pie962w7hpj7zkieoa17ld7l",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual o CEP do seu endereço?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "i837lz3rr3y7pfxbvzq6r8ut",
+          "type": "number input",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "labels": {
+              "button": "Meu CEP",
+              "placeholder": "59100-100"
+            },
+            "variableId": "vggr10jn6p4gxy4yls3vo8hm4"
+          }
+        },
+        {
+          "id": "k597wmg2bcrufg9f0aqkpp23",
+          "type": "Google Sheets",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "action": "Insert a row",
+            "sheetId": "0",
+            "cellsToInsert": [
+              {
+                "id": "s9d4mi3monwpnm2zazp4sriz",
+                "value": "{{Nome}}",
+                "column": "nome"
+              },
+              {
+                "id": "e3rw0olg27o0ww6h61mkuhvt",
+                "value": "{{Telefone}}",
+                "column": "telefone"
+              },
+              {
+                "id": "ha1nblcez2ba66wi9lb47z02",
+                "value": "{{CEP}}",
+                "column": "cep"
+              }
+            ],
+            "credentialsId": "clk93wy44002tjt0gerhxwjai",
+            "spreadsheetId": "10c1igtlE1t6TMy2-plH8StFa1jTzejdmevIvyKJOf9w"
+          }
+        },
+        {
+          "id": "n3gb4u7loqjjwe8cqc1ttzcz",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "ql1tflsh93yxeu8pwnucnzj0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Como informado o custo da amostra é de R$ 0,00 "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "wphxggqq3498kb2i0dotx68q",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "p0ancmi1sex2oqp9rz0q96zg",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "De acordo com o CEP informado o valor da Taxa de envio é de R$29,73"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "fev1d91gvz7heon9wr2bj9wj",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "qbawptcxpumh9endzbu288w8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Totalizando R$0,00 Amostra Grátis + Taxa de Frete R$29,73 = "
+                  },
+                  {
+                    "bold": true,
+                    "text": "R$29,73"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+        },
+        {
+          "id": "eh3ev8tkedcwzkmya607v3c5",
+          "type": "Wait",
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "z27nbxogcdwpn6xadr20w7su",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "dyy9vviodebz7oj1am2l6be4",
+              "type": 0,
+              "blockId": "z27nbxogcdwpn6xadr20w7su",
+              "content": "Cartão de Crédito",
+              "outgoingEdgeId": "au0l10triulu9oe07u9ryydq"
+            },
+            {
+              "id": "oxnplaof689lb0zl12uorsa8",
+              "type": 0,
+              "blockId": "z27nbxogcdwpn6xadr20w7su",
+              "content": "Pix",
+              "outgoingEdgeId": "pe10peeb2pd0fyjb07gncua4"
+            },
+            {
+              "id": "yf2c9g3k829kz5q8ppasm4h1",
+              "type": 0,
+              "blockId": "z27nbxogcdwpn6xadr20w7su",
+              "content": "Boleto",
+              "outgoingEdgeId": "qsymk6e4saocsehj20kdev2j"
+            }
+          ],
+          "groupId": "wmpnj56sfbmfqt6f6m60r2g2",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2567.53,
+        "y": 437
+      }
+    },
+    {
+      "id": "rmpjc9tkstnvyx4yni8u3kt7",
+      "title": "GOZO RÁPIDO",
+      "blocks": [
+        {
+          "id": "km9qwcqs1fv3rzck1q12spuk",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "yojx7yfmokvvy3fwtb6ba5hm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Entendo você, mas, fique tranquilo que você não é o único que passa por esse problema."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "z6fm4se8qmflyqx58ej8sh0b",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "nah1jnlzio1gml2j7cp3jm3e",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A ejaculação precoce é mais comum do que os homens imaginam, atingindo por volta de 30% da população masculina, segundo a Sociedade Brasileira de Urologia. "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "mkvc2k3qrp9e80aqsb7bjcki",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "q2af6ce6wdt5xv7ka0odrd5h",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Boa parte dos problemas que causam essa condição são psicológicos, bem como: ansiedade, culpa, expectativas irrealistas a respeito do desempenho na cama, falta de autoconfiança, problemas no relacionamento"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "n9wigrh2yguv4zp83hamdvhq",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "yhcujqqppkxj9mxr9lflbba8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mas, temos boas notícias, essa condição é totalmente tratável!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "yv0c8es25htju899m9p8pzwv",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "ac019imma0j7mk4nb5t7iq0u",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Por volta do 40 anos o homem começa a sofrer com desequilíbrios hormonais."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "yz4kfgj2lzkcpu3eilwn6qak",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "jvt1wg2c131hnug15pvndy75",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esses desequilíbrios hormonais, como níveis elevados de testosterona, podem influenciar a resposta ejaculatória, embora isso seja menos comum. "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "ilrhc7x7zc2htz5u9vy2zvfc",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "ebhibh2q3n15jn7wvi14v3nz",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Já em alguns casos de condições médicas, como inflamação na próstata (prostatite) ou problemas na tireoide, também podem estar relacionadas à ejaculação precoce."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "rzvu674dz41a7qd52e458ccd",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "ea5fwd864nnlrbl79v1yqrsm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Além disso para aqueles que precisam tomar algum medicamento, pode haver efeitos colaterais que afetam a função sexual, incluindo a ejaculação precoce."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "o2s2oy62kvnclydghqsrk5pm",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "gj58sh389qfuxcqj925q7krl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Caso você possua mais de 40 anos, é importante ficar atento a essas desequilíbrios hormonais e se cuidar com as dicas já citadas, além de realizar a suplementação de antioxidantes, vitaminas e minerais fundamentais para o saúde sexual"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "gm3sjn5g12e0ryhzfmjylcla",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "qjzt6xrzqisyuahnbduskm0o",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Como o Jorge aqui neste caso abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "n8e870lcpnpadldk52vk27mm",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=sharehttps://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "p0yb3nla7xid88yi8vo3euau",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "rwfye258rre55wsbxmwodijx",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "rdrt1mceo28mr91t5kmiemst",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+        },
+        {
+          "id": "m4nx0amnherxaq44pcy4wb29",
+          "type": "Wait",
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "eequuu2xl8ce4ndxt8pfnpio",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "j6by0ogsuvfu76hyzcmn82u6",
+              "type": 0,
+              "blockId": "eequuu2xl8ce4ndxt8pfnpio",
+              "content": "SIM",
+              "outgoingEdgeId": "mxcb67wqz9nee3dvh0a15v19"
+            },
+            {
+              "id": "qdmiroxlfuxzgzea9bi0q48o",
+              "type": 0,
+              "blockId": "eequuu2xl8ce4ndxt8pfnpio",
+              "content": "NÃO",
+              "outgoingEdgeId": "pvfndxbjdcay3iav7otdjgmc"
+            }
+          ],
+          "groupId": "rmpjc9tkstnvyx4yni8u3kt7",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1286.7,
+        "y": 1440.64
+      }
+    },
+    {
+      "id": "kbceqq4qqplpxnkmxqrsa4qw",
+      "title": "PÊNIS PEQUENO",
+      "blocks": [
+        {
+          "id": "dj2jxw52bk60on59du1i6jkx",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "mxh4vic6hzzerwsw20nnjs01",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Entendo você, mas, fique tranquilo que você não é o único homem que tem esse condição"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "tk9ldkdf4u0gldkqx4fkuwks",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "p0tbxb6xnkjebr94fh9v3zhl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vamos lá, considera-se como normais os pênis eretos de pessoas adultas que meçam entre 8 e 23 centímetros. "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "ompwqv3r4cibv2kv7vzg0qb3",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "x7883c6qaqmqjsyeaafvxnzd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O tamanho médio do pênis dos brasileiros fica entre 12 e 14 cm e em cerca de 60% dos homens a circunferência média fica entre 10 e 12,5 cm."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "v3xdi12u9marn6ssa1udew31",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "nqg2mr5n2xenc1mn615eshk8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E logo depois de saber disso vem aquela pergunta, tem como aumentar de tamanho?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "lwqz5t2zza70zcj61irbxqhr",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "phc0y8z48oopn4qsukzagxyc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E a resposta é "
+                  },
+                  {
+                    "bold": true,
+                    "text": "SIM, "
+                  },
+                  {
+                    "text": "tem como aumentar o tamanho do seu pênis"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "my3xkmp8ofk9799hgt7wnomp",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "udcigddghuos44hbq1tn80tt",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O pênis é um órgão com capacidade de aumentar em até 20x o seu tamanho quando flácido "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "h5x1nrsd057fx8h3dkogwl3z",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "adun79it4zy5ica19wfcs8rv",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E para que isso seja possível, você precisa ter principalmente uma excelente circulação sanguinéa e estar bastante excitado "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "m7qewczx7788kwutdov34h8v",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "ej2kqmjhmbbm0vbrkzuquyet",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou apresentar uma imagem para ilustrar o que estou falando "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "b940zr2zqhx942t0nk11dt20",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/b940zr2zqhx942t0nk11dt20?v=1689722816797"
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "fiezxh0aohso2gx5ls1boj6g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ai está a anatomia de um pênis, nessa imagem estamos vendo o que é chamado de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "CORPO CAVERNOSO, "
+                  },
+                  {
+                    "text": "essa área do pênis é responsável pela rigidez da ereção."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "kutsnsr1bziqam143tudjqqg",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "15"
+          }
+        },
+        {
+          "id": "wsqz4kbou09dgvxt6r94rdam",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse tubos com microvasos, se enchem de sangue, onde por sua vez é coberto de um tecido fibroso chamado de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "TÚNICA, "
+                  },
+                  {
+                    "text": "ficando rígido e ereto"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "qnparx4rerm1u8fet8cntbl0",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "rx312y4h78m30m02kisw8tsa",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para que você tenha essas condições de circulação e libido excelentes"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "ak8e0c5fj7ffgaj88l2bogj2",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "k77obvbbnep5j5v23yz67ekn",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mas, sabemos que após os 40 anos os homens sofrem com disturbios hormonais sérios"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "rwopthkmgzubee0lwfkv3y9w",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "frtxuelyuq0fw9gzx3m7ki0g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Que causam falta de apetite sexual, diminuição do hormônio masculino, além de diversos outros problemas"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "mmva64ojaaskl9y1h9pvwngv",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "zk5ujwl40nly1vgpbm5oqkog",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para melhorar essa condição de forma natural é necessário, dormir bem, praticar exercícios físicos e se alimentar adequadamente,"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "c7tqn5pjlnq593260ai3pcyv",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "kmcemq7a5zuepe0ttr8c4umx",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Além de utilizar suplementação rica em antioxidantes, vitaminas e minerais essenciais para o homem"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "huoylqv2r662p2a1cr6ioli3",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "wqivlx4yee9m1539xmbx8awi",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "você também pode utilizar compostos naturais como o que o Sr. Jorge utiliza no seu dia-a-dia, olha só o depoimento dele"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "b7ahumzdtua003iehi2psen8",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "yigggj7p2ha0ocl6yebzwtbf",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "p68wgn50hzgyf8ek2ihx0srp",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse composto suplementar, é capaz de mudar o seu jogo, pois, é rico em propriedades antioxidantes, vitaminais e minerais essenciais, além de ajudar na melhora da circulação diretamente nos corpos cavernosos, e tudo isso de forma natural e livre de efeitos colaterais."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "zkgnlj745ih9u0ja1be424dn",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "lhs6crymajgx0m5de2omjb3h",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja ter acesso e experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+        },
+        {
+          "id": "ucj72x075br0ty861wxhbwo1",
+          "type": "Wait",
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "o3ewoz48n1pg88iaf5p6fpp6",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "t25ekwwrryfrpf7rsavwxt5j",
+              "type": 0,
+              "blockId": "o3ewoz48n1pg88iaf5p6fpp6",
+              "content": "SIM",
+              "outgoingEdgeId": "d8o9o6vwhc0uaeuocw61d1cm"
+            },
+            {
+              "id": "swepyrsam6yfa1j80rupfmap",
+              "type": 0,
+              "blockId": "o3ewoz48n1pg88iaf5p6fpp6",
+              "content": "NÃO",
+              "outgoingEdgeId": "p31keylggygvs7gsn9p6i0i0"
+            }
+          ],
+          "groupId": "kbceqq4qqplpxnkmxqrsa4qw",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1673.46,
+        "y": 1502.77
+      }
+    },
+    {
+      "id": "l9y04pqqjai8y02zpzccc1ia",
+      "title": "IMPOTÊNCIA",
+      "blocks": [
+        {
+          "id": "cydr9zgzhllvteywfkjoen3n",
+          "type": "Wait",
+          "groupId": "l9y04pqqjai8y02zpzccc1ia",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "u56mfsp3oqrky5dpe680m3gi",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você tem ou já apresentou algum desses problemas de saúde, "
+                  },
+                  {
+                    "bold": true,
+                    "text": "se sim, marque a opção referente"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "l9y04pqqjai8y02zpzccc1ia"
+        },
+        {
+          "id": "r7ghr5kpx2cuz2f9823cqf2e",
+          "type": "Wait",
+          "groupId": "l9y04pqqjai8y02zpzccc1ia",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "wpwc7yagkbk7o66lsz0ayjrq",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "y2xmtzmor4nkqb8j09p8y3pq",
+              "type": 0,
+              "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+              "content": "HIPERTENSÃO",
+              "outgoingEdgeId": "lvc2e575cb3eqg2ov65d03yk"
+            },
+            {
+              "id": "daukmgqdb2lubxi6a1p77rhb",
+              "type": 0,
+              "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+              "content": "DIABETES",
+              "outgoingEdgeId": "sygnhjnpgwc5i8t3wsknepp8"
+            },
+            {
+              "id": "izzz60tlz9prv1m6m12dj7pm",
+              "type": 0,
+              "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+              "content": "PROBLEMAS NA PRÓSTATA",
+              "outgoingEdgeId": "lwqefukhky6pe4wrhifntoib"
+            }
+          ],
+          "groupId": "l9y04pqqjai8y02zpzccc1ia",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 374.76,
+        "y": 1002.68
+      }
+    },
+    {
+      "id": "t0t97169qkhegm4bid0p9yqv",
+      "title": "IMPOTÊNCIA AUDIO",
+      "blocks": [
+        {
+          "id": "so8g453i4ifkr4f0g9oq4iql",
+          "type": "Wait",
+          "groupId": "t0t97169qkhegm4bid0p9yqv",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "sr1i0l02uy1hy8bb8pglajnv",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você tem ou já apresentou algum desses problemas de saúde, "
+                  },
+                  {
+                    "bold": true,
+                    "text": "se sim, marque a opção referente"
+                  },
+                  {
+                    "text": ":"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "t0t97169qkhegm4bid0p9yqv"
+        },
+        {
+          "id": "hzy3nyen164j59vmvf7hn7uo",
+          "type": "Wait",
+          "groupId": "t0t97169qkhegm4bid0p9yqv",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "cr8cggv6yx4mgrtb2ak4dn4k",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "udyh3u6ol3nz1yenbt93xh6y",
+              "type": 0,
+              "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+              "content": "HIPERTENSÃO",
+              "outgoingEdgeId": "prknkox1z361dwx2ti307rzp"
+            },
+            {
+              "id": "chgnx6opwxbq3jz0iadnvk2a",
+              "type": 0,
+              "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+              "content": "DIABETES",
+              "outgoingEdgeId": "jv0792bz7q0vlwfvbj1tsmzw"
+            },
+            {
+              "id": "roo9va2fish0afq1qgwb04nz",
+              "type": 0,
+              "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+              "content": "PROBLEMAS NA PRÓSTATA",
+              "outgoingEdgeId": "xpxu92k08lc5zavmyn7cxwrl"
+            }
+          ],
+          "groupId": "t0t97169qkhegm4bid0p9yqv",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 322.76,
+        "y": -1367.32
+      }
+    },
+    {
+      "id": "fq23un1t758xj0keyjd5f5jp",
+      "title": "CHECKOUT",
+      "blocks": [
+        {
+          "id": "zkldhl7kwhv7udte1yp9hnv7",
+          "type": "Redirect",
+          "groupId": "fq23un1t758xj0keyjd5f5jp",
+          "options": {
+            "url": "https://mfpdigital3.pay.yampi.com.br/r/B5HYAUYK2F",
+            "isNewTab": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3008.86,
+        "y": 1552.77
+      }
+    },
+    {
+      "id": "hsjtkxkp0185o7us8sfapw1x",
+      "title": "Group #13",
+      "blocks": [
+        {
+          "id": "yqrjxcgw18hqdxadfsm178u2",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/yqrjxcgw18hqdxadfsm178u2?v=1689775411486"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "ll2ffsuoi39j8tt24usequfu",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "50"
+          }
+        },
+        {
+          "id": "oqd7mdvvda9jy0250nynb07k",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/oqd7mdvvda9jy0250nynb07k?v=1689775452779"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "s1igr5lz2zu7rszu3wnpo8ni",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "60"
+          }
+        },
+        {
+          "id": "d7k1sb2boi5fntuu3ol5u1vh",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/d7k1sb2boi5fntuu3ol5u1vh?v=1689775501482"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "y4xv61qbi7ahxp5t3ht5udxj",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "46"
+          }
+        },
+        {
+          "id": "ox7hx808zxf7l9s5qxizgbgd",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/ox7hx808zxf7l9s5qxizgbgd?v=1689775561048"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "qbk4p1car00i9izu7868tiq6",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "55"
+          }
+        },
+        {
+          "id": "vx8wn2p05yyz8qwo6ejzhahe",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/vx8wn2p05yyz8qwo6ejzhahe?v=1689775829624"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "cvajd1sjy9tivz0bbby0wei5",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "16"
+          }
+        },
+        {
+          "id": "lkowh695qsqdtjjotqn5303j",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "fecnnlmpekd4ppxykpirrk3r",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/fecnnlmpekd4ppxykpirrk3r?v=1689775622898"
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "hvfgq8be6du17offo1txifsn",
+          "type": "Wait",
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "secondsToWaitFor": "65"
+          }
+        },
+        {
+          "id": "zdx4ub3bnje621vycljxojl5",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "hsjtkxkp0185o7us8sfapw1x"
+        },
+        {
+          "id": "xdor04fnn9e0v712ayptyz1d",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "jvujiq79l4hwx4typi0eo0yh",
+              "type": 0,
+              "blockId": "xdor04fnn9e0v712ayptyz1d",
+              "content": "SIM",
+              "outgoingEdgeId": "tcyp15zc4eyawoaod8xavvok"
+            },
+            {
+              "id": "nt4rg4fzixy33w8s6zfnh83q",
+              "type": 0,
+              "blockId": "xdor04fnn9e0v712ayptyz1d",
+              "content": "NÃO",
+              "outgoingEdgeId": "xs6sf4hhplv99hwdz7slkwr9"
+            }
+          ],
+          "groupId": "hsjtkxkp0185o7us8sfapw1x",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1138.57,
+        "y": -971.5
+      }
+    },
+    {
+      "id": "qtcab8gwg6glxtt92zk0bt69",
+      "title": "SOLICITAÇÃO DADOS AUDIO",
+      "blocks": [
+        {
+          "id": "riopdaggostdsakink5udyje",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/riopdaggostdsakink5udyje?v=1689789508467"
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "qu38fxqa0fsghahk97ks6r2o",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me informe seu nome completo abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "obcewx3be531tp4yykkszu40",
+          "type": "text input",
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Seu Nome Completo"
+            },
+            "variableId": "vy064uzle3clxj65p3v12ns81"
+          }
+        },
+        {
+          "id": "j9qqqfn3ikdfdw0tm6n0kcmh",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/j9qqqfn3ikdfdw0tm6n0kcmh?v=1689789589877"
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "kdktbx3g0lynj3rvyt8yk1n0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora me informe seu número de telefone/whatsapp abaixo: "
+                  },
+                  {
+                    "bold": true,
+                    "text": "(dessa forma DDD+NUMERO) "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "vvo9ad8isnhhpr20clasdzwh",
+          "type": "phone number input",
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "labels": {
+              "button": "Enviar Telefone",
+              "placeholder": "11 9 99009900"
+            },
+            "variableId": "vmre5vzsrq92j6cxhoifggb37",
+            "defaultCountryCode": "BR",
+            "retryMessageContent": "Esse número de telefone não é válido"
+          }
+        },
+        {
+          "id": "atnz2u51ytm17q8lcg32w3us",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/atnz2u51ytm17q8lcg32w3us?v=1689789696385"
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "apy30076izovy7pcxgrztudt",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual o CEP do seu endereço?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "osl7r3m0sal3nuh2kxpdcqpe",
+          "type": "number input",
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "labels": {
+              "button": "Meu CEP",
+              "placeholder": "59100-100"
+            },
+            "variableId": "vggr10jn6p4gxy4yls3vo8hm4"
+          }
+        },
+        {
+          "id": "y3tcbdfdnf4e5haaqebokqrv",
+          "type": "Google Sheets",
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "action": "Insert a row",
+            "sheetId": "0",
+            "cellsToInsert": [
+              {
+                "id": "s9d4mi3monwpnm2zazp4sriz",
+                "value": "{{Nome}}",
+                "column": "nome"
+              },
+              {
+                "id": "e3rw0olg27o0ww6h61mkuhvt",
+                "value": "{{Telefone}}",
+                "column": "telefone"
+              },
+              {
+                "id": "ha1nblcez2ba66wi9lb47z02",
+                "value": "{{CEP}}",
+                "column": "cep"
+              }
+            ],
+            "credentialsId": "clk93wy44002tjt0gerhxwjai",
+            "spreadsheetId": "10c1igtlE1t6TMy2-plH8StFa1jTzejdmevIvyKJOf9w"
+          }
+        },
+        {
+          "id": "ku9l1ila69dvxownhfysi7bo",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/ku9l1ila69dvxownhfysi7bo?v=1689789850497"
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "ehrqu5er07ixd3n4k145lkfk",
+          "type": "Wait",
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "secondsToWaitFor": "30"
+          }
+        },
+        {
+          "id": "qk5f3pnznfadix7k14e2p05r",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "ay42sor226aclibgbz598la9",
+              "type": 0,
+              "blockId": "qk5f3pnznfadix7k14e2p05r",
+              "content": "SIM"
+            }
+          ],
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "jbffdkfkwyy2d1vx9wvk4up8",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/jbffdkfkwyy2d1vx9wvk4up8?v=1689789992286"
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "pvpfb7vk23uutya3ktq8qqma",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Como você prefere pagar este valor?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        },
+        {
+          "id": "kzqj9bluanbqmfq8gbam88i6",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "qs9jf5njh8synown1ve5npjw",
+              "type": 0,
+              "blockId": "kzqj9bluanbqmfq8gbam88i6",
+              "content": "Cartão de Crédito",
+              "outgoingEdgeId": "w1vwsaq9rn24pu32xyz9qfpr"
+            },
+            {
+              "id": "boy7ccx12k9qpsrsbrjlpx5v",
+              "type": 0,
+              "blockId": "kzqj9bluanbqmfq8gbam88i6",
+              "content": "Pix",
+              "outgoingEdgeId": "vpneduczydnpptzuxy4zachh"
+            },
+            {
+              "id": "wjxhukjr4jzjh7cs0l2oaw7y",
+              "type": 0,
+              "blockId": "kzqj9bluanbqmfq8gbam88i6",
+              "content": "Boleto",
+              "outgoingEdgeId": "n5az7yvapcqi0h25m3pm60bg"
+            }
+          ],
+          "groupId": "qtcab8gwg6glxtt92zk0bt69",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "x5av0b6xmdvfoxndl51hoetv",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qtcab8gwg6glxtt92zk0bt69"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1505.43,
+        "y": -1841.06
+      }
+    },
+    {
+      "id": "caefgra5mk2o4g2i4ite1ukh",
+      "title": "Group #16",
+      "blocks": [
+        {
+          "id": "ii0jng7ng97z5pi6tuw4286a",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/ii0jng7ng97z5pi6tuw4286a?v=1689790929647"
+          },
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        },
+        {
+          "id": "tmjogdkodw3ewxkwju90ek7n",
+          "type": "Wait",
+          "groupId": "caefgra5mk2o4g2i4ite1ukh",
+          "options": {
+            "secondsToWaitFor": "60"
+          }
+        },
+        {
+          "id": "nh30bs0v30bdmqf5w32jwjat",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/nh30bs0v30bdmqf5w32jwjat?v=1689790965769"
+          },
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        },
+        {
+          "id": "mwxhz109mr1su1kz1t7twldx",
+          "type": "Wait",
+          "groupId": "caefgra5mk2o4g2i4ite1ukh",
+          "options": {
+            "secondsToWaitFor": "134"
+          }
+        },
+        {
+          "id": "qt04qjurmm1yhtjww4k4ys1p",
+          "type": "video",
+          "content": {},
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        },
+        {
+          "id": "elgjamt9hf1wcm5028b1r3ga",
+          "type": "Wait",
+          "groupId": "caefgra5mk2o4g2i4ite1ukh",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "ygdhr0ohvyovzz7zkcuhcrmi",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/ygdhr0ohvyovzz7zkcuhcrmi?v=1689791374088"
+          },
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        },
+        {
+          "id": "s5019o0hxjqw1wqa3d7bimux",
+          "type": "Wait",
+          "groupId": "caefgra5mk2o4g2i4ite1ukh",
+          "options": {
+            "secondsToWaitFor": "76"
+          }
+        },
+        {
+          "id": "j9i09g3ltaczgfebvfive4se",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        },
+        {
+          "id": "ftf08vwno9dq7m4fuw74kje3",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "rqgenovwvimt0aorbj3du54a",
+              "type": 0,
+              "blockId": "ftf08vwno9dq7m4fuw74kje3",
+              "content": "SIM",
+              "outgoingEdgeId": "bcr8j8kck96q8aqbrc52rqry"
+            },
+            {
+              "id": "qxvy4wep2xrfon21oars7dt5",
+              "type": 0,
+              "blockId": "ftf08vwno9dq7m4fuw74kje3",
+              "content": "NÃO",
+              "outgoingEdgeId": "cxvum41m2fc8jeso4a2avpxs"
+            }
+          ],
+          "groupId": "caefgra5mk2o4g2i4ite1ukh",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "ikgd72gi37ard9i1ll7sq0o4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "caefgra5mk2o4g2i4ite1ukh"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1966.76,
+        "y": -1782.83
+      }
+    },
+    {
+      "id": "ux9zoa7r8qy6rbvvef2lnqrb",
+      "title": "Group #16",
+      "blocks": [
+        {
+          "id": "qwi95sw77xc4q4dszr2vqj0p",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\nQuando você tem aí algum problema relacionado a circulação sanguínea, que é o caso de hipertensão, arteriosclerose \n"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "jgkip9ewm6qcuru57xnoct9g",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "melu4uy6d43qpjuruuvmht36",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": " a própria diabetes, quer dizer que você tem uma condição ruim de circulação e possivelmente está afetando sua potência na hora do sexo, então você precisa melhorar essa condição de circulação."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "qp6vbtuck7eu1pi27oqftc98",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "ozwji3kj2tdfmn4hgi2r6qw5",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E como você faz isso?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "zlz4qmlqz857duzkyuigx816",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "kbfkpwid6gjwuoq7jajdjbdk",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": " praticando exercícios físicos, melhorando sua capacidade respiratória, se alimentando de maneira adequada,"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "abj893z9vt9146npsci3lo5y",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "rnzlqya40o08jlphnkdhz8i2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "com uma dieta rica em antioxidantes, vitaminas e minerais que vão dar condição de equilíbrio dos hormônios enquanto você envelhece de forma saudável "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "p1u0zwiowjb1smrw6kbcqbw6",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "u6ep8tmampypweq8jdmd1x6f",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E se você tem mais de 40 isso é primordial, você precisa além de fazer todas essas coisas, se suplementar para manter sua condição hormonal adequada a sua idade"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "akeymicnafn6as9jxztg57jj",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "zwiq2j01co9ukpnkk1fum4h7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Veja o caso do Jorge aqui  caso abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "cznujmkny5h38jfki2vvoo58",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "u8z5pd09zo17oquqrknn9n7d",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "fq2xi8xmf2f60muxhv631g3g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse composto suplementar, contém propriedades antioxidantes, vitaminais e minerais essenciais para a saúde do homem, além de ser totalmente natural e livre de efeitos colaterais."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "zdrlfbvadfbq5evhwv2i9jhy",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "jvq5qmteu4umg3ipop00yijv",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "após os 40 anos, é importante ficar atento a esses desequilíbrios hormonais e se cuidar com as dicas já citadas, além de realizar a suplementação de antioxidantes, vitaminas e minerais de forma adequada "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "t9l2kmejhn73lhuyg4fsxlp7",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "fx482yh489oqvvo67uc4x8i4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "e caso você tenha interesse em conhecer esse produto, eu posso disponbilizar uma AMOSTRA GRÁTIS para você, "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "k3xjfp5wu96n195nifyqwkkt",
+          "type": "Wait",
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "ntw28bqy87qm8wcjhmotj254",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+        },
+        {
+          "id": "sk1us12eq6qwjqm3rto376j4",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "cux0bn990fp1y3h7pdyvs2v8",
+              "type": 0,
+              "blockId": "sk1us12eq6qwjqm3rto376j4",
+              "content": "SIM",
+              "outgoingEdgeId": "imzvlwqxy49edncs0akbvhoa"
+            },
+            {
+              "id": "gfob9yw8exvh8a0x9b77220p",
+              "type": 0,
+              "blockId": "sk1us12eq6qwjqm3rto376j4",
+              "content": "NÃO",
+              "outgoingEdgeId": "rs1yn73ig7lqo3bq470pffq3"
+            }
+          ],
+          "groupId": "ux9zoa7r8qy6rbvvef2lnqrb",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 837.24,
+        "y": 1280.6
+      }
+    },
+    {
+      "id": "p6yhf76opgmg5oyy4w8gkgay",
+      "title": "DOWNSELL",
+      "blocks": [
+        {
+          "id": "y19c16nnu8ec3yjil16dzk7z",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/y19c16nnu8ec3yjil16dzk7z?v=1689793387808"
+          },
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+        },
+        {
+          "id": "tmz333udxmrtts85p5k1qwtx",
+          "type": "Wait",
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "w2t1k9qn3wvzxu4ft273oyxi",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou disponibilizar um "
+                  },
+                  {
+                    "bold": true,
+                    "text": "LIVRO DIGITAL "
+                  },
+                  {
+                    "text": "com o passo a passo para você melhorar sua condição atual no sexo ."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+        },
+        {
+          "id": "yzh1ijh0vros6bc0njxamvae",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me informe seu "
+                  },
+                  {
+                    "bold": true,
+                    "text": "EMAIL"
+                  },
+                  {
+                    "text": " abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+        },
+        {
+          "id": "rjsonf2renncvq21ht8n32pq",
+          "type": "text input",
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Seu Nome Completo"
+            },
+            "variableId": "vzmzqhu9m0gbzmnsvfi4ugrke"
+          }
+        },
+        {
+          "id": "xvmpvjp91ngg0xi7an868dh9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me informe seu "
+                  },
+                  {
+                    "bold": true,
+                    "text": "TELEFONE"
+                  },
+                  {
+                    "text": " abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+        },
+        {
+          "id": "ge4pk36acrg19gox322twiyn",
+          "type": "text input",
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "11 9 99009900"
+            },
+            "variableId": "vmre5vzsrq92j6cxhoifggb37"
+          }
+        },
+        {
+          "id": "u8v8ukewl2w7eyn5pfzkasmk",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me informe seu "
+                  },
+                  {
+                    "bold": true,
+                    "text": "NOME"
+                  },
+                  {
+                    "text": " abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+        },
+        {
+          "id": "g8dsyt63q2hobjao909eqpze",
+          "type": "text input",
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Seu Nome Completo"
+            },
+            "variableId": "vy064uzle3clxj65p3v12ns81"
+          }
+        },
+        {
+          "id": "joeduxxb53bxmk774z3c4bfp",
+          "type": "Google Sheets",
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "action": "Insert a row",
+            "sheetId": "0",
+            "cellsToInsert": [
+              {
+                "id": "s9d4mi3monwpnm2zazp4sriz",
+                "value": "{{Nome}}",
+                "column": "nome"
+              },
+              {
+                "id": "e3rw0olg27o0ww6h61mkuhvt",
+                "value": "{{Telefone}}",
+                "column": "telefone"
+              },
+              {
+                "id": "ha1nblcez2ba66wi9lb47z02",
+                "value": "{{CEP}}",
+                "column": "cep"
+              }
+            ],
+            "credentialsId": "clk93wy44002tjt0gerhxwjai",
+            "spreadsheetId": "10c1igtlE1t6TMy2-plH8StFa1jTzejdmevIvyKJOf9w"
+          }
+        },
+        {
+          "id": "u53ziwrmv3tew6t1dyptduoj",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "nzt7ccp4iac12uwgxxb53kw2",
+              "type": 0,
+              "blockId": "u53ziwrmv3tew6t1dyptduoj",
+              "content": "BAIXE AQUI!",
+              "outgoingEdgeId": "ppekz51k09gaqu0z7nuoexgz"
+            }
+          ],
+          "groupId": "p6yhf76opgmg5oyy4w8gkgay",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3172.67,
+        "y": 2559.73
+      }
+    },
+    {
+      "id": "t0aed8njksb3kpz74vj1nbit",
+      "title": "Group #19",
+      "blocks": [
+        {
+          "id": "rvbckqdqlooul40odzzyx9g7",
+          "type": "Redirect",
+          "groupId": "t0aed8njksb3kpz74vj1nbit",
+          "options": {
+            "url": "https://drive.google.com/file/d/15R5Xesb4HT2EQ6pnXL62ujBMBalgi68a/view?usp=sharing",
+            "isNewTab": false
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2705.62,
+        "y": 3205.65
+      }
+    },
+    {
+      "id": "meon48fj1dp4ajhdqu6684ii",
+      "title": "Group #20",
+      "blocks": [
+        {
+          "id": "lgxbf4ttbpanxzpo50vgxxl7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vamos lá meu amigo a primeira condição para quem tem problemas de próstata é que qualquer medicação que você toma, tem efeitos colaterais ruins no homem, causando impotência, desinteresse, falta de libido e isso é muito preocupante "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "wzzj325m7d9skpi492xazdax",
+          "type": "Wait",
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "o67d3prt1wmijral4im0xf3g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para sua sorte, hoje nós estamos aqui para falar sobre isso, é importante que você mantenha uma alimentação saudável, pratique exercícios físicos"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "hrl21jpdfdrscs1yim0cfklv",
+          "type": "Wait",
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "oohk6424sxx35iqihwkoc0hs",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "e principalmente faça suplementação de antioxidantes, vitaminas e minerais essenciais para manter a saúde da próstata e sexual, principalmente se você já passou dos 40 anos.\n"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "bvuvghk1bo2gn8hdwzab6081",
+          "type": "Wait",
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "rs7ds67sysaj634rotgxqm2g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Veja o caso do Jorge aqui  caso abaixo:"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "tapn0p4k2mtjgyvs10v3obxd",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "kp5wmr0682wfo05lykshzawr",
+          "type": "Wait",
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "h2a0gofjiszichvvd8umeec8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse composto suplementar é rico em antioxidantes, vitaminas e minerais essenciais para a saúde sexual do homem potencializando sua condição de ereção "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "oqnof3it4st2fbukoe2vnl7o",
+          "type": "Wait",
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "oh186jptqnmnbid4tz2autb0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Assim como o Jorge, você deseja experimentar e ter esses resultados com esse composto ? "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "meon48fj1dp4ajhdqu6684ii"
+        },
+        {
+          "id": "ca96g3sbwwf0qwlxii2eywfv",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "wd6cgfxx4gecp2dbndpukr5m",
+              "type": 0,
+              "blockId": "ca96g3sbwwf0qwlxii2eywfv",
+              "content": "SIM",
+              "outgoingEdgeId": "mijhxkmw6emqnyidodhqxu8i"
+            },
+            {
+              "id": "f2lg8w3mthne7u6huo2n7g41",
+              "type": 0,
+              "blockId": "ca96g3sbwwf0qwlxii2eywfv",
+              "content": "NÃO",
+              "outgoingEdgeId": "tld25grynm45dai68j5ehni2"
+            }
+          ],
+          "groupId": "meon48fj1dp4ajhdqu6684ii",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 14.95,
+        "y": 1575.17
+      }
+    },
+    {
+      "id": "kuxmn09ed7twjltb003av4f5",
+      "title": "Group #21",
+      "blocks": [
+        {
+          "id": "hr0q1tc2s3r1sgjetfl8si82",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/hr0q1tc2s3r1sgjetfl8si82?v=1689796184805"
+          },
+          "groupId": "kuxmn09ed7twjltb003av4f5"
+        },
+        {
+          "id": "orilxlna2opn1z1n8pmpz8of",
+          "type": "Wait",
+          "groupId": "kuxmn09ed7twjltb003av4f5",
+          "options": {
+            "secondsToWaitFor": "97"
+          }
+        },
+        {
+          "id": "yioy0asr06hdj8fden5v7c4i",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "kuxmn09ed7twjltb003av4f5"
+        },
+        {
+          "id": "tufxnqaakqcetz3zjcdt4zmm",
+          "type": "Wait",
+          "groupId": "kuxmn09ed7twjltb003av4f5",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "a1k92iidmz3xmb09k39noz0q",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/vvqnro9ijdc9sluytav35u6k?v=1689797524982"
+          },
+          "groupId": "kuxmn09ed7twjltb003av4f5"
+        },
+        {
+          "id": "ij07ycu6qqaqstqnmwr1tfwx",
+          "type": "Wait",
+          "groupId": "kuxmn09ed7twjltb003av4f5",
+          "options": {
+            "secondsToWaitFor": "48"
+          }
+        },
+        {
+          "id": "ix65mb1mvyd9qdzekjuz3ejc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kuxmn09ed7twjltb003av4f5"
+        },
+        {
+          "id": "yvp8qhob95uraoq5by2l6exe",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "nludps06cirk9fgmji7m0qg7",
+              "type": 0,
+              "blockId": "yvp8qhob95uraoq5by2l6exe",
+              "content": "SIM",
+              "outgoingEdgeId": "kn7ib86nrpr6mdcy6gnuy05q"
+            },
+            {
+              "id": "tyzujlu5kmeycg8kds3niabp",
+              "type": 0,
+              "blockId": "yvp8qhob95uraoq5by2l6exe",
+              "content": "NÃO",
+              "outgoingEdgeId": "cgtlp030xvrucge5dpvw4e51"
+            }
+          ],
+          "groupId": "kuxmn09ed7twjltb003av4f5",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -135.81,
+        "y": -1046.74
+      }
+    },
+    {
+      "id": "kd4k5dew6nqixz869nitov69",
+      "title": "Group #22",
+      "blocks": [
+        {
+          "id": "ijjaaxgmqmquwnsmbp9c9yzv",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/ijjaaxgmqmquwnsmbp9c9yzv?v=1689796560343"
+          },
+          "groupId": "kd4k5dew6nqixz869nitov69"
+        },
+        {
+          "id": "jplf4c9imghl80tydkgdv18z",
+          "type": "Wait",
+          "groupId": "kd4k5dew6nqixz869nitov69",
+          "options": {
+            "secondsToWaitFor": "89"
+          }
+        },
+        {
+          "id": "v2xhwqjo25hrya18rf9kclq8",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "kd4k5dew6nqixz869nitov69"
+        },
+        {
+          "id": "h1076xuvtnl7cq5rui8ryhz4",
+          "type": "Wait",
+          "groupId": "kd4k5dew6nqixz869nitov69",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "wnyo42ln8h0auv3gyuwurp4l",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/vvqnro9ijdc9sluytav35u6k?v=1689797524982"
+          },
+          "groupId": "kd4k5dew6nqixz869nitov69"
+        },
+        {
+          "id": "z2810vs3hm8o19yvz89rqafm",
+          "type": "Wait",
+          "groupId": "kd4k5dew6nqixz869nitov69",
+          "options": {
+            "secondsToWaitFor": "48"
+          }
+        },
+        {
+          "id": "iff5gj274fwdzawks0hr77h5",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "kd4k5dew6nqixz869nitov69"
+        },
+        {
+          "id": "a0qjvx1nqhpsut4jujqb0zk3",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "g49ejpchj500g70cxfil30c1",
+              "type": 0,
+              "blockId": "a0qjvx1nqhpsut4jujqb0zk3",
+              "content": "SIM",
+              "outgoingEdgeId": "lognag9hw5lmeh6qmorz3tiq"
+            },
+            {
+              "id": "rcdv0dfillh3jzgf4er2ah2u",
+              "type": 0,
+              "blockId": "a0qjvx1nqhpsut4jujqb0zk3",
+              "content": "NÃO",
+              "outgoingEdgeId": "gyydo2q1rttj1paffvbl9wbc"
+            }
+          ],
+          "groupId": "kd4k5dew6nqixz869nitov69",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -552.48,
+        "y": -1226.07
+      }
+    },
+    {
+      "id": "mtv4lra7qyg96dvbokfga3yk",
+      "title": "Group #23",
+      "blocks": [
+        {
+          "id": "pmfm7ryk5b35z0928ujozv5d",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/pmfm7ryk5b35z0928ujozv5d?v=1689797077719"
+          },
+          "groupId": "mtv4lra7qyg96dvbokfga3yk"
+        },
+        {
+          "id": "vprkx2pfzlckwq8ud5ufaayo",
+          "type": "Wait",
+          "groupId": "mtv4lra7qyg96dvbokfga3yk",
+          "options": {
+            "secondsToWaitFor": "95"
+          }
+        },
+        {
+          "id": "shx7yfeebetivjhind435p2v",
+          "type": "video",
+          "content": {
+            "id": "negVC6h4ERw",
+            "url": "https://youtube.com/shorts/negVC6h4ERw?feature=share",
+            "type": "youtube"
+          },
+          "groupId": "mtv4lra7qyg96dvbokfga3yk"
+        },
+        {
+          "id": "yymrbwlj7ldsyjw1nn7xgkr7",
+          "type": "Wait",
+          "groupId": "mtv4lra7qyg96dvbokfga3yk",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "vvqnro9ijdc9sluytav35u6k",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/blocks/vvqnro9ijdc9sluytav35u6k?v=1689797524982"
+          },
+          "groupId": "mtv4lra7qyg96dvbokfga3yk"
+        },
+        {
+          "id": "yjmck6ekjcxmc86vr9qhe99v",
+          "type": "Wait",
+          "groupId": "mtv4lra7qyg96dvbokfga3yk",
+          "options": {
+            "secondsToWaitFor": "48"
+          }
+        },
+        {
+          "id": "vud2hzg8u8yajysun5abbpgr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você deseja experimentar essa solução?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "mtv4lra7qyg96dvbokfga3yk"
+        },
+        {
+          "id": "n8grgrjrx4o03nrjfjq81lis",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "n9n6018dlyarixbjfzibg3dw",
+              "type": 0,
+              "blockId": "n8grgrjrx4o03nrjfjq81lis",
+              "content": "SIM",
+              "outgoingEdgeId": "hxzki0i5eikpswunz7kcyb4p"
+            },
+            {
+              "id": "u0djsb4s85upo69eupandse5",
+              "type": 0,
+              "blockId": "n8grgrjrx4o03nrjfjq81lis",
+              "content": "NÃO",
+              "outgoingEdgeId": "u4ktbemojz2ycheq4b5ccyxi"
+            }
+          ],
+          "groupId": "mtv4lra7qyg96dvbokfga3yk",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1084.48,
+        "y": -1230.07
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vgo1ou573y95pw3pedsk4iakr",
+      "name": "n"
+    },
+    {
+      "id": "vy064uzle3clxj65p3v12ns81",
+      "name": "Nome"
+    },
+    {
+      "id": "vggr10jn6p4gxy4yls3vo8hm4",
+      "name": "CEP"
+    },
+    {
+      "id": "vmre5vzsrq92j6cxhoifggb37",
+      "name": "Telefone"
+    },
+    {
+      "id": "vzmzqhu9m0gbzmnsvfi4ugrke",
+      "name": "Email"
+    }
+  ],
+  "edges": [
+    {
+      "id": "tpiixoxh2n1hz0no2hv5exgm",
+      "to": {
+        "groupId": "s5kdx746w6f976hijht1i8hy"
+      },
+      "from": {
+        "blockId": "f8557i55o2q5bccv5bm1rt4y",
+        "groupId": "yv6rhhseuelgn1uot8432gl3"
+      }
+    },
+    {
+      "id": "domiy4pjr0d3b81pk7phlmb5",
+      "to": {
+        "blockId": "zfad0y1ivr6og8qeoe2xm73n",
+        "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+      },
+      "from": {
+        "blockId": "pltoxf45qdt198pjzg5qb11u",
+        "groupId": "s5kdx746w6f976hijht1i8hy"
+      }
+    },
+    {
+      "id": "d2zprbg63n21fulsypnm3mtl",
+      "to": {
+        "groupId": "ii57ra20yxhumi8egcwhm7zt"
+      },
+      "from": {
+        "itemId": "cnm9qrejvbzg3xqd4a0bvqpy",
+        "blockId": "iwir4elqqs7d0rwso6a13ybz",
+        "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+      }
+    },
+    {
+      "id": "z5es5dzzb814aq767k544qx5",
+      "to": {
+        "groupId": "fdwny5e61t9l5ropmte5ydoz"
+      },
+      "from": {
+        "itemId": "x5azul4ad41zvnxhdciwidvh",
+        "blockId": "iwir4elqqs7d0rwso6a13ybz",
+        "groupId": "vzgxpp1qqhx16twi0dr94uh2"
+      }
+    },
+    {
+      "id": "j0il87kb9vyzvjmivxxfw0de",
+      "to": {
+        "groupId": "p2yragspq4ktp515seou2mnb"
+      },
+      "from": {
+        "itemId": "i6o44m1upsyk2r10qhsrguxp",
+        "blockId": "o62hj9xx29uttbgiurzjrkot",
+        "groupId": "fdwny5e61t9l5ropmte5ydoz"
+      }
+    },
+    {
+      "id": "byodpcxzuwmkbtwzl08zwi9k",
+      "to": {
+        "groupId": "ipbwufl8ut9oxmzh105bpczk"
+      },
+      "from": {
+        "blockId": "g8lovbsi4hh5z429wz5sftcz",
+        "groupId": "p2yragspq4ktp515seou2mnb"
+      }
+    },
+    {
+      "id": "dg9qkk4re9dkeqyldfufyo0o",
+      "to": {
+        "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+      },
+      "from": {
+        "itemId": "tbut7pu0t8j7ka6wd1s8lmo0",
+        "blockId": "o62hj9xx29uttbgiurzjrkot",
+        "groupId": "fdwny5e61t9l5ropmte5ydoz"
+      }
+    },
+    {
+      "id": "mxcb67wqz9nee3dvh0a15v19",
+      "to": {
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      },
+      "from": {
+        "itemId": "j6by0ogsuvfu76hyzcmn82u6",
+        "blockId": "eequuu2xl8ce4ndxt8pfnpio",
+        "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+      }
+    },
+    {
+      "id": "i18s4nlhis43kw773f5ebf8x",
+      "to": {
+        "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+      },
+      "from": {
+        "itemId": "d2p8awep5zipkons73s8mqob",
+        "blockId": "o62hj9xx29uttbgiurzjrkot",
+        "groupId": "fdwny5e61t9l5ropmte5ydoz"
+      }
+    },
+    {
+      "id": "d8o9o6vwhc0uaeuocw61d1cm",
+      "to": {
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      },
+      "from": {
+        "itemId": "t25ekwwrryfrpf7rsavwxt5j",
+        "blockId": "o3ewoz48n1pg88iaf5p6fpp6",
+        "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+      }
+    },
+    {
+      "id": "llhjkj7j9sdeikqqca2utseq",
+      "to": {
+        "groupId": "l9y04pqqjai8y02zpzccc1ia"
+      },
+      "from": {
+        "itemId": "izj15yaso9r1x3q15ttp5b8f",
+        "blockId": "o62hj9xx29uttbgiurzjrkot",
+        "groupId": "fdwny5e61t9l5ropmte5ydoz"
+      }
+    },
+    {
+      "id": "au0l10triulu9oe07u9ryydq",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "dyy9vviodebz7oj1am2l6be4",
+        "blockId": "z27nbxogcdwpn6xadr20w7su",
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      }
+    },
+    {
+      "id": "pe10peeb2pd0fyjb07gncua4",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "oxnplaof689lb0zl12uorsa8",
+        "blockId": "z27nbxogcdwpn6xadr20w7su",
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      }
+    },
+    {
+      "id": "qsymk6e4saocsehj20kdev2j",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "yf2c9g3k829kz5q8ppasm4h1",
+        "blockId": "z27nbxogcdwpn6xadr20w7su",
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      }
+    },
+    {
+      "id": "uoyo6jyesmz761rgaz9r7oa3",
+      "to": {
+        "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+      },
+      "from": {
+        "blockId": "t366zf1kvvnoa05c5j3xq41u",
+        "groupId": "ii57ra20yxhumi8egcwhm7zt"
+      }
+    },
+    {
+      "id": "kqk861v99754ktbn645fs7ie",
+      "to": {
+        "groupId": "hsjtkxkp0185o7us8sfapw1x"
+      },
+      "from": {
+        "itemId": "sjjw4yy3f6sxc9f4qvpqvmt6",
+        "blockId": "my56g6xmdxahqxhgck066pg2",
+        "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+      }
+    },
+    {
+      "id": "tj5ra60au0xrtg948ev02zxy",
+      "to": {
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      },
+      "from": {
+        "itemId": "zmcl7gaqjkxvqsffaajx444d",
+        "blockId": "a9hhrpjthtdyw0aa5zcer0xw",
+        "groupId": "ipbwufl8ut9oxmzh105bpczk"
+      }
+    },
+    {
+      "id": "tcyp15zc4eyawoaod8xavvok",
+      "to": {
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      },
+      "from": {
+        "itemId": "jvujiq79l4hwx4typi0eo0yh",
+        "blockId": "xdor04fnn9e0v712ayptyz1d",
+        "groupId": "hsjtkxkp0185o7us8sfapw1x"
+      }
+    },
+    {
+      "id": "w1vwsaq9rn24pu32xyz9qfpr",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "qs9jf5njh8synown1ve5npjw",
+        "blockId": "kzqj9bluanbqmfq8gbam88i6",
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      }
+    },
+    {
+      "id": "vpneduczydnpptzuxy4zachh",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "boy7ccx12k9qpsrsbrjlpx5v",
+        "blockId": "kzqj9bluanbqmfq8gbam88i6",
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      }
+    },
+    {
+      "id": "n5az7yvapcqi0h25m3pm60bg",
+      "to": {
+        "groupId": "fq23un1t758xj0keyjd5f5jp"
+      },
+      "from": {
+        "itemId": "wjxhukjr4jzjh7cs0l2oaw7y",
+        "blockId": "kzqj9bluanbqmfq8gbam88i6",
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      }
+    },
+    {
+      "id": "h3igorrnvbn3mmladxxsio2g",
+      "to": {
+        "groupId": "caefgra5mk2o4g2i4ite1ukh"
+      },
+      "from": {
+        "itemId": "ldj4etc9e1pen2in8o8jihcf",
+        "blockId": "my56g6xmdxahqxhgck066pg2",
+        "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+      }
+    },
+    {
+      "id": "bcr8j8kck96q8aqbrc52rqry",
+      "to": {
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      },
+      "from": {
+        "itemId": "rqgenovwvimt0aorbj3du54a",
+        "blockId": "ftf08vwno9dq7m4fuw74kje3",
+        "groupId": "caefgra5mk2o4g2i4ite1ukh"
+      }
+    },
+    {
+      "id": "lvc2e575cb3eqg2ov65d03yk",
+      "to": {
+        "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+      },
+      "from": {
+        "itemId": "y2xmtzmor4nkqb8j09p8y3pq",
+        "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+        "groupId": "l9y04pqqjai8y02zpzccc1ia"
+      }
+    },
+    {
+      "id": "sygnhjnpgwc5i8t3wsknepp8",
+      "to": {
+        "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+      },
+      "from": {
+        "itemId": "daukmgqdb2lubxi6a1p77rhb",
+        "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+        "groupId": "l9y04pqqjai8y02zpzccc1ia"
+      }
+    },
+    {
+      "id": "imzvlwqxy49edncs0akbvhoa",
+      "to": {
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      },
+      "from": {
+        "itemId": "cux0bn990fp1y3h7pdyvs2v8",
+        "blockId": "sk1us12eq6qwjqm3rto376j4",
+        "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+      }
+    },
+    {
+      "id": "ppekz51k09gaqu0z7nuoexgz",
+      "to": {
+        "groupId": "t0aed8njksb3kpz74vj1nbit"
+      },
+      "from": {
+        "itemId": "nzt7ccp4iac12uwgxxb53kw2",
+        "blockId": "u53ziwrmv3tew6t1dyptduoj",
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      }
+    },
+    {
+      "id": "rs1yn73ig7lqo3bq470pffq3",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "gfob9yw8exvh8a0x9b77220p",
+        "blockId": "sk1us12eq6qwjqm3rto376j4",
+        "groupId": "ux9zoa7r8qy6rbvvef2lnqrb"
+      }
+    },
+    {
+      "id": "pvfndxbjdcay3iav7otdjgmc",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "qdmiroxlfuxzgzea9bi0q48o",
+        "blockId": "eequuu2xl8ce4ndxt8pfnpio",
+        "groupId": "rmpjc9tkstnvyx4yni8u3kt7"
+      }
+    },
+    {
+      "id": "p31keylggygvs7gsn9p6i0i0",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "swepyrsam6yfa1j80rupfmap",
+        "blockId": "o3ewoz48n1pg88iaf5p6fpp6",
+        "groupId": "kbceqq4qqplpxnkmxqrsa4qw"
+      }
+    },
+    {
+      "id": "xs6sf4hhplv99hwdz7slkwr9",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "nt4rg4fzixy33w8s6zfnh83q",
+        "blockId": "xdor04fnn9e0v712ayptyz1d",
+        "groupId": "hsjtkxkp0185o7us8sfapw1x"
+      }
+    },
+    {
+      "id": "cxvum41m2fc8jeso4a2avpxs",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "qxvy4wep2xrfon21oars7dt5",
+        "blockId": "ftf08vwno9dq7m4fuw74kje3",
+        "groupId": "caefgra5mk2o4g2i4ite1ukh"
+      }
+    },
+    {
+      "id": "jqtrq9ctxiruei96vfnhur1a",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "twd7p49udofgxkjaf84adpqe",
+        "blockId": "a9hhrpjthtdyw0aa5zcer0xw",
+        "groupId": "ipbwufl8ut9oxmzh105bpczk"
+      }
+    },
+    {
+      "id": "lwqefukhky6pe4wrhifntoib",
+      "to": {
+        "groupId": "meon48fj1dp4ajhdqu6684ii"
+      },
+      "from": {
+        "itemId": "izzz60tlz9prv1m6m12dj7pm",
+        "blockId": "wpwc7yagkbk7o66lsz0ayjrq",
+        "groupId": "l9y04pqqjai8y02zpzccc1ia"
+      }
+    },
+    {
+      "id": "mijhxkmw6emqnyidodhqxu8i",
+      "to": {
+        "groupId": "wmpnj56sfbmfqt6f6m60r2g2"
+      },
+      "from": {
+        "itemId": "wd6cgfxx4gecp2dbndpukr5m",
+        "blockId": "ca96g3sbwwf0qwlxii2eywfv",
+        "groupId": "meon48fj1dp4ajhdqu6684ii"
+      }
+    },
+    {
+      "id": "tld25grynm45dai68j5ehni2",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "f2lg8w3mthne7u6huo2n7g41",
+        "blockId": "ca96g3sbwwf0qwlxii2eywfv",
+        "groupId": "meon48fj1dp4ajhdqu6684ii"
+      }
+    },
+    {
+      "id": "fjo1dvvhcoor6g6wysde7g74",
+      "to": {
+        "groupId": "t0t97169qkhegm4bid0p9yqv"
+      },
+      "from": {
+        "itemId": "dx2ecbzpo65iq63jumvuy5ch",
+        "blockId": "my56g6xmdxahqxhgck066pg2",
+        "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+      }
+    },
+    {
+      "id": "prknkox1z361dwx2ti307rzp",
+      "to": {
+        "groupId": "kuxmn09ed7twjltb003av4f5"
+      },
+      "from": {
+        "itemId": "udyh3u6ol3nz1yenbt93xh6y",
+        "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+        "groupId": "t0t97169qkhegm4bid0p9yqv"
+      }
+    },
+    {
+      "id": "jv0792bz7q0vlwfvbj1tsmzw",
+      "to": {
+        "groupId": "kuxmn09ed7twjltb003av4f5"
+      },
+      "from": {
+        "itemId": "chgnx6opwxbq3jz0iadnvk2a",
+        "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+        "groupId": "t0t97169qkhegm4bid0p9yqv"
+      }
+    },
+    {
+      "id": "xpxu92k08lc5zavmyn7cxwrl",
+      "to": {
+        "blockId": "ijjaaxgmqmquwnsmbp9c9yzv",
+        "groupId": "kd4k5dew6nqixz869nitov69"
+      },
+      "from": {
+        "itemId": "roo9va2fish0afq1qgwb04nz",
+        "blockId": "cr8cggv6yx4mgrtb2ak4dn4k",
+        "groupId": "t0t97169qkhegm4bid0p9yqv"
+      }
+    },
+    {
+      "id": "w68jl1nnb0c92b8h7n8hywzm",
+      "to": {
+        "groupId": "mtv4lra7qyg96dvbokfga3yk"
+      },
+      "from": {
+        "itemId": "wf0tc0um5c8wsp8arzf04ggh",
+        "blockId": "my56g6xmdxahqxhgck066pg2",
+        "groupId": "kjpyrh4y9ih0f3g5ssx0392c"
+      }
+    },
+    {
+      "id": "hxzki0i5eikpswunz7kcyb4p",
+      "to": {
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      },
+      "from": {
+        "itemId": "n9n6018dlyarixbjfzibg3dw",
+        "blockId": "n8grgrjrx4o03nrjfjq81lis",
+        "groupId": "mtv4lra7qyg96dvbokfga3yk"
+      }
+    },
+    {
+      "id": "lognag9hw5lmeh6qmorz3tiq",
+      "to": {
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      },
+      "from": {
+        "itemId": "g49ejpchj500g70cxfil30c1",
+        "blockId": "a0qjvx1nqhpsut4jujqb0zk3",
+        "groupId": "kd4k5dew6nqixz869nitov69"
+      }
+    },
+    {
+      "id": "kn7ib86nrpr6mdcy6gnuy05q",
+      "to": {
+        "groupId": "qtcab8gwg6glxtt92zk0bt69"
+      },
+      "from": {
+        "itemId": "nludps06cirk9fgmji7m0qg7",
+        "blockId": "yvp8qhob95uraoq5by2l6exe",
+        "groupId": "kuxmn09ed7twjltb003av4f5"
+      }
+    },
+    {
+      "id": "cgtlp030xvrucge5dpvw4e51",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "tyzujlu5kmeycg8kds3niabp",
+        "blockId": "yvp8qhob95uraoq5by2l6exe",
+        "groupId": "kuxmn09ed7twjltb003av4f5"
+      }
+    },
+    {
+      "id": "gyydo2q1rttj1paffvbl9wbc",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "rcdv0dfillh3jzgf4er2ah2u",
+        "blockId": "a0qjvx1nqhpsut4jujqb0zk3",
+        "groupId": "kd4k5dew6nqixz869nitov69"
+      }
+    },
+    {
+      "id": "u4ktbemojz2ycheq4b5ccyxi",
+      "to": {
+        "groupId": "p6yhf76opgmg5oyy4w8gkgay"
+      },
+      "from": {
+        "itemId": "u0djsb4s85upo69eupandse5",
+        "blockId": "n8grgrjrx4o03nrjfjq81lis",
+        "groupId": "mtv4lra7qyg96dvbokfga3yk"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#9095A0"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#00A884"
+      },
+      "roundness": "large",
+      "hostAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/hostAvatar?v=1689808073933",
+        "isEnabled": true
+      },
+      "guestAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/guestAvatar?v=1689808008551",
+        "isEnabled": false
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF"
+      },
+      "guestBubbles": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#FF8E21"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/background?v=1689807864320"
+      }
+    },
+    "customCss": ".typebot-chat-view > .flex:first-child {\n    padding-top: 30px;\n}\n\n.typebot-input {\n    position: flex;\n    bottom: 10;\n    align-items: center;\n    z-index: 999;\n    right: 10;\n}\n\n.typebot-input .typebot-button {\n    background: #008a7c;\n    border-radius: 50%;\n    color: #fff;\n    position: relative;\n    width: 50px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.typebot-container {\n    background-size: initial!important;\n    background-repeat: repeat-x!important;\n}\n\n.typebot-host-bubble>.bubble-typing {\n  border-radius: 0 5px 5px 5px;\n}\n\n.typebot-host-bubble>.bubble-typing:after {\n    position: absolute;\n    content: \"\";\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 0px 10px 10px 0;\n    border-color: transparent #fff transparent transparent;\n    top: 0;\n    left: -10px;\n}\n\n.typebot-guest-bubble {\n  position: relative;\n  border-radius: 5px 0 5px 5px;\n}\n\n.typebot-guest-bubble:after {\n  position: absolute;\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n}\n\n.typebot-guest-bubble:after {\n    border-width: 0px 0 10px 10px;\n    border-color: transparent transparent transparent #FF8E21;\n    top: 0;\n    right: -10px;\n    border-style: solid;\n}\n\niframe[src=\"\"] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: relative;\n  width: 100%;\n  height: 100% !important;\n  z-index: 999999;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\na#lite-badge {\n  display: none!important;\n}\n\n.w-full {\nwidth: auto;\n}\n\n/* Botão do input */\n.typebot-input .typebot-button {\n  content: \"\";\n  background: rgba(0, 138, 134, 1);\n  border-radius: 50%; \n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 50px; \n  height: 50px; \n  border: none;\n  font-size: 0px;\n  color: transparent;\n}\n\n.typebot-input .typebot-button::before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 25px;\n  height: 25px;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" width=\"19px\"><path d=\"M476.59 227.05l-.16-.07L49.35 49.84A23.56 23.56 0 0027.14 52 24.65 24.65 0 0016 72.59v113.29a24 24 0 0019.52 23.57l232.93 43.07a4 4 0 010 7.86L35.53 303.45A24 24 0 0016 327v113.31A23.57 23.57 0 0026.59 460a23.94 23.94 0 0013.22 4 24.55 24.55 0 009.52-1.93L476.4 285.94l.19-.09a32 32 0 000-58.8z\" fill=\"white\"/></svg>');\n}\n\n/* Oculta o ícone anterior*/\n.typebot-input .typebot-button .send-icon {\n  display: none; \n}\n\n/* Estilo da caixa do input */\n.typebot-input {\n    max-width: 100%!important;\n    width:100%!important;\n    position: fixed;\n    bottom: 0;\n    align-items: center;\n    z-index: 999;\n    right: 0;\n    margin-bottom: 20px;\n    background-color: white;\n    border-radius: 50px;\n    box-shadow: 1 2px 1px -1px rgba(0,0,0,.2);\n    height: 50px;\n    padding-right: 0px!important;\n}\n\n\n/* Corrigir cor do botão */\n.disabled\\:opacity-50:disabled {\n    opacity: 100%;\n}\n\n\n"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "rememberUser": {
+        "isEnabled": false
+      },
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": true,
+      "isHideQueryParamsEnabled": true
+    },
+    "metadata": {
+      "description": "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form.",
+      "customHeadCode": "<!-- Meta Pixel Code -->\n<script>\n  !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n  n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];\n  s.parentNode.insertBefore(t,s)}(window, document,'script',\n  'https://connect.facebook.net/en_US/fbevents.js');\n  fbq('init', '1657283918071896');\n  fbq('track', 'PageView');\n</script>\n<noscript><img height=\"1\" width=\"1\" style=\"display:none\"\n  src=\"https://www.facebook.com/tr?id=1657283918071896&ev=PageView&noscript=1\"\n/></noscript>\n<!-- End Meta Pixel Code -->\n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css\">\n<style>\n  .hide {\n    display: none!important;\n  }\n  typebot-standard {\n    position: relative;\n    z-index: 9999;\n  }\n  #__next {\n    position: relative;\n    z-index: 9999;\n}\n  /* User Bar */\n.user-bar {\n  width: 100%;\n  height: 55px;\n  background: #005e54;\n  color: #fff;\n  padding: 0;\n  font-size: 24px;\n  position: fixed;\n  z-index: 99999;\n  display: block;\n  top: 0;\n}\n\n.user-bar:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.user-bar div {\n    float: left;\n    transform: translateY(-50%);\n    position: relative;\n    top: 50%;\n    margin-left: 10px;\n}\n\n.user-bar .actions {\n  float: right;\n  margin: 0 0 0 20px;\n}\n\n.user-bar .actions.more {\n  margin: 0 12px 0 32px;\n}\n\n.user-bar .actions.attachment {\n  margin: 0 0 0 30px;\n}\n\n.user-bar .actions.attachment i {\n  display: block;\n  transform: rotate(-45deg);\n}\n\n.user-bar .avatar {\n  margin: 0 0 0 5px;\n  width: 36px;\n  height: 36px;\n}\n\n.user-bar .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);\n  display: block;\n  width: 100%;\n}\n\n.user-bar .name {\n  font-size: 17px;\n  font-weight: 600;\n  text-overflow: ellipsis;\n  letter-spacing: 0.3px;\n  margin: 0 0 0 8px;\n  overflow: hidden;\n  white-space: nowrap;\n  width: 150px;\n}\n\n.user-bar .status {\n  display: block;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 0;\n}\n</style>\n\n<script>\nfunction criarBarra() {\n  var userBar = document.createElement(\"div\");\n  userBar.className = \"user-bar\";\n\n  var backButton = document.createElement(\"div\");\n  backButton.className = \"back\";\n  backButton.innerHTML = '<i class=\"zmdi zmdi-arrow-left\"></i>';\n\n  var avatar = document.createElement(\"div\");\n  avatar.className = \"avatar\";\n  avatar.innerHTML = '<img src=\"https://s3.fr-par.scw.cloud/typebot/public/typebots/clk5r5x2r002wky0fx0jr8cjx/hostAvatar?v=1689808073933\" alt=\"Gabriela Faria\">';\n\n  var name = document.createElement(\"div\");\n  name.className = \"name\";\n  name.innerHTML = '<span>Dr. Fernando Vaz</span><span class=\"status\">online</span>';\n\n  var moreActions = document.createElement(\"div\");\n  moreActions.className = \"actions more\";\n  moreActions.innerHTML = '<i class=\"zmdi zmdi-more-vert\"></i>';\n\n  var attachmentAction = document.createElement(\"div\");\n  attachmentAction.className = \"actions attachment\";\n  attachmentAction.innerHTML = '<i class=\"zmdi zmdi-attachment-alt\"></i>';\n\n  var phoneAction = document.createElement(\"div\");\n  phoneAction.className = \"actions\";\n  phoneAction.innerHTML = '<i class=\"zmdi zmdi-phone\"></i>';\n\n  userBar.appendChild(backButton);\n  userBar.appendChild(avatar);\n  userBar.appendChild(name);\n  userBar.appendChild(moreActions);\n  userBar.appendChild(attachmentAction);\n  userBar.appendChild(phoneAction);\n\n  var elementoPai = document.querySelector(\"#__next\");\n  if (elementoPai) {\n    elementoPai.insertBefore(userBar, elementoPai.firstChild);\n  }\n}\n\ncriarBarra();\n</script>\n"
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}

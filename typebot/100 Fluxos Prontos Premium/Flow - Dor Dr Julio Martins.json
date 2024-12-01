@@ -1,0 +1,2074 @@
+{
+  "id": "clkklh9hi000vmo0fyg4n35s3",
+  "version": "3",
+  "icon": null,
+  "name": "Flow - Dor Dr Julio Martins",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "lfc7ek53bgxi9n9uoxcbaztv",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "cx5iel8jxfo4caorf8rnjiw0",
+          "type": "start",
+          "label": "Start",
+          "groupId": "lfc7ek53bgxi9n9uoxcbaztv",
+          "outgoingEdgeId": "f0a3dziy97iqqi82e281nmqb"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1804.43,
+        "y": -11.61
+      }
+    },
+    {
+      "id": "qy9ldghk6c3cqp4a3sq1ba2q",
+      "title": "Group #1",
+      "blocks": [
+        {
+          "id": "yyvh6ism82vqvpdb4fzolz6a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Dr. Júlio Martins"
+                  },
+                  {
+                    "text": " está online…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q"
+        },
+        {
+          "id": "k28ngw6lhvwj73cboylv9lm1",
+          "type": "Wait",
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q",
+          "options": {
+            "secondsToWaitFor": "1"
+          }
+        },
+        {
+          "id": "hfgqthd8fcoerjlwfg1nl9uu",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "AGUARDE UM INSTANTE... ⏳"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Atenção, está é uma consulta online e "
+                  },
+                  {
+                    "bold": true,
+                    "text": "GRATUITA!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q"
+        },
+        {
+          "id": "q4l8bimvubtcikt68xu3gmq4",
+          "type": "Wait",
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q",
+          "options": {
+            "secondsToWaitFor": "1"
+          }
+        },
+        {
+          "id": "hbv92alrmbz3n4ngou74gv1j",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Oi, sou o "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Dr. Júlio Martins"
+                  },
+                  {
+                    "text": ", vamos iniciar a sua "
+                  },
+                  {
+                    "bold": true,
+                    "text": "CONSULTA GRÁTIS?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q"
+        },
+        {
+          "id": "hebe2ei8o6a6al5uu2jf5rew",
+          "type": "picture choice input",
+          "items": [
+            {
+              "id": "rlreygj9fw4tatj9nc0q8vpi",
+              "type": 3,
+              "title": "Iniciar Consulta",
+              "blockId": "hebe2ei8o6a6al5uu2jf5rew",
+              "pictureSrc": "data:image/svg+xml;utf8,<svg fill='%23ffffff' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d='M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16H336c-8.8 0-16-7.2-16-16s7.2-16 16-16V424c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V424c0-29.8 20.4-54.9 48-62V304.9c-6-.6-12.1-.9-18.3-.9H178.3c-6.2 0-12.3 .3-18.3 .9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7V311.2zM144 448a24 24 0 1 0 0-48 24 24 0 1 0 0 48z'/></svg>",
+              "description": "CLIQUE AQUI PARA INICIAR"
+            }
+          ],
+          "groupId": "qy9ldghk6c3cqp4a3sq1ba2q",
+          "options": {
+            "buttonLabel": "Send",
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "ixcchvvlagpyd38q7ptfzpgi"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1451.14,
+        "y": -16.63
+      }
+    },
+    {
+      "id": "z160c3ce8cfsdf33guizwhq4",
+      "title": "Group #2",
+      "blocks": [
+        {
+          "id": "l56qszy3p2g1ztj4euv89f8u",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Antes de darmos inicio, deixa eu me aprensentar..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Sou médico fitoterapeuta, a mais de 28 anos."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Formado na Universidade da Flórida"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Estudo e desenvolvo meios naturais para curas de doenças como a Neuropatia."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "z160c3ce8cfsdf33guizwhq4"
+        },
+        {
+          "id": "h4b3brfjp9wxq2wki0yengol",
+          "type": "Wait",
+          "groupId": "z160c3ce8cfsdf33guizwhq4",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "fvwvs4ra4m8703pb03k3yydu",
+          "type": "image",
+          "content": {
+            "url": "https://i.postimg.cc/1XN9Dwqb/Materia-Dr-Ju-lio.png"
+          },
+          "groupId": "z160c3ce8cfsdf33guizwhq4"
+        },
+        {
+          "id": "trrg8fzm1keqyc91ojmt2s7y",
+          "type": "Wait",
+          "groupId": "z160c3ce8cfsdf33guizwhq4",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "zv1sbqcpa0zsfg81nso282nd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora que já me apresentei..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me fala, por gentileza, o "
+                  },
+                  {
+                    "bold": true,
+                    "text": "SEU NOME?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "z160c3ce8cfsdf33guizwhq4"
+        },
+        {
+          "id": "oc25lavfrc7ouctwzya0744v",
+          "type": "text input",
+          "groupId": "z160c3ce8cfsdf33guizwhq4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Seu nome."
+            },
+            "variableId": "vprp91gkcj6ooz2wteh9qrvjn"
+          },
+          "outgoingEdgeId": "tguoed1k6i6c1tc67jdcj665"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -1114.82,
+        "y": -9.82
+      }
+    },
+    {
+      "id": "e76ay732zpex456ksi2stvau",
+      "title": "Group #3",
+      "blocks": [
+        {
+          "id": "bfzb51nhpbfw3xxc7qdl2670",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Darei o meu melhor no seu atendimento {{NOME}}!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "e76ay732zpex456ksi2stvau"
+        },
+        {
+          "id": "i41liklaibx7xwkvtmd0nfyr",
+          "type": "Wait",
+          "groupId": "e76ay732zpex456ksi2stvau",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "esbtyexcd92caams6u4ou1hh",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual a sua idade?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "e76ay732zpex456ksi2stvau"
+        },
+        {
+          "id": "bf5ww7pprs0zmkhm5gkysbii",
+          "type": "Wait",
+          "groupId": "e76ay732zpex456ksi2stvau",
+          "options": {
+            "secondsToWaitFor": "1"
+          }
+        },
+        {
+          "id": "jglk0sn8kt232e7tnv8c8n81",
+          "type": "text input",
+          "groupId": "e76ay732zpex456ksi2stvau",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Sua idade"
+            },
+            "variableId": "vpel0viottucscnen8zdlejaf"
+          },
+          "outgoingEdgeId": "nmlhwt90fxxo0zdnvlazu390"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -793.46,
+        "y": -13.3
+      }
+    },
+    {
+      "id": "y91slqthdfv3mu32vlapqy9n",
+      "title": "Group #5",
+      "blocks": [
+        {
+          "id": "o2qg6y5lstu6abw5h9081lm6",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "{{NOME}}, "
+                  },
+                  {
+                    "text": "qual desses "
+                  },
+                  {
+                    "bold": true,
+                    "text": "sintomas"
+                  },
+                  {
+                    "text": " você mais "
+                  },
+                  {
+                    "bold": true,
+                    "text": "sente atualmente?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "y91slqthdfv3mu32vlapqy9n"
+        },
+        {
+          "id": "sbaw4vpdilj02ee9m6pxi2op",
+          "type": "picture choice input",
+          "items": [
+            {
+              "id": "ssbdiz1d7g3jwcbj5uabdt7h",
+              "type": 3,
+              "title": "Sintomas 1",
+              "blockId": "sbaw4vpdilj02ee9m6pxi2op",
+              "pictureSrc": "https://i.postimg.cc/tCzjNG8v/sitomas-1.png",
+              "outgoingEdgeId": "gcltvbuk7fo179v66xlo2w39"
+            },
+            {
+              "id": "h5ccszrrnmgppm73xmv8ust8",
+              "type": 3,
+              "title": "Sintomas 2",
+              "blockId": "sbaw4vpdilj02ee9m6pxi2op",
+              "pictureSrc": "https://i.postimg.cc/gJ35cvWt/sitomas-2.png",
+              "outgoingEdgeId": "q5gddxlsuoyvhx4kij1rko6n"
+            }
+          ],
+          "groupId": "y91slqthdfv3mu32vlapqy9n",
+          "options": {
+            "buttonLabel": "Send",
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -469.43,
+        "y": -11.42
+      }
+    },
+    {
+      "id": "h3tuml9kfbx4c3mhoi8ou5y3",
+      "title": "Group #6",
+      "blocks": [
+        {
+          "id": "o2gkktlxhvqnww5icihg977z",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A quanto tempo você vem sofrendo com "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Formigamento, Dormência e Queimação?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "h3tuml9kfbx4c3mhoi8ou5y3"
+        },
+        {
+          "id": "embfl3b5fzaba11o9ka6ziwc",
+          "type": "Wait",
+          "groupId": "h3tuml9kfbx4c3mhoi8ou5y3",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "nnw0dbwkxs18fw9pzsef84bd",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "c8uv9ikb3xpya8bag99dqtcx",
+              "type": 0,
+              "blockId": "nnw0dbwkxs18fw9pzsef84bd",
+              "content": "A pouco tempo."
+            },
+            {
+              "id": "z1vqwcy13lvx0qtyze6oa48l",
+              "type": 0,
+              "blockId": "nnw0dbwkxs18fw9pzsef84bd",
+              "content": "A muito tempo"
+            }
+          ],
+          "groupId": "h3tuml9kfbx4c3mhoi8ou5y3",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "w8f6e582fa91kuldlq0pji5p"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -126.7,
+        "y": -6.31
+      }
+    },
+    {
+      "id": "lc3y34jfv070caggdl3cic35",
+      "title": "Group #7",
+      "blocks": [
+        {
+          "id": "vfidxp879owt089sgpbxick4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "A quanto tempo você vem sofrendo com "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Dores nas Articulações?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "lc3y34jfv070caggdl3cic35"
+        },
+        {
+          "id": "fw8kpmspb9227w1nbnc9eayz",
+          "type": "Wait",
+          "groupId": "lc3y34jfv070caggdl3cic35",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "rorffnvybqxwnwn9sn4b6a4p",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "f7zz7c8gk3bas9i63hlqowjz",
+              "type": 0,
+              "blockId": "rorffnvybqxwnwn9sn4b6a4p",
+              "content": "A pouco tempo"
+            },
+            {
+              "id": "kcaqcvtmo6m0w1r22xvn8l4a",
+              "type": 0,
+              "blockId": "rorffnvybqxwnwn9sn4b6a4p",
+              "content": "A muito tempo"
+            }
+          ],
+          "groupId": "lc3y34jfv070caggdl3cic35",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "jmtjo6tksapx8hshktbjd8on"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -128.89,
+        "y": 487.21
+      }
+    },
+    {
+      "id": "vjz1tm36usb5ki5ui4kq3hoe",
+      "title": "Group #8",
+      "blocks": [
+        {
+          "id": "n4rthie60p3blazoxnbjh2j7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "{{NOME}}"
+                  },
+                  {
+                    "text": ", estou analisando o seu caso…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "v4cfy0y69scej7jbi3iw870b",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "tmi7pbwwr1q7z0l5h9mjim2n",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Irei te mandar um "
+                  },
+                  {
+                    "bold": true,
+                    "text": "áudio"
+                  },
+                  {
+                    "text": " para "
+                  },
+                  {
+                    "bold": true,
+                    "text": "te explicar melhor"
+                  },
+                  {
+                    "text": ", ok?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "jnmopimnwq84o0f1ghw4tldh",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "rwqlpj77cgiqvxvp1174cxnn",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/rwqlpj77cgiqvxvp1174cxnn?v=1690300363267"
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "jl213a6ml87nwhkvo74ysww6",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "26"
+          }
+        },
+        {
+          "id": "yjnx8rq0jz8gtvg76eostm67",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/yjnx8rq0jz8gtvg76eostm67?v=1690300391211"
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "cq8xhet4t5jx6e8e5yvb6lsl",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "me3whgoesxwejntzgaodg6oc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mariana é de Minas Gerais e é esposa do meu paciênte, ele "
+                  },
+                  {
+                    "bold": true,
+                    "text": "sentia os mesmo sintomas"
+                  },
+                  {
+                    "text": ", que você "
+                  },
+                  {
+                    "bold": true,
+                    "text": "sente hoje..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "i5ztbs3rw1ujucfdkq8ic0ha",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "u20r5ib2uab40b9heaye4841",
+          "type": "embed",
+          "content": {
+            "url": "https://scripts.converteai.net/a8a8bdac-c536-41c6-9869-c97f211ff2ab/players/64c00ec035322d00090573d7/embed.html",
+            "height": 230
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "a2h3uywsx86f1vywl71edev9",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "28"
+          }
+        },
+        {
+          "id": "lq6jcfwxrqvxw8w3mulyzprg",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Eduardo me procurou a 6 meses atrás, em um estágio avançada de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Neuropatia..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Graças a Deus "
+                  },
+                  {
+                    "bold": true,
+                    "text": "conseguimos reverter "
+                  },
+                  {
+                    "text": "🙌🏻"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "di9un6wv0iuiskcphx8kdnj4",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "sovdtiliflhy8hfxabtxq0im",
+          "type": "embed",
+          "content": {
+            "url": "https://scripts.converteai.net/a8a8bdac-c536-41c6-9869-c97f211ff2ab/players/64c00ec79c46270009427f82/embed.html",
+            "height": 230
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "yvfyfegms8j67cup3d7bj3wg",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "30"
+          }
+        },
+        {
+          "id": "ypdr6t9ree5quva4xgq71efn",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Incrível"
+                  },
+                  {
+                    "text": " não é mesmo..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Seu caso é parecido com algum desses casos?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+        },
+        {
+          "id": "qdn6qxbwc1pqmu5ttpsgogpj",
+          "type": "Wait",
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "tif0bvvxg3h36ji06mif5ang",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "homey6xs12pz8kwfgqg0x2kh",
+              "type": 0,
+              "blockId": "tif0bvvxg3h36ji06mif5ang",
+              "content": "Sim! Muito parecido [CLIQUE]"
+            }
+          ],
+          "groupId": "vjz1tm36usb5ki5ui4kq3hoe",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "f68h6sckb62cb8pbizs93ttv"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 223.12,
+        "y": -3.39
+      }
+    },
+    {
+      "id": "ny6eqohlhtyrxlm5s57pvkhs",
+      "title": "Group #9",
+      "blocks": [
+        {
+          "id": "tb1vt2ukf5327u5evrjjcemr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora eu preciso te perguntar…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ny6eqohlhtyrxlm5s57pvkhs"
+        },
+        {
+          "id": "o0x3gexqipwt3jliw7ipg40l",
+          "type": "Wait",
+          "groupId": "ny6eqohlhtyrxlm5s57pvkhs",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "kax9q22t2hj1znqztyi2j2sl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "{{NOME}}"
+                  },
+                  {
+                    "text": ", você gostaria de voltar a viver sem sentir "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Dores nas Articulações, Formigamentos, Dormência e Queimação?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "ny6eqohlhtyrxlm5s57pvkhs"
+        },
+        {
+          "id": "u8ibpc6kdi21lufdjl03gsbt",
+          "type": "Wait",
+          "groupId": "ny6eqohlhtyrxlm5s57pvkhs",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "j940klb85nr7sgplqcyj2745",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "xd05kkr6uuvjj5atshl9nmhf",
+              "type": 0,
+              "blockId": "j940klb85nr7sgplqcyj2745",
+              "content": "Sim! Eu quero [CLIQUE]"
+            }
+          ],
+          "groupId": "ny6eqohlhtyrxlm5s57pvkhs",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "az9p5c8t6x3qlr8wa4j7quwe"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 560.53,
+        "y": 2.49
+      }
+    },
+    {
+      "id": "zia9vbj2gn4irxb692qr6a4c",
+      "title": "Group #10",
+      "blocks": [
+        {
+          "id": "d2o2nqa9nxge1dnci56r1spt",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ainda bem, que você tomou essa decisão"
+                  },
+                  {
+                    "bold": true,
+                    "text": " {{NOME}}."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Sei que não é fácil conviver com essa "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Doença…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "wi211ykzforlifo2k9bjynm5",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "z92ija09lzns5sgdwcccfeco",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/z92ija09lzns5sgdwcccfeco?v=1690311586788"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "amireo3g7xll98vyml3dwb1r",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "26"
+          }
+        },
+        {
+          "id": "nlodp9p3eegvm8vglkfsxgsj",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Eu estou orgulhoso em te apresentar o meu tratamento que já ajudou milhares de pessoas..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Eu o chamo de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "NeuroCura..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "cz2af2cvq801ne2k8lmt7tfp",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "wwrpelqnt68e57rokg8upfbt",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/wwrpelqnt68e57rokg8upfbt?v=1690311672376"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "urnn352n26ikmzqzz9darhzv",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "c76pgppc5ga3mmzptrt1rvfy",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Esse é, disparado, o caminho mais rápido, seguro e inteligente para "
+                  },
+                  {
+                    "bold": true,
+                    "text": "você se livrar..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Das "
+                  },
+                  {
+                    "bold": true,
+                    "text": "dores nas articulações"
+                  },
+                  {
+                    "text": ", sensações de "
+                  },
+                  {
+                    "bold": true,
+                    "text": "formigamento, dormência e queimação"
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "b1h4l4kglo8tvpbeqa0fn2as",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "x8prmguow8n4azul1ch1dv92",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/x8prmguow8n4azul1ch1dv92?v=1690311789568"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "uhadks1xvloqxx12yjtjk3jd",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "27"
+          }
+        },
+        {
+          "id": "p6mahd1f3bkfs16epatx4q2h",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/p6mahd1f3bkfs16epatx4q2h?v=1690311824535"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "gagcvucrytzng793mf7mpexf",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "27"
+          }
+        },
+        {
+          "id": "zdjx91orrca9cantb5mcf7jr",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Com a ajuda do "
+                  },
+                  {
+                    "bold": true,
+                    "text": "NeuroCura"
+                  },
+                  {
+                    "text": " a sua "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Lisozima"
+                  },
+                  {
+                    "text": " será aumentada em "
+                  },
+                  {
+                    "bold": true,
+                    "text": "POUCOS DIAS!"
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "E nunca mais "
+                  },
+                  {
+                    "text": "você vai sentirá esses"
+                  },
+                  {
+                    "bold": true,
+                    "text": " sintomas novamente…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "xj67vqlu1hsmuh4ry3wyarhs",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "xex4ro2s59c62ssbwdww618n",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/xex4ro2s59c62ssbwdww618n?v=1690312014610"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "adluqvhegjxl5a8u9fj8dage",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "14"
+          }
+        },
+        {
+          "id": "ij7tjaul0hit8omfappmsbdf",
+          "type": "image",
+          "content": {
+            "url": "https://i.postimg.cc/MKMHKT84/Beneficios.png"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "dlljhvn2r0den0hmcea6vzsk",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "i1wlw9ynjqkgh52ts0ndecr7",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/i1wlw9ynjqkgh52ts0ndecr7?v=1690312116073"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "zk9ffqssgo19f7qntcjjdc7o",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "33"
+          }
+        },
+        {
+          "id": "leo6bqerrk0orqnca25re3rb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tudo isso e muito mais em outras dezenas de módulos, direcionado para "
+                  },
+                  {
+                    "bold": true,
+                    "text": "acabar com a sua Neuropatia…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "w06lmhw9siwck8ngatg75sab",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "kss2dx29qrc20bwguo43215g",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "É hora de você resgatar a vida que tinha antes..."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Sem dores, sem preocupações e sem depender de ninguém!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "cdbtzfr97k172r9wj16nevof",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "vxvgy76b6wy8bb4ony5gvx6x",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/vxvgy76b6wy8bb4ony5gvx6x?v=1690312239529"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "pl4oz4qta09gkmcu8fp7losi",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "19"
+          }
+        },
+        {
+          "id": "gm8c41y99vr1bwke1iarnn6y",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Então me diga…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "yalv3p0w0j5fkyy725dwoqr5",
+          "type": "Wait",
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "t7f1bwh6awt66a8xfc3kk2p3",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/t7f1bwh6awt66a8xfc3kk2p3?v=1690312321314"
+          },
+          "groupId": "zia9vbj2gn4irxb692qr6a4c"
+        },
+        {
+          "id": "xhad7q8b5dfpd8yakted6vv0",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "wsphg6nzbwd62ksrkied4sg3",
+              "type": 0,
+              "blockId": "xhad7q8b5dfpd8yakted6vv0",
+              "content": "SIM! EU QUERO [CLIQUE]"
+            }
+          ],
+          "groupId": "zia9vbj2gn4irxb692qr6a4c",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "qh2ixp7tkluy2v0qnffcg8at"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 895.09,
+        "y": 4.97
+      }
+    },
+    {
+      "id": "bbqfocfbgsu94yxi591cvy2v",
+      "title": "Group #11",
+      "blocks": [
+        {
+          "id": "o6fkngq7vzwm2ssg5vmm4ecg",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ótimo decisão, "
+                  },
+                  {
+                    "bold": true,
+                    "text": "{{NOME}}"
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Minha maior satisfação é te ver livre da "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Dessa doença..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "yuhd5e6u6sght1zjfhuz1nxs",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "e0g96f5t0torrkeajoma99vp",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora vou te explicar como você vai fazer a "
+                  },
+                  {
+                    "bold": true,
+                    "text": "sua inscrição"
+                  },
+                  {
+                    "text": ", para "
+                  },
+                  {
+                    "bold": true,
+                    "text": "participar do meu tratamento..."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "ef4pdxy55z6274q4n7lufvw0",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "yomkpl5rbhk1rnv9usxwtkfj",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/yomkpl5rbhk1rnv9usxwtkfj?v=1690312862282"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "pfsq9w8y1qlyeqqoujickdeo",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "17"
+          }
+        },
+        {
+          "id": "olb8kfq3hpxwpesu02s2v1kb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O "
+                  },
+                  {
+                    "bold": true,
+                    "text": "meu tratamento"
+                  },
+                  {
+                    "text": " sempre foi muito concorrido, isso porque ele realmente funciona."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E agora, estou dando a "
+                  },
+                  {
+                    "bold": true,
+                    "text": "oportunidade de você experimentar de graça…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "qq5y9fkpb9v8sdoggb1z4sov",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "5"
+          }
+        },
+        {
+          "id": "qwit9js2yam5ep86jjpfbgwt",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/qwit9js2yam5ep86jjpfbgwt?v=1690312940523"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "i2zvpc7s2ss8a619ioz4dd96",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "11"
+          }
+        },
+        {
+          "id": "jr5hg9h3xf8nfbrtyuq4cvbd",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/jr5hg9h3xf8nfbrtyuq4cvbd?v=1690313075915"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "s5m2bm2jn2cik1rtdshl8kzj",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "15"
+          }
+        },
+        {
+          "id": "lwjb4zth1ecf9ztdqrye7o7y",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/lwjb4zth1ecf9ztdqrye7o7y?v=1690313120722"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "rn7fnf17b46h1m4l6bp9kzqw",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "10"
+          }
+        },
+        {
+          "id": "dlowvo27pky3myraju9zw911",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Fica tranquilo que você não vai precisar pagar todo mês."
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "É uma "
+                  },
+                  {
+                    "bold": true,
+                    "text": "taxa única"
+                  },
+                  {
+                    "text": " de inscrição para liberar o "
+                  },
+                  {
+                    "bold": true,
+                    "text": "seu tratamento completo"
+                  },
+                  {
+                    "text": "…"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "wwia7l9cg7xanbnyh1zfdopx",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "k0e4h1s95s67540vg4mqearu",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/k0e4h1s95s67540vg4mqearu?v=1690313245285"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "us3i764dx12s7wrk2p85nhnv",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "23"
+          }
+        },
+        {
+          "id": "fwpb3fpagl0xbxm9rmz3cvgs",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/fwpb3fpagl0xbxm9rmz3cvgs?v=1690313274099"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "nd7k1alur9zfml7gnnv94y3t",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "12"
+          }
+        },
+        {
+          "id": "w4de59da0sxb545kk6atkl1e",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/y6dn4erwgnzoqu931otv9ztv/blocks/w4de59da0sxb545kk6atkl1e?v=1690313299454"
+          },
+          "groupId": "bbqfocfbgsu94yxi591cvy2v"
+        },
+        {
+          "id": "x66nuvg4i1d3hkkszdcedqpf",
+          "type": "Wait",
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "secondsToWaitFor": "7"
+          }
+        },
+        {
+          "id": "luadzosfhvpkzqf41sn2esz2",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "s3mvbvna611ec4me5wwuqxjn",
+              "type": 0,
+              "blockId": "luadzosfhvpkzqf41sn2esz2",
+              "content": "SIM! QUERO FAZER A MINHA INSCRIÇÃO. [CLIQUE AQUI]"
+            }
+          ],
+          "groupId": "bbqfocfbgsu94yxi591cvy2v",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "ihptarpf8nfjnaubatkm75i1"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1230.03,
+        "y": 5.78
+      }
+    },
+    {
+      "id": "ir0vutquzwiwogz67qchljtp",
+      "title": "Group #12",
+      "blocks": [
+        {
+          "id": "xa86k7g7snxgdhy2bkg7n1np",
+          "type": "Redirect",
+          "groupId": "ir0vutquzwiwogz67qchljtp",
+          "options": {
+            "url": "https://go.perfectpay.com.br/PPU38CMMRDH",
+            "isNewTab": false
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1561.86,
+        "y": 5.64
+      }
+    },
+    {
+      "id": "wqqknyy701ss9x9r6kvln8yl",
+      "title": "Group #4",
+      "blocks": [
+        {
+          "id": "krl0dxjrbl5nnzg4gw8yo7vq",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}} Qual o seu numero (WhatsApp)"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "wqqknyy701ss9x9r6kvln8yl"
+        },
+        {
+          "id": "ewuph5kcanjd0cyggvx9z93h",
+          "type": "Wait",
+          "groupId": "wqqknyy701ss9x9r6kvln8yl",
+          "options": {
+            "secondsToWaitFor": "1"
+          }
+        },
+        {
+          "id": "bhb4jsrp46k6esfdt1e0t2xd",
+          "type": "phone number input",
+          "groupId": "wqqknyy701ss9x9r6kvln8yl",
+          "options": {
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Qual seu WhatsApp"
+            },
+            "variableId": "vvrtkr4anh8tou4t0bbgoy42g",
+            "defaultCountryCode": "BR",
+            "retryMessageContent": "This phone number doesn't seem to be valid. Can you type it again?"
+          },
+          "outgoingEdgeId": "ejl5aicpmm0qc9nnfp5hel04"
+        }
+      ],
+      "graphCoordinates": {
+        "x": -784.6,
+        "y": 416.75
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vprp91gkcj6ooz2wteh9qrvjn",
+      "name": "NOME"
+    },
+    {
+      "id": "vpel0viottucscnen8zdlejaf",
+      "name": "IDADE"
+    },
+    {
+      "id": "vvrtkr4anh8tou4t0bbgoy42g",
+      "name": "TELEFONE"
+    }
+  ],
+  "edges": [
+    {
+      "id": "f0a3dziy97iqqi82e281nmqb",
+      "to": {
+        "groupId": "qy9ldghk6c3cqp4a3sq1ba2q"
+      },
+      "from": {
+        "blockId": "cx5iel8jxfo4caorf8rnjiw0",
+        "groupId": "lfc7ek53bgxi9n9uoxcbaztv"
+      }
+    },
+    {
+      "id": "ixcchvvlagpyd38q7ptfzpgi",
+      "to": {
+        "groupId": "z160c3ce8cfsdf33guizwhq4"
+      },
+      "from": {
+        "blockId": "hebe2ei8o6a6al5uu2jf5rew",
+        "groupId": "qy9ldghk6c3cqp4a3sq1ba2q"
+      }
+    },
+    {
+      "id": "tguoed1k6i6c1tc67jdcj665",
+      "to": {
+        "groupId": "e76ay732zpex456ksi2stvau"
+      },
+      "from": {
+        "blockId": "oc25lavfrc7ouctwzya0744v",
+        "groupId": "z160c3ce8cfsdf33guizwhq4"
+      }
+    },
+    {
+      "id": "gcltvbuk7fo179v66xlo2w39",
+      "to": {
+        "groupId": "h3tuml9kfbx4c3mhoi8ou5y3"
+      },
+      "from": {
+        "itemId": "ssbdiz1d7g3jwcbj5uabdt7h",
+        "blockId": "sbaw4vpdilj02ee9m6pxi2op",
+        "groupId": "y91slqthdfv3mu32vlapqy9n"
+      }
+    },
+    {
+      "id": "q5gddxlsuoyvhx4kij1rko6n",
+      "to": {
+        "groupId": "lc3y34jfv070caggdl3cic35"
+      },
+      "from": {
+        "itemId": "h5ccszrrnmgppm73xmv8ust8",
+        "blockId": "sbaw4vpdilj02ee9m6pxi2op",
+        "groupId": "y91slqthdfv3mu32vlapqy9n"
+      }
+    },
+    {
+      "id": "w8f6e582fa91kuldlq0pji5p",
+      "to": {
+        "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+      },
+      "from": {
+        "blockId": "nnw0dbwkxs18fw9pzsef84bd",
+        "groupId": "h3tuml9kfbx4c3mhoi8ou5y3"
+      }
+    },
+    {
+      "id": "jmtjo6tksapx8hshktbjd8on",
+      "to": {
+        "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+      },
+      "from": {
+        "blockId": "rorffnvybqxwnwn9sn4b6a4p",
+        "groupId": "lc3y34jfv070caggdl3cic35"
+      }
+    },
+    {
+      "id": "f68h6sckb62cb8pbizs93ttv",
+      "to": {
+        "groupId": "ny6eqohlhtyrxlm5s57pvkhs"
+      },
+      "from": {
+        "blockId": "tif0bvvxg3h36ji06mif5ang",
+        "groupId": "vjz1tm36usb5ki5ui4kq3hoe"
+      }
+    },
+    {
+      "id": "az9p5c8t6x3qlr8wa4j7quwe",
+      "to": {
+        "groupId": "zia9vbj2gn4irxb692qr6a4c"
+      },
+      "from": {
+        "blockId": "j940klb85nr7sgplqcyj2745",
+        "groupId": "ny6eqohlhtyrxlm5s57pvkhs"
+      }
+    },
+    {
+      "id": "qh2ixp7tkluy2v0qnffcg8at",
+      "to": {
+        "groupId": "bbqfocfbgsu94yxi591cvy2v"
+      },
+      "from": {
+        "blockId": "xhad7q8b5dfpd8yakted6vv0",
+        "groupId": "zia9vbj2gn4irxb692qr6a4c"
+      }
+    },
+    {
+      "id": "ihptarpf8nfjnaubatkm75i1",
+      "to": {
+        "groupId": "ir0vutquzwiwogz67qchljtp"
+      },
+      "from": {
+        "blockId": "luadzosfhvpkzqf41sn2esz2",
+        "groupId": "bbqfocfbgsu94yxi591cvy2v"
+      }
+    },
+    {
+      "id": "nmlhwt90fxxo0zdnvlazu390",
+      "to": {
+        "blockId": "bhb4jsrp46k6esfdt1e0t2xd",
+        "groupId": "wqqknyy701ss9x9r6kvln8yl"
+      },
+      "from": {
+        "blockId": "jglk0sn8kt232e7tnv8c8n81",
+        "groupId": "e76ay732zpex456ksi2stvau"
+      }
+    },
+    {
+      "id": "ejl5aicpmm0qc9nnfp5hel04",
+      "to": {
+        "groupId": "y91slqthdfv3mu32vlapqy9n"
+      },
+      "from": {
+        "blockId": "bhb4jsrp46k6esfdt1e0t2xd",
+        "groupId": "wqqknyy701ss9x9r6kvln8yl"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#28292a"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#128C7E"
+      },
+      "roundness": "medium",
+      "hostAvatar": {
+        "url": "https://i.postimg.cc/fRKkwGWH/Julio-Martins.png",
+        "isEnabled": true
+      },
+      "guestAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/guestAvatar?v=1685330799682",
+        "isEnabled": false
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#FFFFFF"
+      },
+      "guestBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#e1ffc7"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cli88mae30010mh0f0yzjqn48/background?v=1685470080750"
+      }
+    },
+    "customCss": ".typebot-chat-view > .flex:first-child {\n    padding-top: 30px;\n}\n\n.typebot-input {\n    position: fixed;\n    bottom: 0;\n    align-items: center;\n    z-index: 999;\n    right: 0;\n}\n\n.typebot-input .typebot-button {\n    background: #008a7c;\n    border-radius: 50%;\n    color: #fff;\n    position: relative;\n    width: 50px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.typebot-container {\n    background-size: initial!important;\n    background-repeat: repeat-x!important;\n}\n\n.typebot-host-bubble>.bubble-typing {\n  border-radius: 0 5px 5px 5px;\n}\n\n.typebot-host-bubble>.bubble-typing:after {\n    position: absolute;\n    content: \"\";\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 0px 10px 10px 0;\n    border-color: transparent #fff transparent transparent;\n    top: 0;\n    left: -10px;\n}\n\n.typebot-guest-bubble {\n  position: relative;\n  border-radius: 5px 0 5px 5px;\n}\n\n.typebot-guest-bubble:after {\n  position: absolute;\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n}\n\n.typebot-guest-bubble:after {\n    border-width: 0px 0 10px 10px;\n    border-color: transparent transparent transparent #e1ffc7;\n    top: 0;\n    right: -10px;\n    border-style: solid;\n}\n\niframe[src=\"\"] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: relative;\n  width: 100%;\n  height: 100% !important;\n  z-index: 999999;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\na#lite-badge {\n  display: none!important;\n}"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "rememberUser": {
+        "isEnabled": false
+      },
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": false,
+      "isHideQueryParamsEnabled": false
+    },
+    "metadata": {
+      "title": "WhatsApp Web",
+      "imageUrl": "https://images.unsplash.com/photo-1611077544170-be90a2f68add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MjU2MDR8MHwxfHNlYXJjaHwyN3x8d2VpZ2h0JTIwbG9zc3xlbnwwfDB8fHwxNjg2MjAzMzA4fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "favIconUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/zxylsxnfz3qzd3zhdhioq532/favIcon?v=1690429043297",
+      "description": "Faça agora sua consulta gratuita com Dr. Júlio no WhatsApp.",
+      "customHeadCode": "<!-- Facebook Pixel Code -->\n<script>\n   !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window, document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n    fbq('init', '297371806115634');\n    fbq('track', 'PageView');\n    fbq('track', 'ViewContent');\n \n</script>\n<!-- End Facebook Pixel Code -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css\">\n<style>\n  .hide {\n    display: none!important;\n  }\n  typebot-standard {\n    position: relative;\n    z-index: 9999;\n  }\n  #__next {\n    position: relative;\n    z-index: 9999;\n}\n  /* User Bar */\n.user-bar {\n  width: 100%;\n  height: 55px;\n  background: #005e54;\n  color: #fff;\n  padding: 0;\n  font-size: 24px;\n  position: fixed;\n  z-index: 99999;\n  display: block;\n  top: 0;\n}\n\n.user-bar:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.user-bar div {\n    float: left;\n    transform: translateY(-50%);\n    position: relative;\n    top: 50%;\n    margin-left: 10px;\n}\n\n.user-bar .actions {\n  float: right;\n  margin: 0 0 0 20px;\n}\n\n.user-bar .actions.more {\n  margin: 0 12px 0 32px;\n}\n\n.user-bar .actions.attachment {\n  margin: 0 0 0 30px;\n}\n\n.user-bar .actions.attachment i {\n  display: block;\n  transform: rotate(-45deg);\n}\n\n.user-bar .avatar {\n  margin: 0 0 0 5px;\n  width: 36px;\n  height: 36px;\n}\n\n.user-bar .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);\n  display: block;\n  width: 100%;\n}\n\n.user-bar .name {\n  font-size: 17px;\n  font-weight: 600;\n  text-overflow: ellipsis;\n  letter-spacing: 0.3px;\n  margin: 0 0 0 8px;\n  overflow: hidden;\n  white-space: nowrap;\n  width: 150px;\n}\n\n.user-bar .status {\n  display: block;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 0;\n}\n</style>\n\n<script>\nfunction criarBarra() {\n  var userBar = document.createElement(\"div\");\n  userBar.className = \"user-bar\";\n\n  var backButton = document.createElement(\"div\");\n  backButton.className = \"back\";\n  backButton.innerHTML = '<i class=\"zmdi zmdi-arrow-left\"></i>';\n\n  var avatar = document.createElement(\"div\");\n  avatar.className = \"avatar\";\n  avatar.innerHTML = '<img src=\"https://i.postimg.cc/fRKkwGWH/Julio-Martins.png\" alt=\"CF DO JEFF\">';\n\n  var name = document.createElement(\"div\");\n  name.className = \"name\";\n  name.innerHTML = '<span>Dr. Júlio Martins</span><span class=\"status\">online</span>';\n\n  var moreActions = document.createElement(\"div\");\n  moreActions.className = \"actions more\";\n  moreActions.innerHTML = '<i class=\"zmdi zmdi-more-vert\"></i>';\n\n  var attachmentAction = document.createElement(\"div\");\n  attachmentAction.className = \"actions attachment\";\n  attachmentAction.innerHTML = '<i class=\"zmdi zmdi-attachment-alt\"></i>';\n\n  var phoneAction = document.createElement(\"div\");\n  phoneAction.className = \"actions\";\n  phoneAction.innerHTML = '<i class=\"zmdi zmdi-phone\"></i>';\n\n  userBar.appendChild(backButton);\n  userBar.appendChild(avatar);\n  userBar.appendChild(name);\n  userBar.appendChild(moreActions);\n  userBar.appendChild(attachmentAction);\n  userBar.appendChild(phoneAction);\n\n  var elementoPai = document.querySelector(\"#__next\");\n  if (elementoPai) {\n    elementoPai.insertBefore(userBar, elementoPai.firstChild);\n  }\n}\n\ncriarBarra();\n</script>\n"
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}

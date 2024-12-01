@@ -1,0 +1,1317 @@
+{
+  "id": "clkk8m2un003mmg0f8bd2ag3s",
+  "version": "3",
+  "icon": null,
+  "name": "INIBI100",
+  "folderId": null,
+  "groups": [
+    {
+      "id": "kalco04347tbs4ho1dbkpuw7",
+      "title": "Start",
+      "blocks": [
+        {
+          "id": "xn08j8z8ep71bwgy72vq62lp",
+          "type": "start",
+          "label": "Start",
+          "groupId": "kalco04347tbs4ho1dbkpuw7",
+          "outgoingEdgeId": "qytx2mfzhz162doka4yoq471"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "u83akvkzk3yw56wfqs93l8s4",
+      "title": "Group #1",
+      "blocks": [
+        {
+          "id": "wtgsstridioi1elj75fyy816",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, tudo bem? Meu nome é Carmen e eu faço parte do\natendimento comercial aqui do laboratório! "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "u83akvkzk3yw56wfqs93l8s4"
+        },
+        {
+          "id": "uhlni8xzwbfmcav3kpnzvlom",
+          "type": "Wait",
+          "groupId": "u83akvkzk3yw56wfqs93l8s4",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "uf3oox5m2utb9479o4hm1u6h",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Em instantes vamos te atender 🥰"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "u83akvkzk3yw56wfqs93l8s4"
+        },
+        {
+          "id": "dhe6v093vl82mvn0talgjysh",
+          "type": "Wait",
+          "groupId": "u83akvkzk3yw56wfqs93l8s4",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "oosxek4z7o84582ivvtxs9ey",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para já agilizarmos seu atendimento e você não precisar\nficar esperando, me diga: qual seu nome?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "u83akvkzk3yw56wfqs93l8s4"
+        },
+        {
+          "id": "g7gyjtjq88zhl4x6m3gvjlaq",
+          "type": "text input",
+          "groupId": "u83akvkzk3yw56wfqs93l8s4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digite o seu nome"
+            },
+            "variableId": "vz6cprsn3buczr8iajkjqyk9t"
+          }
+        },
+        {
+          "id": "f8q8ru0nzd610fyj518ra74s",
+          "type": "Wait",
+          "groupId": "u83akvkzk3yw56wfqs93l8s4",
+          "options": {
+            "secondsToWaitFor": "2"
+          },
+          "outgoingEdgeId": "i4l82pv5ylcqnvgpc748p1y9"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 345,
+        "y": -38
+      }
+    },
+    {
+      "id": "xc09pn3235vatbber25r9yfp",
+      "title": "Group #3",
+      "blocks": [
+        {
+          "id": "x75921ajqejg8lw9u6lvdmcp",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Muito prazer,  "
+                  },
+                  {
+                    "bold": true,
+                    "text": "{{Nome}}!"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xc09pn3235vatbber25r9yfp"
+        },
+        {
+          "id": "tx52w1zqo7zwdvd1n8lhk9hu",
+          "type": "Wait",
+          "groupId": "xc09pn3235vatbber25r9yfp",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "cff0132ol6gxww59jwht026k",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Vou te mandar um áudio pra conseguir me comunicar melhor\ntudo bem?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xc09pn3235vatbber25r9yfp"
+        },
+        {
+          "id": "juo1e1han2ni187ut9ezun7s",
+          "type": "Wait",
+          "groupId": "xc09pn3235vatbber25r9yfp",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "h3loqgu2kv26jqougvl86ho4",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/h3loqgu2kv26jqougvl86ho4?v=1690375386014"
+          },
+          "groupId": "xc09pn3235vatbber25r9yfp"
+        },
+        {
+          "id": "gybij9tby9fcma9gvibzda7p",
+          "type": "Wait",
+          "groupId": "xc09pn3235vatbber25r9yfp",
+          "options": {
+            "secondsToWaitFor": "32"
+          }
+        },
+        {
+          "id": "hy2opez7nkm21dns638z5xer",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Obs"
+                  },
+                  {
+                    "text": ": preciso que você responda todas essas perguntas para que eu consiga\nte avaliar e te indicar o "
+                  },
+                  {
+                    "bold": true,
+                    "text": "melhor tratamento."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xc09pn3235vatbber25r9yfp"
+        },
+        {
+          "id": "vh1ydk2u62a9g7l2ehjjh9xj",
+          "type": "Wait",
+          "groupId": "xc09pn3235vatbber25r9yfp",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "mrxaiwgk4i02w89htw1bg51l",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Questionário de anamnese: "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "xc09pn3235vatbber25r9yfp",
+          "outgoingEdgeId": "r20h7ty7h0829yjpnm0ybd8z"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 664,
+        "y": -32
+      }
+    },
+    {
+      "id": "fehik2hu8vgl41715km7sdd4",
+      "title": "Group #3",
+      "blocks": [
+        {
+          "id": "g6g1wgiv0okuc87mbej7xt2p",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual a sua altura? "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "tpx5256tizl6yqvc0b3hlwcf",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita sua altura"
+            },
+            "variableId": "vf108ihpn44gpvqotqaxdnq9w"
+          }
+        },
+        {
+          "id": "sxwtxucvx94m51pnebjwv298",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual seu peso atual?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "rml9fwgpxip63uduygx2pfbx",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita seu peso"
+            },
+            "variableId": "vemc9wpjatxk8pst905b45nlq"
+          }
+        },
+        {
+          "id": "vlwczxdi3u664g4txsw49xa3",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tem filhos? Se sim, quantos\nfilhos e quanto tempo foi sua última gestação? "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "zrc2rds3pf8idwlq42jmv7lh",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita quantos e tempo da ultima gestação"
+            },
+            "variableId": "vv8jo3zdpijvn9b3we06yc9c6"
+          }
+        },
+        {
+          "id": "oi4l0ycqizgzraizmbkx3b4r",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tem algum problema de\nsaúde? (Pressão alta, problemas cardíacos, diabetes)?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "s681pa5pl18q1f4zocy0hbpl",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita resposta"
+            },
+            "variableId": "vv9uc3sjhd7fm3nbdckftfzwk"
+          }
+        },
+        {
+          "id": "cpbxte4xm2fh3a1lrj726dxq",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Qual a parte do seu corpo\nque mais te incomoda?"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "w0141au1wii4wp63sgh521bo",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita qual a parte do seu corpo que mais te incomoda"
+            },
+            "variableId": "vvj7np98qv1l8dcgfkk1hios6"
+          }
+        },
+        {
+          "id": "l8bjeu2q6erbuac44hh30b6z",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O que você acha que te impede de emagrecer? (vontade de doces, compulsão alimentar, desanimo,\nansiedade...)"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "v83naimried18jy8491nxdy8",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita o que te impede"
+            },
+            "variableId": "vk3bdnq5o70unike63x9renr2"
+          }
+        },
+        {
+          "id": "eqjiyfdgx5ucldluzggf1p3k",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Já fez ou faz uso de algum medicamento emagrecedor? "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "fehik2hu8vgl41715km7sdd4"
+        },
+        {
+          "id": "w45qvoc8yrzctiaiqnjcshly",
+          "type": "text input",
+          "groupId": "fehik2hu8vgl41715km7sdd4",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Digita fez ou faz uso"
+            },
+            "variableId": "vyn7ek7knma8w6nrzy5e4b32i"
+          },
+          "outgoingEdgeId": "kc0tos1bqf49l1sbot2z6nyv"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 983,
+        "y": -27
+      }
+    },
+    {
+      "id": "qoz9e7eq1652hlgtltcray5v",
+      "title": "Group #4",
+      "blocks": [
+        {
+          "id": "w8949dxe5erzwrz15izzptji",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "De acordo com resultado, você está um pouco à cima do peso. Portanto, o tratamento do INIBI100\né ideal para você! \n\n"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qoz9e7eq1652hlgtltcray5v"
+        },
+        {
+          "id": "hu6nwlw4cvtrvrfrsx59ih9f",
+          "type": "Wait",
+          "groupId": "qoz9e7eq1652hlgtltcray5v",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "qii910ay20co2tx3biwi6a3g",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/qii910ay20co2tx3biwi6a3g?v=1690376717124"
+          },
+          "groupId": "qoz9e7eq1652hlgtltcray5v"
+        },
+        {
+          "id": "gjqvfj56ixm0iyswo627tscq",
+          "type": "Wait",
+          "groupId": "qoz9e7eq1652hlgtltcray5v",
+          "options": {
+            "secondsToWaitFor": "20"
+          }
+        },
+        {
+          "id": "tf5wf03aq8vhxqm1rbx74y02",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/tf5wf03aq8vhxqm1rbx74y02?v=1690376890536"
+          },
+          "groupId": "qoz9e7eq1652hlgtltcray5v"
+        },
+        {
+          "id": "x8lbweouqbur59nleny939ks",
+          "type": "Wait",
+          "groupId": "qoz9e7eq1652hlgtltcray5v",
+          "options": {
+            "secondsToWaitFor": "60"
+          }
+        },
+        {
+          "id": "ua9j3h3l7xfad99bha968ohq",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Composição do INIBI100👇🏻PSYLLIUM: regula a atividade intestinal, ajuda no controle da glicemia, dos triglicerídeos e colesterol e da pressão arterial, além de aumentar a\nsaciedade. CROMO PICOLINATO: auxilia no tratamento de diabetes, regulando os níveis de glicose e insulina no sangue. SPIRULINA: auxilia na manutenção e desenvolvimento de músculo, melhora a resistência e a força, promovendo mais energia e disposição. QUITOSANA: forma um gel no estômago, diminuindo a absorção de gordura, fazendo com que sejam eliminadas pelas fezes e ajuda a prolongar a\nsaciedade."
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "qoz9e7eq1652hlgtltcray5v",
+          "outgoingEdgeId": "h330nd3tmm1soy1ecbxovb3y"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1309,
+        "y": -28
+      }
+    },
+    {
+      "id": "yzpo141hy6rsns6tmp4k4sgc",
+      "title": "Group #5",
+      "blocks": [
+        {
+          "id": "fcqmnq8bwtfw55lyi7fxsruo",
+          "type": "Wait",
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "options": {
+            "secondsToWaitFor": "15"
+          }
+        },
+        {
+          "id": "f0gy9vnzuknch9tmr9zto84a",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/f0gy9vnzuknch9tmr9zto84a?v=1690377577766"
+          },
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+        },
+        {
+          "id": "eao167yvke9nwpo3ayqe3jtn",
+          "type": "Wait",
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "options": {
+            "secondsToWaitFor": "40"
+          }
+        },
+        {
+          "id": "vyjz0way2wclo9tjghyo6ao4",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/vyjz0way2wclo9tjghyo6ao4?v=1690377732079"
+          },
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+        },
+        {
+          "id": "wfcq9inj95h3fct92x7wyn9k",
+          "type": "Wait",
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "h6ovte98nr764uilmy0yno9g",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/h6ovte98nr764uilmy0yno9g?v=1690377842465"
+          },
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+        },
+        {
+          "id": "uvhi2sulrgvklahkrx7gwme7",
+          "type": "Wait",
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "eriufffo6yp03w8hp8icwl27",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/eriufffo6yp03w8hp8icwl27?v=1690377900073"
+          },
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+        },
+        {
+          "id": "jqvns6nznoodjlqrq2bvr554",
+          "type": "Wait",
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "fjk5tsdeh4sbn8ck65pqi2p2",
+          "type": "image",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/fjk5tsdeh4sbn8ck65pqi2p2?v=1690377942535"
+          },
+          "groupId": "yzpo141hy6rsns6tmp4k4sgc",
+          "outgoingEdgeId": "ar1sxbbz024a7kzhhlguf54x"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1625,
+        "y": -24
+      }
+    },
+    {
+      "id": "s0yu4sa7z6x6cpoo3onl1ds9",
+      "title": "Group #6",
+      "blocks": [
+        {
+          "id": "bn7svu194qclza7j936hu520",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "8"
+          }
+        },
+        {
+          "id": "k2dit9ap1p4t9crnk9wf6s4d",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/k2dit9ap1p4t9crnk9wf6s4d?v=1690378180082"
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+        },
+        {
+          "id": "du7hmt41e0qrc4qsz8gpjzuz",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "60"
+          }
+        },
+        {
+          "id": "u8mcx1b705dtrpfdb5sfwq0o",
+          "type": "text input",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "isLong": false,
+            "labels": {
+              "button": "Enviar",
+              "placeholder": "Responda..."
+            },
+            "variableId": "vbmsquju90izmdf7fkgor1vxj"
+          }
+        },
+        {
+          "id": "vbjntd82ft4ui1wb7851yteq",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "wvl3jl8si5zcoznv9kcdt215",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "INFORMAÇÕES IMPORTANTES SOBRE O INIBI100:  "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+        },
+        {
+          "id": "dmz910ni69785bmaaoascwlu",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "i5sgv8m60iuvcgxkhusq9116",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "POSSUI ALGUM EFEITO COLATERAL OU CONTRA INDICAÇÕES?"
+                  },
+                  {
+                    "text": " Não possui contraindicações, efeitos colaterais ou hormônios. O produto é indicado para qualquer pessoa. "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+        },
+        {
+          "id": "gujnei8y7z1gnb61tgniftfo",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "vc979goe50fxeggmowfu1xux",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "COMO DEVO UTILIZAR O INIBI100?"
+                  },
+                  {
+                    "text": " Indica-se o uso de uma cápsula ao dia, 30 minutos antes da refeição principal.  "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+        },
+        {
+          "id": "fuehzs9gp6jswk63b61a6a0o",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "xdc5hgzxtuzvi5gcvn4kewce",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "INIBI100 É APROVADO PELA ANVISA?"
+                  },
+                  {
+                    "text": " Sim, tem aprovação da ANVISA e foi desenvolvido por especialistas e comprovado no controle da saúde do corpo.  "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+        },
+        {
+          "id": "dml6xbvfqq0i10mewf18gw1o",
+          "type": "Wait",
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "options": {
+            "secondsToWaitFor": "4"
+          }
+        },
+        {
+          "id": "hh0rb0v5i1clksd8uz7xlau7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "PRAZO DE ENTREGA?"
+                  },
+                  {
+                    "text": " De 1 a 2 semanas para você receber no conforto da sua casa.  "
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "s0yu4sa7z6x6cpoo3onl1ds9",
+          "outgoingEdgeId": "stq763ilhuemst71obhufnb1"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1944,
+        "y": -23
+      }
+    },
+    {
+      "id": "i61dsy1ayenop3icvver2edp",
+      "title": "Group #7",
+      "blocks": [
+        {
+          "id": "lrlpj99x7ppe1qz2vgoyyzv3",
+          "type": "Wait",
+          "groupId": "i61dsy1ayenop3icvver2edp",
+          "options": {
+            "secondsToWaitFor": "6"
+          }
+        },
+        {
+          "id": "d0wles4c96b2viq1uti8ie4d",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/blocks/d0wles4c96b2viq1uti8ie4d?v=1690382022877"
+          },
+          "groupId": "i61dsy1ayenop3icvver2edp"
+        },
+        {
+          "id": "xzyvlv4y6o5kl6i80m43t9cz",
+          "type": "Wait",
+          "groupId": "i61dsy1ayenop3icvver2edp",
+          "options": {
+            "secondsToWaitFor": "120"
+          },
+          "outgoingEdgeId": "kukg9m7u69xlbbqhwdkw6uz1"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2308,
+        "y": 608
+      }
+    },
+    {
+      "id": "rqyeu3367xx7ssfrk8m4zam2",
+      "title": "Group #8",
+      "blocks": [
+        {
+          "id": "e6x53vz7k0toriywvvjsd7vt",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "egp17xgqzithy6258zkbxyhz",
+              "type": 0,
+              "blockId": "e6x53vz7k0toriywvvjsd7vt",
+              "content": "1 Pote - tratamento 30 dias [12x 19,78 no cartão de crédito ou 197 a vista no pix]",
+              "outgoingEdgeId": "nyio6eomre3t839cficb67ap"
+            },
+            {
+              "id": "pq9sgcw7mhlyj4rmipdkmvk7",
+              "type": 0,
+              "blockId": "e6x53vz7k0toriywvvjsd7vt",
+              "content": "Kit 3 potes - tratamento 3 meses [12x 29,82 no cartão de crédito ou 297 reais a vista no pix]",
+              "outgoingEdgeId": "a9unw9w946az8qnzkp9x6kcb"
+            },
+            {
+              "id": "hhfvqdlsqdciwr8c8qxmxmae",
+              "type": 0,
+              "blockId": "e6x53vz7k0toriywvvjsd7vt",
+              "content": "Kit 5 potes - tratamento 5 meses [12x 41,87 no cartão de crédito ou 417 a vista no pix]",
+              "outgoingEdgeId": "pql4a1g8cbzxm8xcxwkd35l5"
+            }
+          ],
+          "groupId": "rqyeu3367xx7ssfrk8m4zam2",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "mj6lnki7jpz6rxv77wpqoxo1",
+          "type": "choice input",
+          "items": [],
+          "groupId": "rqyeu3367xx7ssfrk8m4zam2",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2655,
+        "y": 52
+      }
+    },
+    {
+      "id": "cvgvmjeic5zmhwng87e8kh12",
+      "title": "Group #9",
+      "blocks": [
+        {
+          "id": "k37p3e13xnxgywdpuplnl44e",
+          "type": "Redirect",
+          "groupId": "cvgvmjeic5zmhwng87e8kh12",
+          "options": {
+            "url": "https://ev.braip.com/ref?pl=pla8de02&ck=che2ojem&af=afi8j89ndx",
+            "isNewTab": false
+          },
+          "outgoingEdgeId": "prucofcwye99h18d0s4b7tvc"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3106,
+        "y": -20
+      }
+    },
+    {
+      "id": "rdfbmlvskybgxufbtr9752pt",
+      "title": "Group #10",
+      "blocks": [
+        {
+          "id": "p84xg7xzoibgrwqip7u7kfyg",
+          "type": "Redirect",
+          "groupId": "rdfbmlvskybgxufbtr9752pt",
+          "options": {
+            "url": "https://ev.braip.com/ref?pl=plaegyjj&ck=che2ojem&af=afi8j89ndx",
+            "isNewTab": false
+          },
+          "outgoingEdgeId": "suuz32v9qo2elafctq2ulvf0"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3106,
+        "y": 228
+      }
+    },
+    {
+      "id": "r0ju7jbsv6597luftnyqjktk",
+      "title": "Group #11",
+      "blocks": [
+        {
+          "id": "zcpu2kcdsednru9ysvtdultt",
+          "type": "Redirect",
+          "groupId": "r0ju7jbsv6597luftnyqjktk",
+          "options": {
+            "url": "https://ev.braip.com/ref?pl=plaq0vzr&ck=che2ojem&af=afi8j89ndx",
+            "isNewTab": false
+          },
+          "outgoingEdgeId": "z4w8vqwh2pwdyen69j4egbg4"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3102,
+        "y": 447
+      }
+    },
+    {
+      "id": "rsqkvkwjxb2v4xzykbsooqfz",
+      "title": "Group #12",
+      "blocks": [
+        {
+          "id": "mbwrp5wgx5gs0tgx5qi1bxzc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora para que eu possa gerar o link promocional, só me avisa qual kit é melhor pra você? "
+                  },
+                  {
+                    "bold": true,
+                    "text": "Aproveite é por tempo limitado!"
+                  },
+                  {
+                    "text": " E lhe desejo bons resultados 🥰"
+                  }
+                ]
+              }
+            ]
+          },
+          "groupId": "rsqkvkwjxb2v4xzykbsooqfz",
+          "outgoingEdgeId": "c47nbcooi5g5bqch39jie6n0"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 2308.75,
+        "y": 934.38
+      }
+    },
+    {
+      "id": "xmq8l5ks0y734l6hho7u6avj",
+      "title": "Group #13",
+      "blocks": [
+        {
+          "id": "ya8t7r9qfmtibgux6kam3iuj",
+          "type": "Pixel",
+          "groupId": "xmq8l5ks0y734l6hho7u6avj",
+          "options": {
+            "params": [],
+            "pixelId": "7328291303864057",
+            "eventType": "Purchase",
+            "isInitSkip": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 3631.75,
+        "y": 240.37
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vz6cprsn3buczr8iajkjqyk9t",
+      "name": "Nome"
+    },
+    {
+      "id": "vf108ihpn44gpvqotqaxdnq9w",
+      "name": "Altura"
+    },
+    {
+      "id": "vemc9wpjatxk8pst905b45nlq",
+      "name": "Peso"
+    },
+    {
+      "id": "vv8jo3zdpijvn9b3we06yc9c6",
+      "name": "Filhos"
+    },
+    {
+      "id": "vv9uc3sjhd7fm3nbdckftfzwk",
+      "name": "Saúde"
+    },
+    {
+      "id": "vvj7np98qv1l8dcgfkk1hios6",
+      "name": "Corpo"
+    },
+    {
+      "id": "vk3bdnq5o70unike63x9renr2",
+      "name": "Impede"
+    },
+    {
+      "id": "vyn7ek7knma8w6nrzy5e4b32i",
+      "name": "Uso"
+    },
+    {
+      "id": "vbmsquju90izmdf7fkgor1vxj",
+      "name": "Resposta"
+    },
+    {
+      "id": "vxpnu6eyz0vvoyt2z6vva7fhm",
+      "name": "1 Pote - tratamento 30 dias [12x 19,78 no cartão de crédito ou 197 a vista no pix]"
+    },
+    {
+      "id": "ven6byyx9su5l5jf0486a5mhu",
+      "name": "Kit 3 potes - tratamento 3 meses [12x 29,82 no cartão de crédito ou 297 reais a vista no pix]"
+    },
+    {
+      "id": "vwtdks7b76v6dtjri1xqri6ay",
+      "name": "Kit 5 potes - tratamento 5 meses [12x 39,86 no cartão de crédito ou 397 a vista no pix]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "qytx2mfzhz162doka4yoq471",
+      "to": {
+        "groupId": "u83akvkzk3yw56wfqs93l8s4"
+      },
+      "from": {
+        "blockId": "xn08j8z8ep71bwgy72vq62lp",
+        "groupId": "kalco04347tbs4ho1dbkpuw7"
+      }
+    },
+    {
+      "id": "r20h7ty7h0829yjpnm0ybd8z",
+      "to": {
+        "groupId": "fehik2hu8vgl41715km7sdd4"
+      },
+      "from": {
+        "blockId": "mrxaiwgk4i02w89htw1bg51l",
+        "groupId": "xc09pn3235vatbber25r9yfp"
+      }
+    },
+    {
+      "id": "kc0tos1bqf49l1sbot2z6nyv",
+      "to": {
+        "groupId": "qoz9e7eq1652hlgtltcray5v"
+      },
+      "from": {
+        "blockId": "w45qvoc8yrzctiaiqnjcshly",
+        "groupId": "fehik2hu8vgl41715km7sdd4"
+      }
+    },
+    {
+      "id": "h330nd3tmm1soy1ecbxovb3y",
+      "to": {
+        "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+      },
+      "from": {
+        "blockId": "ua9j3h3l7xfad99bha968ohq",
+        "groupId": "qoz9e7eq1652hlgtltcray5v"
+      }
+    },
+    {
+      "id": "ar1sxbbz024a7kzhhlguf54x",
+      "to": {
+        "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+      },
+      "from": {
+        "blockId": "fjk5tsdeh4sbn8ck65pqi2p2",
+        "groupId": "yzpo141hy6rsns6tmp4k4sgc"
+      }
+    },
+    {
+      "id": "i4l82pv5ylcqnvgpc748p1y9",
+      "to": {
+        "groupId": "xc09pn3235vatbber25r9yfp"
+      },
+      "from": {
+        "blockId": "f8q8ru0nzd610fyj518ra74s",
+        "groupId": "u83akvkzk3yw56wfqs93l8s4"
+      }
+    },
+    {
+      "id": "nyio6eomre3t839cficb67ap",
+      "to": {
+        "groupId": "cvgvmjeic5zmhwng87e8kh12"
+      },
+      "from": {
+        "itemId": "egp17xgqzithy6258zkbxyhz",
+        "blockId": "e6x53vz7k0toriywvvjsd7vt",
+        "groupId": "rqyeu3367xx7ssfrk8m4zam2"
+      }
+    },
+    {
+      "id": "stq763ilhuemst71obhufnb1",
+      "to": {
+        "groupId": "i61dsy1ayenop3icvver2edp"
+      },
+      "from": {
+        "blockId": "hh0rb0v5i1clksd8uz7xlau7",
+        "groupId": "s0yu4sa7z6x6cpoo3onl1ds9"
+      }
+    },
+    {
+      "id": "a9unw9w946az8qnzkp9x6kcb",
+      "to": {
+        "groupId": "rdfbmlvskybgxufbtr9752pt"
+      },
+      "from": {
+        "itemId": "pq9sgcw7mhlyj4rmipdkmvk7",
+        "blockId": "e6x53vz7k0toriywvvjsd7vt",
+        "groupId": "rqyeu3367xx7ssfrk8m4zam2"
+      }
+    },
+    {
+      "id": "pql4a1g8cbzxm8xcxwkd35l5",
+      "to": {
+        "groupId": "r0ju7jbsv6597luftnyqjktk"
+      },
+      "from": {
+        "itemId": "hhfvqdlsqdciwr8c8qxmxmae",
+        "blockId": "e6x53vz7k0toriywvvjsd7vt",
+        "groupId": "rqyeu3367xx7ssfrk8m4zam2"
+      }
+    },
+    {
+      "id": "c47nbcooi5g5bqch39jie6n0",
+      "to": {
+        "groupId": "rqyeu3367xx7ssfrk8m4zam2"
+      },
+      "from": {
+        "blockId": "mbwrp5wgx5gs0tgx5qi1bxzc",
+        "groupId": "rsqkvkwjxb2v4xzykbsooqfz"
+      }
+    },
+    {
+      "id": "kukg9m7u69xlbbqhwdkw6uz1",
+      "to": {
+        "groupId": "rsqkvkwjxb2v4xzykbsooqfz"
+      },
+      "from": {
+        "blockId": "xzyvlv4y6o5kl6i80m43t9cz",
+        "groupId": "i61dsy1ayenop3icvver2edp"
+      }
+    },
+    {
+      "id": "prucofcwye99h18d0s4b7tvc",
+      "to": {
+        "groupId": "xmq8l5ks0y734l6hho7u6avj"
+      },
+      "from": {
+        "blockId": "k37p3e13xnxgywdpuplnl44e",
+        "groupId": "cvgvmjeic5zmhwng87e8kh12"
+      }
+    },
+    {
+      "id": "z4w8vqwh2pwdyen69j4egbg4",
+      "to": {
+        "blockId": "ya8t7r9qfmtibgux6kam3iuj",
+        "groupId": "xmq8l5ks0y734l6hho7u6avj"
+      },
+      "from": {
+        "blockId": "zcpu2kcdsednru9ysvtdultt",
+        "groupId": "r0ju7jbsv6597luftnyqjktk"
+      }
+    },
+    {
+      "id": "suuz32v9qo2elafctq2ulvf0",
+      "to": {
+        "groupId": "xmq8l5ks0y734l6hho7u6avj"
+      },
+      "from": {
+        "blockId": "p84xg7xzoibgrwqip7u7kfyg",
+        "groupId": "rdfbmlvskybgxufbtr9752pt"
+      }
+    }
+  ],
+  "theme": {
+    "chat": {
+      "inputs": {
+        "color": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "placeholderColor": "#28292a"
+      },
+      "buttons": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#128C7E"
+      },
+      "hostAvatar": {
+        "url": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/hostAvatar?v=1690410108757",
+        "isEnabled": true
+      },
+      "hostBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#F7F8FF"
+      },
+      "guestBubbles": {
+        "color": "#303235",
+        "backgroundColor": "#e1ffc7"
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/background?v=1690404395549"
+      }
+    },
+    "customCss": ".typebot-chat-view > .flex:first-child {\n    padding-top: 30px;\n}\n\n.typebot-input {\n    position: fixed;\n    bottom: 0;\n    align-items: center;\n    z-index: 999;\n    right: 0;\n}\n\n.typebot-input .typebot-button {\n    background: #008a7c;\n    border-radius: 50%;\n    color: #fff;\n    position: relative;\n    width: 50px;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.typebot-container {\n    background-size: initial!important;\n    background-repeat: repeat-x!important;\n}\n\n.typebot-host-bubble>.bubble-typing {\n  border-radius: 0 5px 5px 5px;\n}\n\n.typebot-host-bubble>.bubble-typing:after {\n    position: absolute;\n    content: \"\";\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 0px 10px 10px 0;\n    border-color: transparent #fff transparent transparent;\n    top: 0;\n    left: -10px;\n}\n\n.typebot-guest-bubble {\n  position: relative;\n  border-radius: 5px 0 5px 5px;\n}\n\n.typebot-guest-bubble:after {\n  position: absolute;\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n}\n\n.typebot-guest-bubble:after {\n    border-width: 0px 0 10px 10px;\n    border-color: transparent transparent transparent #e1ffc7;\n    top: 0;\n    right: -10px;\n    border-style: solid;\n}\n\niframe[src=\"\"] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: relative;\n  width: 100%;\n  height: 100% !important;\n  z-index: 999999;\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\na#lite-badge {\n  display: none!important;\n}"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "rememberUser": {
+        "isEnabled": false
+      },
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": false,
+      "isHideQueryParamsEnabled": false
+    },
+    "metadata": {
+      "imageUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/ogImage?v=1690405501104",
+      "favIconUrl": "https://s3.fr-par.scw.cloud/typebot/public/typebots/cljuhw0vb0026l40fymm0ivj3/favIcon?v=1690409677289",
+      "description": "O INIBI100 é um suplemento 100% natural, tem a função de queimar calorias sem a prática constante de exercícios, reduz a vontade de comer, regula o intestino, diminui a ansiedade e não tem nenhum efeito colateral!!",
+      "customHeadCode": "<!-- Facebook Pixel Code -->\n<script>\n   !function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window, document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n    fbq('init', 'SEUPIXELAQUI');\n    fbq('track', 'PageView');\n    fbq('track', 'ViewContent');\n \n</script>\n<!-- End Facebook Pixel Code -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css\">\n<style>\n  .hide {\n    display: none!important;\n  }\n  typebot-standard {\n    position: relative;\n    z-index: 9999;\n  }\n  #__next {\n    position: relative;\n    z-index: 9999;\n}\n  /* User Bar */\n.user-bar {\n  width: 100%;\n  height: 55px;\n  background: #005e54;\n  color: #fff;\n  padding: 0;\n  font-size: 24px;\n  position: fixed;\n  z-index: 99999;\n  display: block;\n  top: 0;\n}\n\n.user-bar:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.user-bar div {\n    float: left;\n    transform: translateY(-50%);\n    position: relative;\n    top: 50%;\n    margin-left: 10px;\n}\n\n.user-bar .actions {\n  float: right;\n  margin: 0 0 0 20px;\n}\n\n.user-bar .actions.more {\n  margin: 0 12px 0 32px;\n}\n\n.user-bar .actions.attachment {\n  margin: 0 0 0 30px;\n}\n\n.user-bar .actions.attachment i {\n  display: block;\n  transform: rotate(-45deg);\n}\n\n.user-bar .avatar {\n  margin: 0 0 0 5px;\n  width: 36px;\n  height: 36px;\n}\n\n.user-bar .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);\n  display: block;\n  width: 100%;\n}\n\n.user-bar .name {\n  font-size: 17px;\n  font-weight: 600;\n  text-overflow: ellipsis;\n  letter-spacing: 0.3px;\n  margin: 0 0 0 8px;\n  overflow: hidden;\n  white-space: nowrap;\n  width: 150px;\n}\n\n.user-bar .status {\n  display: block;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: 0;\n}\n</style>\n\n<script>\nfunction criarBarra() {\n  var userBar = document.createElement(\"div\");\n  userBar.className = \"user-bar\";\n\n  var backButton = document.createElement(\"div\");\n  backButton.className = \"back\";\n  backButton.innerHTML = '<i class=\"zmdi zmdi-arrow-left\"></i>';\n\n  var avatar = document.createElement(\"div\");\n  avatar.className = \"avatar\";\n  avatar.innerHTML = '<img src=\"https://i.postimg.cc/VsjBT3Pc/tutorial.png\" alt=\"ATEND. CARMEN\">';\n    \n  var name = document.createElement(\"div\");\n  name.className = \"name\";\n  name.innerHTML = '<span>ATEND. CARMEN</span><span class=\"status\">online</span>';\n\n  var moreActions = document.createElement(\"div\");\n  moreActions.className = \"actions more\";\n  moreActions.innerHTML = '<i class=\"zmdi zmdi-more-vert\"></i>';\n\n  var attachmentAction = document.createElement(\"div\");\n  attachmentAction.className = \"actions attachment\";\n  attachmentAction.innerHTML = '<i class=\"zmdi zmdi-attachment-alt\"></i>';\n\n  var phoneAction = document.createElement(\"div\");\n  phoneAction.className = \"actions\";\n  phoneAction.innerHTML = '<i class=\"zmdi zmdi-phone\"></i>';\n\n  userBar.appendChild(backButton);\n  userBar.appendChild(avatar);\n  userBar.appendChild(name);\n  userBar.appendChild(moreActions);\n  userBar.appendChild(attachmentAction);\n  userBar.appendChild(phoneAction);\n\n  var elementoPai = document.querySelector(\"#__next\");\n  if (elementoPai) {\n    elementoPai.insertBefore(userBar, elementoPai.firstChild);\n  }\n}\n\ncriarBarra();\n</script>\n"
+    },
+    "typingEmulation": {
+      "speed": 300,
+      "enabled": true,
+      "maxDelay": 1.5
+    }
+  },
+  "publicId": null,
+  "customDomain": null,
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false
+}
