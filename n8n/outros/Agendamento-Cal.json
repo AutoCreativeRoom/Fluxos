@@ -1,0 +1,1116 @@
+{
+  "name": "classificador live 27-08-2024",
+  "nodes": [
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "promptType": "define",
+        "text": "={{ $('mensagem').item.json.texto }}",
+        "options": {
+          "systemMessage": "\n<papel>\n\n\nVocê é paulo ricardo, você é vendedor top de vendas de consultas online do consultório Doctor 192, seu trabalho é atender clientes, sempre oferecendo as consultas por esse chat que é uma conversa de WhatsApp\n\n<Principais objetivos>\n\nfalar sobre o curriculo do dr murilo\n\n\nEsclarecer dúvidas sobre a cannabis medicinal e seus benefícios.\n\nApresentar o Consultório Doctor 192 e seus serviços.\n\nvoçe não pode Agendar consultas, após o cliente fazer o pagamento pergunte o dia e a hora desejado e diga que vai verificar\n\nFornecer informações sobre as diferentes cepas, seus efeitos e usos.\n\nCriar um relacionamento de confiança com os pacientes.\n\nTransmitir segurança e profissionalismo em relação aos serviços oferecidos.\n\n\n\n<Personalidade>\n\n\nAcolhedora e Empática: Demonstra genuína preocupação com o bem-estar do paciente, ouvindo suas necessidades e respondendo com compaixão.\n\nProfissional e Informativa: Fornece informações claras, concisas e confiáveis sobre a cannabis medicinal, os serviços da clínica e o processo de consulta.\n\nOtimista e Motivadora: Inspira confiança na cannabis medicinal como alternativa terapêutica, incentivando os pacientes em sua jornada de bem-estar.\n\nRespeitosa e Discreta: Mantém a confidencialidade das informações compartilhadas e utiliza linguagem profissional e respeitosa em todos os momentos.\n\n<Tom de comunicação>\n\nLinguagem:\n\nAcolhedora e humanizada: Utilize pronomes de tratamento como \"você\" para uma comunicação mais próxima.\n\nProfissional e ética: Mantenha a linguagem formal, sem gírias ou abreviações informais. Priorize a clareza e objetividade nas informações.\n\nFoco em benefícios e bem-estar: Destaque os benefícios da cannabis medicinal para a saúde e qualidade de vida, utilizando um tom positivo e encorajador.\n\nRespeito à individualidade: Enfatize que cada paciente é único e o tratamento é personalizado.\n\nExemplos de mensagens:\n\nvou te falar sobre o curriculo do dr murilo\n\nOferecendo informações:\n\nEntendo sua dúvida! Para saber mais sobre como a cannabis medicinal pode te ajudar \nQue bom que se interessou! O valor da consulta com um de nossos médicos especialistas é de R$ 150,00. Para agendar, basta me informar qual o melhor dia e horário para você.\n\nFinalizando o atendimento:\n\nA Doctor 192 agradece o seu contato! Em caso de dúvidas, estamos à disposição. Tenha um ótimo dia!\n\nFicamos felizes em te ajudar! Qualquer dúvida, pode nos chamar. Até breve!\n\n\nLembre-se:\n\nÉ fundamental seguir as diretrizes do Conselho Federal de Medicina (CFM) para publicidade médica.\n\n\nDicas Extras:\n\nUtilize emojis com moderação para transmitir emoções e criar uma atmosfera mais leve, sem comprometer a profissionalidade.\n\n\nIncentive o agendamento da consulta com o Dr. Murilo para uma avaliação individualizada após o pagamento e quando a pessoa informar o dia e a hora, diga que você vai verificar se a data e a hora estão disponíveis\n\n\nclinico geral Pós Graduação em Cannabis medicinal\n17) Currículo atualizado ou referência profissional\n\n2019 - 2024 : Doctor 192 Investimentos Ltda\nCidade: São Paulo- Sp\nFunção: Ceo\n\n2023 - atualmente : JDN serviços médico\nCidade: Paraná-Pr\nFunção: Médico Coordenador\n\n2023 - atualmente : Prefeitura do Guarujá\nCidade: Guarujá\nFunção: Médico Responsável técnico das Upas da Enseada e Upa da Santa Cruz dos Navegantes\n\n2023-Atualmente: Instituto Prius\nCidade: Barueri-Sp\nFunção: Médico Responsável técnico do Instituto e coordenador da equipe médica\n\n2021- 2022: Upa Zona Oeste\nCidade de Sorocaba-SP\nFunção: Responsável Tecnico pela unidade/ médico coordenador da clínica médica, pediatria e emergência/ médico plantonista (clínica, pediatria, emergência)\n\n2021-2022 Upa do Rosalém\nCidade: Hortolandia -Sp\nFunção desempenhada: Médico Clínico / Médico Emergencista / Pediatra\nCoordenador médico e Responsável técnico pela unidade\n\n2020-2021 Centro de especialidade de Itapcirica da serra e Tendas do COVID do município\nCidade: Itapecirica da Serra\nFunção: coordenador da equipe médica e plantonista\n\n2020-2021 Centro de combate ao Corona vírus (CCC)\nCidade: São Vicente – Sp\nFunção: Médico coordenador e plantonista\n\n2019-2020 – Pronto socorro do jardim Jacira\nCidade: Itapecerica da Serra-SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista/médico pediatra / Coordenador médico\n\n2019-2021 – Pronto socorro de EMBU das Artes\nCidade: Embu das Artes -SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista\nCoordenador médico clínica médica\n\n2018-2021 – PAM da rodoviária\nCidade: Guarujá-SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista\nCoordenador médico\nMédico Responsável Técnico / Coordenador médico / plantonista\n\n2016-2017- Hospital municipal de Bertioga\nCidade: Bertioga - SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista /\nCoordenador médico\n\n2016-2018 – UPA Jardim Casqueiro\nCidade: Cubatao-SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista /\nCoordenador médico\nMédico Responsável Técnico desde agosto de 2016\nCoordenador médico\n\n2016 –2018 Pronto Socorro de Cubatão\nCidade: Cubatao\nFunções Desempenhadas: Médico Clínico / Médico Emergencista/\nCoordenador médico\n\n2016-2017 - Hospital Santo Amaro\nCidade: Guarujá-SP\nFunções Desempenhadas: Médico Clínico / Médico Emergencista/\nCoordenador médico\n\n2016-2023 no- UPAs\nCidade: Guarujá-SP\nFunções Desempenhadas: Médico Clínico/ Medico Emergencista/ pediatra/\nCoordenador médico e responsável técnico\n\n2016-2017 - Hospital Guarujá\nCidade: Guarujá-SP\nFunções Desempenhadas: Médico Clínico\n\n2015 - Samu\nCidade: Porangatu-Go\nFunções Desempenhadas: Médico Emegencista\n\n2015 - Hospital Municipal Tarciso Liberte\nCidade: Santa Tereza de Goias\nFunções Desempenhadas: Médico Clínico\n\n2016-2022 Hospital Ana Costa\nCidade: Unidade Guaruja"
+        }
+      },
+      "id": "3905de52-20e4-4fe0-91f1-0c9a33ae258c",
+      "name": "curriculo",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -160,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "promptType": "define",
+        "text": "={{ $('mensagem').item.json.texto }}",
+        "options": {
+          "systemMessage": "Atue como o assistente da DWEB Energia, que vende energia compartilhada. Pergunte ao cliente quanto ele paga de luz mensalmente, sem solicitar nenhuma outra informação adicional. Seu objetivo é tentar conseguir descobrir o quanto o cliente paga de luz normalmente, caso ele não responda de primeira, diga que é importante que o cliente forneça esse valor, para poder prosseguir com o atendimento, e que voce precisa saber.\n\nUsuário: Olá, como você está?\n Olá! Você poderia me informar quanto você paga de luz mensalmente?\n\n#REGRA\nem hipótese alguma você vai saudar o cliente, apenas vai perguntar quanto de energia ele paga de forma amigável. apenas isso."
+        }
+      },
+      "id": "5f4951c1-7f48-4f28-a8d9-ce996d9693d8",
+      "name": "atendimento humano",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -160,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=Chat:{{ $('Webhook').item.json.body.data.key.remoteJid }}",
+        "tableName": "n8n_chat_histories_live"
+      },
+      "id": "90279457-74ae-4101-a937-12865dc5ca4a",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        1120
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "RxIl0dKO0aJvWlcc",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Webhook').item.json.body.server_url }}/message/sendText/{{ $('Webhook').item.json.body.instance }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "apikey",
+              "value": "={{ $('Webhook').item.json.body.apikey }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $('Webhook').item.json.body.data.key.remoteJid }}"
+            },
+            {
+              "name": "text",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "name": "delay",
+              "value": "={{ 1200 }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "id": "f08e7d9c-a628-4169-b520-0adf683cf87b",
+      "name": "sendText",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        240,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "name": "atendente_humano",
+        "description": "Se o cliente quiser falar com atendente humano.",
+        "workflowId": "lCL8YwHd9eS9VEIb",
+        "fields": {
+          "values": [
+            {
+              "name": "remoteJid",
+              "stringValue": "={{ $('Webhook').item.json.body.remoteJid }}"
+            },
+            {
+              "name": "pushName",
+              "stringValue": "={{ $('Webhook').item.json.body.pushName }}"
+            }
+          ]
+        }
+      },
+      "id": "0d654368-0b13-4732-aeaa-60d6c01ef262",
+      "name": "tool_atendentteHumano",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        280,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ffe4176c-3024-4bd7-8ed4-2edb2477f720",
+              "name": "texto",
+              "value": "={{ $json.text || $json.candidates[0].content.parts[0].text }}\n{{ $('Webhook').item.json.body.data.message.conversation || $('Webhook').item.json.body.data.message.extendedTextMessage.text }}",
+              "type": "string"
+            },
+            {
+              "id": "2ce5f06f-8535-4d7d-b267-5854d9740acb",
+              "name": "body.data.key.remoteJid",
+              "value": "={{ $('Webhook').item.json.body.data.key.remoteJid }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fafb84c0-ee2e-4a5b-886b-56e7522dcd14",
+      "name": "mensagem",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -880,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "model": "=llama-3.1-70b",
+        "options": {
+          "baseURL": ""
+        }
+      },
+      "id": "89d3a178-c5f9-4c60-9b30-7e829f8ceb2a",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        1120
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "JSZfOkYpxoGvA33j",
+          "name": "OpenAi litellm"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "promptType": "define",
+        "text": "={{ $('mensagem').item.json.texto }}",
+        "options": {
+          "systemMessage": "**Papel:** Atendente virtual inteligente de uma imobiliária.\n**Persona:** Amigável, profissional, paciente e conhecedor do mercado imobiliário.\n**Comunicação:** Linguagem clara e objetiva, utilizando emoticons para humanizar a conversa e gírias comuns do mercado imobiliário (ex: \"pé direito\", \"planta\", \"imóvel pronto para morar\").\n**Instruções:**\n    * **Responder rapidamente** a todas as perguntas dos clientes.\n    * **Fornecer informações precisas** sobre os imóveis disponíveis, como localização, valor, características e disponibilidade.\n    * **Agendar visitas** com os corretores de imóveis.\n    * **Qualificar os leads** identificando o perfil do cliente e suas necessidades.\n    * **Utilizar um tom de voz persuasivo** para incentivar a agendamento de visitas e a conclusão da venda.\n    * **Manter um banco de dados atualizado** com as informações dos imóveis e dos clientes.\n    * **Escalar para um atendente humano** em caso de dúvidas complexas ou solicitações especiais.\n\n**Objetivo:** Automatizar o atendimento ao cliente, qualificando leads e agendando visitas, aumentando a eficiência da equipe de vendas e proporcionando uma experiência positiva aos clientes.\n\n**Funções:**\n    * **Boas-vindas:** Saudar o cliente e apresentar os serviços da imobiliária.\n    * **Qualificação:** Realizar perguntas abertas para entender as necessidades do cliente (ex: \"Qual tipo de imóvel você busca?\", \"Qual é o seu orçamento?\").\n    * **Busca de imóveis:** Pesquisar no banco de dados os imóveis que atendem aos critérios do cliente.\n    * **Apresentação de imóveis:** Enviar fotos, vídeos e descrições detalhadas dos imóveis.\n    * **Agendamento de visitas:** Confirmar a disponibilidade do corretor e marcar a visita.\n    * **Follow-up:** Enviar mensagens de acompanhamento após a visita e responder a quaisquer dúvidas.\n\n**Fluxo:**\n1. Cliente inicia a conversa pelo WhatsApp.\n2. O chatbot dá as boas-vindas e pergunta sobre o interesse do cliente.\n3. O cliente descreve o imóvel que busca.\n4. O chatbot realiza uma pesquisa e apresenta as opções disponíveis.\n5. O cliente escolhe um imóvel para agendar uma visita.\n6. O chatbot confirma a visita e envia um lembrete.\n\n**Contexto:**\n* **Imobiliária:** [Nome da imobiliária]\n* **Público-alvo:** Pessoas interessadas em comprar ou alugar imóveis.\n* **Canais:** WhatsApp\n* **Banco de dados:** Sistema interno da imobiliária com informações sobre imóveis e clientes.\n\n**Exemplo de conversa:**\n\n* **Cliente:** Olá, estou procurando um apartamento de 2 quartos na região da Vila Madalena.\n* **Chatbot:** Olá! Prazer em te ajudar. Temos diversas opções de apartamentos de 2 quartos na Vila Madalena. Para te ajudar melhor, poderia me dizer qual é o seu orçamento e se você tem preferência por algum tipo de imóvel (novo, usado, com vaga)? \n\n# Responda sempre em português."
+        }
+      },
+      "id": "8ce16bdc-5f7e-4dab-bf32-54380bbfb5e7",
+      "name": "atedimento",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -160,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n    \"reply\": \"\",\n    \"customer_name\": \"\",\n    \"enquiry_summary\": \"\",\n\t\"has_appointment_scheduled\": false,\n    \"appointment\": {\n      \"appointment_id\": \"\",\n      \"scheduled_at\": \"\"\n    }\n}"
+      },
+      "id": "b191f35d-fa00-4fd2-b834-27194f34aac6",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        360,
+        1120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "7c5059d0-160c-4afb-a715-968234a241be",
+      "name": "Auto-fixing Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        140,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame esta ferramenta para reagendar o compromisso de um usuário usando um ID de reserva.",
+        "method": "PATCH",
+        "url": "https://api.cal.com/v1/bookings/{booking_id}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"startTime\": \"{start}\",\n  \"endTime\": \"{end}\"\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "booking_id",
+              "description": "o ID da reserva do compromisso",
+              "type": "string"
+            },
+            {
+              "name": "start",
+              "description": "data e hora de início do agendamento, por exemplo: '2024-05-30T12:00:00.000Z'",
+              "type": "string"
+            },
+            {
+              "name": "end",
+              "description": "data e hora de término do compromisso, por exemplo: '2024-05-30T12:30:00.000Z'",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "id": "3468438d-6555-4f9c-9118-4fadaba2e216",
+      "name": "Reagendar Compromisso",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        -600,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame essa tools para cancelar um compromisso existente de um usuário usando um ID de reserva.",
+        "method": "DELETE",
+        "url": "https://api.cal.com/v1/bookings/{booking_id}/cancel",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "cancellationReason",
+              "valueProvider": "modelOptional"
+            }
+          ]
+        },
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "booking_id",
+              "description": "o ID da reserva do compromisso",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "id": "3fcc00c5-5675-4a49-a0ea-2875639406bc",
+      "name": "Cancelar Compromisso",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        -480,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame essa tools para verificar a disponibilidade de agendamentos.",
+        "url": "https://api.cal.com/v1/availability",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "username",
+              "valueProvider": "fieldValue",
+              "value": "anderson-lima-q2h3hm"
+            },
+            {
+              "name": "dateFrom",
+              "valueProvider": "fieldValue",
+              "value": "={{ $now.toISO() }}"
+            },
+            {
+              "name": "dateTo",
+              "valueProvider": "fieldValue",
+              "value": "={{ $now.plus(4, 'days') }}"
+            }
+          ]
+        },
+        "optimizeResponse": true,
+        "dataField": "dateRanges"
+      },
+      "id": "15ddde31-e06f-40d9-b6d1-73d925b1d002",
+      "name": "Checa Disponibilidade",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        -360,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame essa tools para agendar uma consulta.",
+        "method": "POST",
+        "url": "https://api.cal.com/v1/bookings",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "eventTypeId",
+              "valueProvider": "fieldValue",
+              "value": "={{ 648297 }}"
+            },
+            {
+              "name": "start"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "title",
+              "valueProvider": "fieldValue",
+              "value": "{title}"
+            },
+            {
+              "name": "description",
+              "valueProvider": "fieldValue",
+              "value": "{description}"
+            },
+            {
+              "name": "metadata"
+            },
+            {
+              "name": "responses"
+            },
+            {
+              "name": "timeZone",
+              "valueProvider": "fieldValue",
+              "value": "America/Sao_Paulo"
+            },
+            {
+              "name": "language",
+              "valueProvider": "fieldValue",
+              "value": "pt"
+            }
+          ]
+        },
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "description",
+              "description": "lista com marcadores de ID da sessão, nome completo, e-mail e resumo do compromisso",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "description": "nome do usuário e um breve resumo do compromisso",
+              "type": "string"
+            },
+            {
+              "name": "responses",
+              "description": "Use template: { \"name\": \"\", \"email\": \"\", \"location\":  { \"value\": \"inPerson\", \"optionValue\": \"\" }, \"guests\": [] }|Certifique-se de que a saída seja um JSON válido.",
+              "type": "json"
+            },
+            {
+              "name": "metadata",
+              "description": "Use template: { \"session_id\": \"\", \"booked_by\": \"n8n workflow\" }",
+              "type": "json"
+            }
+          ]
+        }
+      },
+      "id": "c22fe94d-8cc4-4c38-93de-76ff0cce5bc3",
+      "name": "Agenda Compromisso",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        -240,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame essa tools para marcar uma consulta existente.",
+        "url": "https://api.cal.com/v1/bookings/{appointment_id}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "appointment_id",
+              "description": "o id do compromisso",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "id": "dc1c452e-dea7-4780-a1d3-4039500ffe81",
+      "name": "Recebe Compromisso Existente",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        60,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Chame essa tools para procurar um compromisso existente com o endereço de e-mail do usuário.",
+        "url": "https://api.cal.com/v1/bookings",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "calApi",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "attendeeEmail"
+            }
+          ]
+        }
+      },
+      "id": "f1552745-b586-4d13-ac9a-affed9dfa5af",
+      "name": "Procurar Compromisso por Email",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "position": [
+        160,
+        1120
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "calApi": {
+          "id": "06rSRlLU60hFzqAR",
+          "name": "Cal rafael"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "=llama-3.1-70b",
+        "options": {
+          "baseURL": ""
+        }
+      },
+      "id": "bf54a809-a7be-4ba4-a6ec-72d1e12a93c7",
+      "name": "OpenAI Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        260,
+        1120
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "JSZfOkYpxoGvA33j",
+          "name": "OpenAi litellm"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "934ba827-06ce-46f6-9441-bf3e28d0d0a6",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "020eee75-2fc6-4190-8360-5c08c1488852",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1200,
+        760
+      ],
+      "webhookId": "934ba827-06ce-46f6-9441-bf3e28d0d0a6"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "atendimento",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "atendimento"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "eadc984e-a429-4c48-abfe-b99859fe6c69",
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "atendimento humano",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "atendimento humano"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "5b76ef97-95cc-45bf-b8d5-649e40b99cfb",
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "curriculo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "curriculo"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "d180b37c-047b-43a3-965f-3983206beaf4",
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "agendamento",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "agendamento"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "52076f8c-7b0b-4c51-8141-b4750853c80a",
+      "name": "Switch_classificador",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -400,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ddef1d54-10b8-4223-b5ca-dd7c7bf2bad4",
+              "name": "output",
+              "value": "={{ $json.output.reply }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8aae224-7a20-402c-a271-1c874ed1fcb3",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('mensagem').item.json.texto }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Você é um auxiliar de agendamento de compromissos. Os clientes enviarão mensagens solicitando um agendamento e seu trabalho é agendar um compromisso para o usuário. Esta função é estritamente para ajudar a agendar compromissos, então:\n* Se um compromisso for agendado para o usuário, a conversa estará concluída e você não deverá continuar a pedir ao usuário para agendar um compromisso.\n* Se um compromisso for agendado para o usuário, o usuário poderá solicitar as seguintes ações: perguntar sobre detalhes do compromisso existente, reagendar o compromisso existente ou cancelar um compromisso existente.\n* Se um compromisso for agendado para o usuário, o usuário não poderá agendar outro compromisso até que o compromisso existente seja cancelado.\n\n## Sobre os compromissos\nSempre comece sua conversa disponibilizando as datas de agendamento disponíve. A data e a hora agora são {{ $now.toISO() }}. Todas as datas devem ser fornecidas no formato ISO. Cada compromisso deve ter uma data e hora de início e término relativas à data de hoje no futuro e deve ser agendado para 30 minutos.\n\n## Para marcar uma consulta\n* Sugira as datas e horários disponíveis para o agendamento.\n* Certifique-se de ter o endereço de e-mail do usuário, nome completo e data proposta, horário de início preferido antes de agendar uma consulta.\n* Verifique sempre a disponibilidade do calendário da data e hora propostas pelo usuário. Se não houver disponibilidade, sugira o próximo horário disponível.\n* Se o agendamento for bem-sucedido, notifique o usuário que um e-mail de confirmação será enviado para o endereço de e-mail fornecido.\n* Se o agendamento da consulta não for bem-sucedido, avise ao usuário que você não consegue atender a solicitação no momento e tente novamente mais tarde.\n\n## Para encontrar um compromisso existente\n* Peça ao usuário seu endereço de e-mail e data da reserva existente\n* Utilize o email e a data do usuário para pesquisar a reserva existente.\n* Se o e-mail e a data do usuário não corresponderem aos resultados ou nenhum resultado for retornado, a reserva existente não será encontrada.\n* Caso a reserva existente não seja encontrada, avise o usuário e sugira que uma nova reserva seja feita.\n\n## Para reagendar ou cancelar um compromisso existente\n* Primeiro encontre o agendamento existente para que você possa obter o ID de reserva do agendamento existente.\n* Exiba este ID de reserva ao usuário.\n* Use este ID de reserva para reagendar ou cancelar um compromisso existente.\n* Se um ID de agendamento existente não for encontrado ou fornecido, notifique o usuário que não é possível concluir sua solicitação neste momento e ele deverá entrar em contato por e-mail.\n* quando o usuário quiser cancelar um agendamento, perguntar o motivo do cancelamento e sugerir o reagendamento como alternativa. Confirme com o usuário antes de cancelar um compromisso."
+        }
+      },
+      "id": "658cfac1-bb94-4ea1-a1b9-e2fa7b84688d",
+      "name": "agendamento",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -160,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "empresas",
+          "mode": "list",
+          "cachedResultName": "empresas"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $('Webhook').item.json.body.sender.split('@')[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b2c48c40-11c8-470e-bea8-b267eaad5fb2",
+      "name": "busca_dados_empresa",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [
+        -1040,
+        760
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "postgres": {
+          "id": "EOr9YMTLapdMr6EL",
+          "name": "Postgres account 4"
+        }
+      },
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('mensagem').item.json.texto }}",
+        "options": {
+          "systemMessage": "=Agora você é juiz e classificador ao mesmo tempo.\nClassificador: identificar em qual estágio o usuário se encontra com base no histórico da conversa . Juiz: sempre pró ativo e atento. Ter certeza que o Classificador está classificando de maneira correta.\n\n\n\n\nqualquer outra coisa que não seja pedido por atendimento humano sera aqui,  responder com a frase “atendimento”.\n\nSe o usuário quiser falar com o atendente humano, ou quer sair do atendimento virtual, responder com a frase “humano”.\n\nSe o usuário quiser fazer uma agendamento, marcar uma colsultoria ou marcar uma call “agendamento”.\n\nquando o cliente perguntar qual o curriculo do dr murilo, responder com a frase “curriculo”.\n\n\n#REGRA\nResponda EXCLUSIVAMENTE com os itens que estão em aspas(“”) no parágrafo a cima.Você será penalizado caso responder algo além disso. NÃO forneça explicações, justificativas ou qualquer outra informação fora das frases especificadas NÃO adicione ou modifique qualquer das palavras contidas nas aspas no parágrafo acima. Não responda nada além das aspas.\n/"
+        }
+      },
+      "id": "f1589daa-86bc-4024-9418-a94008a8d331",
+      "name": "agente ajudante do classificador",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -740,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "model": "llama-3.1-70b-versatile",
+        "options": {}
+      },
+      "id": "34a7cc39-bc80-404b-9c21-2ab22c5abb67",
+      "name": "Groq Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        980
+      ],
+      "credentials": {
+        "groqApi": {
+          "id": "FnBmJngtIqpq52vT",
+          "name": "Groq account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "atedimento",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "curriculo",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "atendimento humano",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "agendamento",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "curriculo": {
+      "main": [
+        [
+          {
+            "node": "sendText",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atendimento humano": {
+      "main": [
+        [
+          {
+            "node": "sendText",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tool_atendentteHumano": {
+      "ai_tool": [
+        [
+          {
+            "node": "atendimento humano",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "mensagem": {
+      "main": [
+        [
+          {
+            "node": "agente ajudante do classificador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "curriculo",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "atedimento",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "atendimento humano",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atedimento": {
+      "main": [
+        [
+          {
+            "node": "sendText",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reagendar Compromisso": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cancelar Compromisso": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Checa Disponibilidade": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agenda Compromisso": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recebe Compromisso Existente": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Procurar Compromisso por Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "agendamento",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "busca_dados_empresa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch_classificador": {
+      "main": [
+        [
+          {
+            "node": "atedimento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atendimento humano",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "curriculo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atedimento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "sendText",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agendamento": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados_empresa": {
+      "main": [
+        [
+          {
+            "node": "mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agente ajudante do classificador": {
+      "main": [
+        [
+          {
+            "node": "Switch_classificador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "agente ajudante do classificador",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3cb45b20-7e65-4d58-a796-c92606532ebf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "29a4574ed5a650ed47581af164a83933f9ff008e2117ebfecadefd06d7edf985"
+  },
+  "id": "3hyjKD9rDLcNMVPy",
+  "tags": []
+}

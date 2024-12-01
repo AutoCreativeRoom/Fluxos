@@ -1,0 +1,384 @@
+{
+  "name": "Disparo_de_mensagens_whatsApp",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "disparo",
+        "formTitle": "Disparo de mensagens no WhatsApp",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "lista",
+              "fieldType": "file",
+              "acceptFileTypes": "csv",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f89978d1-1a28-4e3c-95a3-a27e98365861",
+      "name": "n8n Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        1440,
+        600
+      ],
+      "webhookId": "27e447d6-6887-42d2-afbc-18df7aea3f4b"
+    },
+    {
+      "parameters": {
+        "binaryPropertyName": "lista",
+        "options": {
+          "delimiter": ";"
+        }
+      },
+      "id": "c3f6462d-35c5-4297-b0c5-850ad073fca0",
+      "name": "Extract from File",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b6cf60ed-c06e-4384-aafa-15ab31c7721b",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1900,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "cae0f84f-2a71-4c73-9671-efa3e1f1c8ae",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        800
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "\"a sua mensagem aqui\""
+      },
+      "id": "458e00d6-3236-409f-8b9d-ee525a8ecd66",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2620,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<CLIETNE>{{ $json.nome }}</CLIETNE>",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Você é um assistente comercial e a sua função é criar uma mensagem de whatsApp personalizada para o <CLIETNE></CLIETNE>.\n\nVocê trabalha para a DinastIA, uma empresa que desenvolve automoçoes para grandes negócios usando Inteligencia artificial.\n\nA mensagem deve ser curta e direta, vendendo o valor de se ter uma automação para agendamentos e prospecção."
+        }
+      },
+      "id": "41d961ea-558a-4ae9-8ddd-beb7e6450216",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        2320,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "messages-api",
+        "instanceName": "aula",
+        "remoteJid": "={{ $('Loop Over Items').item.json.numero }}@s.whatsapp.net",
+        "messageText": "={{ $json.output }}"
+      },
+      "id": "4af2ed57-d38d-4e5c-af37-05a166c9db13",
+      "name": "Evolution API",
+      "type": "n8n-nodes-evolution-api.httpBin",
+      "typeVersion": 1,
+      "position": [
+        2760,
+        560
+      ],
+      "credentials": {
+        "httpbinApi": {
+          "id": "auUTeGhcCtfd9rrV",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1HriMr_y_UtkUXyceBGfwucfKrSRjHfn0jdUnikaOxb0",
+          "mode": "list",
+          "cachedResultName": "Agente disparador de mensagens",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HriMr_y_UtkUXyceBGfwucfKrSRjHfn0jdUnikaOxb0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HriMr_y_UtkUXyceBGfwucfKrSRjHfn0jdUnikaOxb0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.messageTimestamp }}",
+            "nome": "={{ $('Loop Over Items').item.json.nome }}",
+            "numero": "={{ $('Loop Over Items').item.json.numero }}",
+            "mensagem": "={{ $('AI Agent').item.json.output }}",
+            "data_hora": "={{ $now.format('dd/MM/yyyy hh:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "nome",
+              "displayName": "nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "numero",
+              "displayName": "numero",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mensagem",
+              "displayName": "mensagem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "data_hora",
+              "displayName": "data_hora",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "04b9d11d-d8a6-4972-aae5-197fea0d7f9f",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2980,
+        560
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YZB8yUwLq22NPPKP",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "3460b23f-76cf-42fa-a49c-0234b9eb0fcb",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3240,
+        560
+      ],
+      "webhookId": "1f4bbd7e-034d-4252-a517-82bef3dd2981"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=chat_{{ $('Loop Over Items').item.json.numero }}@s.whatsapp.net"
+      },
+      "id": "78414fc3-f55d-456f-b599-999c15d47958",
+      "name": "Redis Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.3,
+      "position": [
+        2420,
+        780
+      ],
+      "credentials": {
+        "redis": {
+          "id": "LTzsljpp7xcIB2r2",
+          "name": "Redis account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "n8n Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Evolution API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evolution API": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2ad0256a-a3a1-407d-b51a-2737eb6300df",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "Mnw69RbkNEa286kc",
+  "tags": []
+}

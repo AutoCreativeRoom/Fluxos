@@ -1,0 +1,631 @@
+{
+  "name": "analista_de_trafego_pago_v1",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "analista_trafego_pago",
+        "formTitle": "Analista de tráfego pago",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Arquivo",
+              "fieldType": "file",
+              "multipleFiles": false,
+              "acceptFileTypes": "xls",
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "ad53e68d-99f4-4a44-bb9c-21482a4e5ee1",
+      "name": "formulario",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        720,
+        520
+      ],
+      "webhookId": "3896190e-2dd5-429e-a4e5-7c51fdbdceea"
+    },
+    {
+      "parameters": {
+        "operation": "xls",
+        "binaryPropertyName": "Arquivo",
+        "options": {}
+      },
+      "id": "5862a6b7-562b-4385-bfa7-d262f7977384",
+      "name": "Extract from File",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        940,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "2af919d5-95a1-4336-a0a9-53e273952b55",
+              "leftValue": "={{ $json.Reach }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "6f7abb65-717f-441d-9e5f-7d525db6fa01",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        1140,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "2f5ffdf5-f5b8-4de3-b44b-cf5a8e6667bd",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1360,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk",
+          "mode": "list",
+          "cachedResultName": "Agente - analista de trafego pago",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $now.format('yyyy-MM-dd-hh-mm-ss-ii') }}",
+            "nome": "={{ $json.output.nome_anuncio }}",
+            "pontos_positivos": "={{ $json.output.pontos_positivos }}",
+            "pontos_negativos": "={{ $json.output.pontos_atencao }}",
+            "sugestao": "={{ $json.output.sugestao }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "nome",
+              "displayName": "nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pontos_positivos",
+              "displayName": "pontos_positivos",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pontos_negativos",
+              "displayName": "pontos_negativos",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sugestao",
+              "displayName": "sugestao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c196c513-a7c1-4bc4-8bdc-63a71257e5ca",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2240,
+        540
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YZB8yUwLq22NPPKP",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "63d611af-dfa2-4aaf-b7e9-369ecc3ed6b7",
+      "name": "Auto-fixing Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"pontos_positivos\": \"pontos positivos aqui\",\n    \"pontos_atencao\": \"pontos de atenção aqui\",\n    \"sugestao\": \"sugestao aqui.\",\n    \"nome_anuncio\": \"nome do anuncio aqui.\"\n}"
+      },
+      "id": "000a44ed-f372-4a05-905c-e686b51cb622",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2040,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "dfc92ba2-8449-4da5-818f-383c983f478b",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        760
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "566c0708-1520-4ca4-b52e-389940c3dfde",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        900
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "0648ce82-1590-4753-a5fe-f1cc83b764ae",
+      "name": "agrupar",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "3269f3a0-d1bb-44df-a8fb-af1ac15ac662",
+      "name": "OpenAI Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1960,
+        200
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"pontos_positivos\": \"pontos positivos aqui\",\n    \"pontos_negativos\": \"pontos negativos aqui\",\n    \"sugestao\": \"sugestao aqui.\"\n}"
+      },
+      "id": "b98c4aa9-ae04-451a-9dcb-b0c02c3e4a8a",
+      "name": "Structured Output Parser1",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2220,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk",
+          "mode": "list",
+          "cachedResultName": "Agente - analista de trafego pago",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1EfKR7LxcdT3nnOR7On0J9L7GFKWwSTjiBrzDjDxyGOk/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "=gestor_{{ $now.format('yyyy-MM-dd--hh-mm-ss') }}",
+            "nome": "Analise do gestor",
+            "pontos_positivos": "={{ $json.output.pontos_positivos }}",
+            "pontos_negativos": "={{ $json.output.pontos_negativos }}",
+            "sugestao": "={{ $json.output.sugestao }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "nome",
+              "displayName": "nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pontos_positivos",
+              "displayName": "pontos_positivos",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pontos_negativos",
+              "displayName": "pontos_negativos",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sugestao",
+              "displayName": "sugestao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f3edb9c8-15e9-46cf-93b6-37ed85ca9e88",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2380,
+        20
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YZB8yUwLq22NPPKP",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "=<!DOCTYPE html>\n<html lang=\"pt-BR\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Análise de Campanha - Marketing Digital</title>\n    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css\" rel=\"stylesheet\">\n    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" rel=\"stylesheet\">\n</head>\n<body class=\"bg-gray-100 min-h-screen\">\n    <!-- Cabeçalho -->\n    <header class=\"bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg\">\n        <div class=\"container mx-auto px-4 py-6\">\n            <h1 class=\"text-3xl font-bold\">Análise de Campanha</h1>\n            <p class=\"text-lg opacity-90\">Relatório de Performance - Marketing Digital</p>\n        </div>\n    </header>\n\n    <!-- Conteúdo Principal -->\n    <main class=\"container mx-auto px-4 py-8\">\n        <!-- Card Principal -->\n        <div class=\"bg-white rounded-lg shadow-xl p-6 mb-8\">\n            <div class=\"flex items-center mb-4\">\n                <i class=\"fas fa-chart-line text-2xl text-blue-600 mr-3\"></i>\n                <h2 class=\"text-2xl font-semibold\">Análise do Gestor</h2>\n            </div>\n            <p class=\"text-gray-600 mb-4\">Data da análise: 22/11/2024</p>\n        </div>\n\n        <!-- Grid de Análises -->\n        <div class=\"grid md:grid-cols-3 gap-6\">\n            <!-- Pontos Positivos -->\n            <div class=\"bg-white rounded-lg shadow-lg p-6\">\n                <div class=\"flex items-center mb-4\">\n                    <div class=\"w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3\">\n                        <i class=\"fas fa-plus text-green-600\"></i>\n                    </div>\n                    <h3 class=\"text-xl font-semibold text-green-600\">Pontos Positivos</h3>\n                </div>\n                <div class=\"space-y-3 text-gray-700\">\n                    <p><i class=\"fas fa-check-circle text-green-500 mr-2\"></i> {{ $json.pontos_positivos }}</p>\n                </div>\n            </div>\n\n            <!-- Pontos Negativos -->\n            <div class=\"bg-white rounded-lg shadow-lg p-6\">\n                <div class=\"flex items-center mb-4\">\n                    <div class=\"w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3\">\n                        <i class=\"fas fa-minus text-red-600\"></i>\n                    </div>\n                    <h3 class=\"text-xl font-semibold text-red-600\">Pontos Negativos</h3>\n                </div>\n                <div class=\"space-y-3 text-gray-700\">\n                    <p><i class=\"fas fa-exclamation-circle text-red-500 mr-2\"></i> {{ $json.pontos_negativos }}</p>\n                </div>\n            </div>\n\n            <!-- Sugestões -->\n            <div class=\"bg-white rounded-lg shadow-lg p-6\">\n                <div class=\"flex items-center mb-4\">\n                    <div class=\"w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3\">\n                        <i class=\"fas fa-lightbulb text-blue-600\"></i>\n                    </div>\n                    <h3 class=\"text-xl font-semibold text-blue-600\">Sugestões</h3>\n                </div>\n                <div class=\"space-y-3 text-gray-700\">\n                    <p><i class=\"fas fa-arrow-right text-blue-500 mr-2\"></i> {{ $json.sugestao }}</p>\n                </div>\n            </div>\n        </div>\n    </main>\n\n    <!-- Rodapé -->\n    <footer class=\"bg-gray-800 text-white mt-12\">\n        <div class=\"container mx-auto px-4 py-6\">\n            <p class=\"text-center\">&copy; 2024 Sua Agência de Marketing Digital. Todos os direitos reservados.</p>\n        </div>\n    </footer>\n</body>\n</html>",
+        "options": {}
+      },
+      "id": "ccd56d56-39e9-419e-862d-566afd493ef0",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2640,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ JSON.stringify($json) }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Persona\nVocê é um analista sênior de marketing digital especializado em análise de campanhas do Meta Ads, com vasta experiência em otimização de campanhas e interpretação de métricas-chave de performance.\n\n# Objetivo\nAnalisar detalhadamente os dados do anúncio fornecido e fornecer insights acionáveis para otimização de campanha.\n\n# Instruções de Análise\nQuando receber os dados de um anúncio, siga este processo de análise:\n\n<thinking>\n1. Primeiro, identifique as métricas básicas da campanha:\n   - Nome da campanha\n   - Status\n   - Orçamento gasto\n   - Período\n\n2. Analise as métricas de alcance e engajamento:\n   - Alcance total\n   - Impressões\n   - Frequência\n   - CTR\n   - CPC\n\n3. Avalie a eficiência do custo:\n   - CPM\n   - Custo por resultado\n   - ROI geral\n</thinking>\n\n<analysis>\nForneça a análise estruturada seguindo este formato:\n\n## Visão Geral da Campanha\n[Inclua as informações básicas da campanha]\n\n## Métricas de Performance\n[Liste as métricas principais com suas respectivas análises]\n\n## Pontos Fortes\n[Liste 2-3 aspectos positivos da campanha]\n\n## Pontos de Atenção\n[Liste 2-3 aspectos que precisam de melhoria]\n\n## Recomendações\n[Forneça 3-5 recomendações acionáveis baseadas nos dados]\n</analysis>\n\n# Regras Importantes\n1. Use comparações percentuais quando relevante\n2. Sempre contextualize as métricas\n3. Seja específico nas recomendações\n4. Indique se alguma métrica está fora dos benchmarks padrão do setor\n5. Priorize insights que podem levar a ações concretas\n\nSe houver dados insuficientes para alguma análise, indique claramente na resposta."
+        }
+      },
+      "id": "d0cd9c3b-94b9-45a2-a2f0-ff477c79ee0a",
+      "name": "analista_de_trafego_pago",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        1720,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ JSON.stringify($json.data) }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Persona\nVocê é um analista sênior de marketing digital e cientista de dados, especializado em análise comparativa de campanhas do Meta Ads, com experiência em identificação de padrões e anomalias em grandes conjuntos de dados de marketing.\n\n# Objetivo\nAnalisar múltiplos anúncios do Meta simultaneamente, identificando padrões, comparando performances e gerando insights acionáveis para otimização de campanhas.\n\n# Estrutura de Análise\nPara cada conjunto de anúncios fornecido, siga este processo:\n\n<analysis_structure>\n1. Primeiro, crie uma tabela de análise com os seguintes campos:\n   - ID do anúncio\n   - Nome do anúncio\n   - Pontos Positivos\n   - Pontos Negativos\n   - Sugestões de Otimização\n\n2. Para cada anúncio, analise:\n   - Métricas de performance (CTR, CPC, CPM)\n   - Métricas de alcance (Reach, Impressions, Frequency)\n   - Eficiência de custos (Cost per Result, Amount Spent)\n\n3. Compare os anúncios entre si para identificar:\n   - Melhores performers\n   - Piores performers\n   - Anomalias e outliers\n</analysis_structure>\n\n\n# Regras de Análise\n1. Sempre inclua números específicos nas análises\n2. Compare métricas com benchmarks do setor quando relevante\n3. Forneça no mínimo 2 pontos positivos e 2 pontos negativos por anúncio\n4. Inclua no mínimo 3 sugestões acionáveis por anúncio\n5. Use linguagem clara e objetiva\n6. Identifique tendências entre diferentes anúncios\n\n# Análise Final\nApós analisar todos os anúncios, forneça:\n\n<gestor_analysis>\n{\n    \"pontos_positivos\": [\n        \"Insights gerais positivos da campanha como um todo\"\n    ],\n    \"pontos_negativos\": [\n        \"Principais pontos de atenção identificados\"\n    ],\n    \"sugestao\": [\n        \"Recomendações estratégicas para todo o conjunto de campanhas\"\n    ]\n}\n</gestor_analysis>\n\n# Benchmarks de Referência\n- CTR médio: 1-3%\n- Frequência ideal: 1.8-2.5\n- CPM competitivo: R$5-15\n- CPC adequado: R$0.50-2.00\n\nSe algum dado estiver faltando ou parecer inconsistente, indique claramente na análise."
+        }
+      },
+      "id": "533dab78-72be-4b6b-b507-6b9967209345",
+      "name": "gestor_de_trafego_pago",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        2000,
+        20
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "formulario": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "agrupar",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "analista_de_trafego_pago",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "analista_de_trafego_pago",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "analista_de_trafego_pago",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agrupar": {
+      "main": [
+        [
+          {
+            "node": "gestor_de_trafego_pago",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "gestor_de_trafego_pago",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "gestor_de_trafego_pago",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "analista_de_trafego_pago": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gestor_de_trafego_pago": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c00a8349-0a34-4ffe-98a0-fe656e36eb68",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "z3tI81yjJZI35Un6",
+  "tags": []
+}

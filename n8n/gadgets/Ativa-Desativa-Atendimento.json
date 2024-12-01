@@ -1,0 +1,368 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "319d4591-6482-447d-bd79-57b994ab7134",
+              "leftValue": "={{ $('Webhook1').item.json.body.data.key.fromMe }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "318d4bde-7759-41ad-b2f5-3938089d7db7",
+      "name": "Verifica se a mensagem é minha",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -20,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "1837d9fe-59b0-4e3c-a759-2ca303eeeb47",
+        "options": {}
+      },
+      "id": "3088c09f-cf22-442f-a96c-e81eedfecbf5",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        820
+      ],
+      "webhookId": "3cb7eeef-cb1e-40cc-ae7d-fa6458a54346"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.data.message.conversation }}",
+                    "rightValue": "#on",
+                    "operator": {
+                      "type": "string",
+                      "operation": "startsWith"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "#on"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "dcb23115-2ee0-4eb5-94f6-c6b3bc0e3ceb",
+                    "leftValue": "={{ $json.body.data.message.conversation }}",
+                    "rightValue": "#off",
+                    "operator": {
+                      "type": "string",
+                      "operation": "startsWith"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "#off"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e2029189-b093-45fd-b68b-1fe32671970a",
+      "name": "Verifica Comando1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        240,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "user",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "whatsapp",
+              "condition": "eq",
+              "keyValue": "={{ $json.body.data.recipient.id }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "is_manual",
+              "fieldValue": "true"
+            }
+          ]
+        }
+      },
+      "id": "3018e870-d8f7-4e5a-80cf-1e47dd0ac7c7",
+      "name": "Ativa Atendimento Manual",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "user",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "whatsapp",
+              "condition": "eq",
+              "keyValue": "={{ $json.body.data.recipient.id }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "is_manual",
+              "fieldValue": "false"
+            }
+          ]
+        }
+      },
+      "id": "01d79048-2565-4399-9637-8a9c0e38bbf6",
+      "name": "Desativa Atendimento Manual",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        460,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "user",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "whatsapp",
+              "keyValue": "={{ $json.body.data.sender.id }}"
+            }
+          ]
+        }
+      },
+      "id": "613b7dd2-0272-422e-bfcd-e7746ab7cfea",
+      "name": "Verifica se Usuário esta Cadastrado",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        240,
+        820
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "372bfa0b-282f-4cf1-bf49-79fa91a78f5c",
+              "leftValue": "={{ !!Object.keys($node[\"Verifica se Usuário esta Cadastrado\"].data).length }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0914897d-9c3f-4947-bf5d-dfa9e05a2a6a",
+      "name": "Sim / Não",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        460,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "tableId": "user",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "whatsapp",
+              "fieldValue": "={{ $('Webhook').item.json.body.data.sender.id }}"
+            }
+          ]
+        }
+      },
+      "id": "9f40af7a-142b-4572-bded-8529af289535",
+      "name": "Cadastra Usuário",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        720,
+        940
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "79d59500-33bf-4bb6-b7d0-0c7dca87cdfd",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        920,
+        820
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Verifica se a mensagem é minha": {
+      "main": [
+        [
+          {
+            "node": "Verifica Comando1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Verifica se Usuário esta Cadastrado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Verifica se a mensagem é minha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica Comando1": {
+      "main": [
+        [
+          {
+            "node": "Ativa Atendimento Manual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Desativa Atendimento Manual",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica se Usuário esta Cadastrado": {
+      "main": [
+        [
+          {
+            "node": "Sim / Não",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sim / Não": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cadastra Usuário",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastra Usuário": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "",
+  "meta": {
+    "instanceId": "fd06b448d6fad37c04b7efd6c534f2419e15b841674324565af54008b6ec9d36"
+  },
+  "tags": []
+}

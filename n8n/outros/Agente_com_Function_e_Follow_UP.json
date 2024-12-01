@@ -1,0 +1,3640 @@
+{
+  "name": "Agente com Function e Follow UP",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "ea32da6a-267f-4043-ad49-d89ec2932f0b",
+              "leftValue": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"key\"][\"fromMe\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0234fbe6-1133-432a-851a-5e924fdfeae7",
+      "name": "Verificar se a mensagem veio de mim",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -7360,
+        2680
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "Farmacia_leads",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "remoteJid",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Verificar a palavra chave pra pausar ou despausar o bot\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "statusBot",
+              "fieldValue": "true"
+            }
+          ]
+        }
+      },
+      "id": "5d6c0419-a973-4326-a15e-5d9f45c205c2",
+      "name": "Inseri o telefona na tabela pausando bot",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -6800,
+        2220
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "2yuUASztTfzNIJYI",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "Farmacia_leads",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "remoteJid",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Verificar a palavra chave pra pausar ou despausar o bot\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "statusBot",
+              "fieldValue": "false"
+            }
+          ]
+        }
+      },
+      "id": "92df245d-5b43-456c-a020-8d35ad67b1aa",
+      "name": "Deleta o telefone da tabela despausando bot",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -6800,
+        2460
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "2yuUASztTfzNIJYI",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Farmacia_leads",
+        "returnAll": true,
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "remoteJid",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Verificar se a mensagem veio de mim\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "a2cfa32b-29c4-47a7-a9a8-7e7f91db2a48",
+      "name": "Busca o numero de telefone na tabela",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -6980,
+        2700
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "2yuUASztTfzNIJYI",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "25cd26a3-4d0e-42ef-921b-18072fbe29e4",
+              "leftValue": "={{ $json }}",
+              "rightValue": "",
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "7a7fcab0-b4df-402d-9034-39a7ad5a7b5c",
+              "leftValue": "={{ $item(\"0\").$node[\"Busca o numero de telefone na tabela\"].json[\"statusBot\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "de86178b-d121-4b23-8839-ae0c22a22b46",
+      "name": "Verifica se pode enviar mensagem",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -6680,
+        2700
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "id": "b0616de7-1000-4a88-9661-901e7e658bb3",
+      "name": "carrega o Json do webhook",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -6040,
+        2840
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16248b69-f570-41c0-8477-77ef53fedec6",
+              "name": "remoteJid",
+              "value": "={{ $json.body.data.key.remoteJid }}",
+              "type": "string"
+            },
+            {
+              "id": "be31f03c-9689-4e42-89db-d871fd9b072f",
+              "name": "textMessage",
+              "value": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"message\"][\"ephemeralMessage\"][\"message\"][\"extendedTextMessage\"][\"text\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3e57d0f8-98a5-42a3-aa55-7e8011f7fe8f",
+      "name": "Destaca telefone e texto",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5540,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "base64",
+        "options": {
+          "mimeType": "audio/mp3"
+        }
+      },
+      "id": "46cb21cc-f015-4f80-ba07-ece989bbfa7e",
+      "name": "Converter para MP3",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -5380,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/audio/transcriptions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "whisper-large-v3"
+            },
+            {
+              "name": "language",
+              "value": "pt"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ab1fc03a-9d6e-4b50-869f-53eda9596525",
+      "name": "Transcrever o MP3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -5220,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16248b69-f570-41c0-8477-77ef53fedec6",
+              "name": "remoteJid",
+              "value": "={{ $item(\"0\").$node[\"Verifica o tipo de mensagem enviada\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "be31f03c-9689-4e42-89db-d871fd9b072f",
+              "name": "textMessage",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2f336924-8cd7-476d-85b5-c53183c25561",
+      "name": "Destaca telefone e texto1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5060,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "base64",
+        "options": {}
+      },
+      "id": "f71b97e1-d688-450b-b870-4a848de223dd",
+      "name": "Converter para JPEG",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -5380,
+        2980
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16248b69-f570-41c0-8477-77ef53fedec6",
+              "name": "remoteJid",
+              "value": "={{ $item(\"0\").$node[\"Verifica o tipo de mensagem enviada\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "be31f03c-9689-4e42-89db-d871fd9b072f",
+              "name": "textMessage",
+              "value": "=Transcrição da imagem enviada pelo usuário:\n{{ $json.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7b988417-bbbe-4b85-be82-514938f8840c",
+      "name": "Destaca telefone e texto2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5060,
+        2980
+      ]
+    },
+    {
+      "parameters": {
+        "content": "# NODE ANCORA",
+        "height": 393.74937389814977,
+        "width": 235.3250125220369
+      },
+      "id": "d0b1de5c-9aa2-42d1-a1eb-052eacbc3e60",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -4900,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "content": "# Tratamento de midias da evolutionAPI",
+        "height": 888.0211754366505,
+        "width": 1419.423692751709,
+        "color": 4
+      },
+      "id": "97391b78-0ab0-44db-96af-8f98cb779dd2",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -6080,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "content": "# Sistema de pausa do bot",
+        "height": 504.8521357331505,
+        "width": 567.1075027567781,
+        "color": 6
+      },
+      "id": "e000387d-f90c-480c-b227-64bc8b1653ae",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -7200,
+        2140
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/files",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "purpose",
+              "value": "vision"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b0c475c6-521b-4494-83f1-9dc1273783a1",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -5220,
+        2980
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ffdc8a8f-9a04-4711-92f9-596a80ab3aab",
+              "name": "openAi_token",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "170f45ef-9440-4676-a0d0-3bec1de4a8cc",
+              "name": "openAi_assistant_id",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "3d281572-cf59-4d68-8244-9a3aeb3e6a69",
+              "name": "evolutionApi",
+              "value": "https://",
+              "type": "string"
+            },
+            {
+              "id": "bcfbd9d0-2f40-4026-b5dc-6c5de191e326",
+              "name": "evolution_nome_instancia",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "6293143a-900f-4818-8b6f-80eb58d322b0",
+              "name": "evolution_apikey_instancia",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f63cd799-5f3c-4214-894d-28ba41a12156",
+      "name": "credenciais",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -7800,
+        2660
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "id": "72a7314d-1032-4ab6-b5dd-e1849b6436ae",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -7540,
+        2680
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "93f7cf4a-4151-46d9-b71b-5ce01df35c6d",
+              "name": "base64",
+              "value": "={{ $json.body.data.message.base64 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "708d194b-6e08-4675-8bfe-0eba4ea96059",
+      "name": "Separa base64",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5540,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "93f7cf4a-4151-46d9-b71b-5ce01df35c6d",
+              "name": "base64",
+              "value": "={{ $json.body.data.message.base64 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "47a84409-973c-4a1a-a7ca-8e1b491dc8a8",
+      "name": "Separa base64_1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5540,
+        2980
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "0088d9db-1da5-4f50-bf3c-1a64027baa4d",
+              "leftValue": "={{ $item(\"0\").$node[\"Busca o numero de telefone na tabela1\"].json }}",
+              "rightValue": "",
+              "operator": {
+                "type": "object",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3727d14e-1c5d-4969-a723-1a50a62394bf",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -4440,
+        2600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b395fdb7-8f65-4858-83df-37444c575109",
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        -4060,
+        2600
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "1a0fc840-dd83-4163-9a15-b670c4b998e4",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -780,
+        2460
+      ],
+      "webhookId": "3f4c50d9-505d-4bc9-972a-50548cd8957d"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "0088d9db-1da5-4f50-bf3c-1a64027baa4d",
+              "leftValue": "={{ $item(\"0\").$node[\"Merge2\"].json[\"temThread\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "376c4c01-ced7-4e35-b3bd-baebf33c83f1",
+      "name": "verifica se remoteJid tem THREAD",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -3860,
+        2600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c8f6ef5a-e654-4521-9094-be48761e0d3d",
+      "name": "se for mandado o fluxo é encerrado",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        2580
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/threads",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "582982c7-bbc5-4891-9d15-74bf0f3e0776",
+      "name": "se não tiver, Cria a THREAD",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -3640,
+        2720
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "assistant_id",
+              "value": "={{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_assistant_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "35f55936-c3c5-4d49-abfd-61b8b5fc2da8",
+      "name": "Faz o RUN da mensagem dentro de uma THREAD especifica",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1420,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "721f330a-ef5c-4e0e-af15-5b9419cfd01f",
+      "name": "Listar as Runs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1180,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"Merge2\"].json[\"Thread\"] }}/messages?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7a8286cf-a6fc-43ea-b774-9f29b8230199",
+      "name": "Listar MENSAGENS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1820,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "id": "5f1380fa-2e57-4d47-be9e-8947cc66d21e",
+      "name": "Espera para ver se o usuario manda outra mensagem",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2000,
+        2380
+      ],
+      "webhookId": "cba19bec-f3db-43cd-879a-fe69f73567df"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1b948cb7-d0a8-4c0b-85fa-7aafa3e7589e",
+      "name": "listar runs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -3060,
+        1820
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs/{{ $item(\"0\").$node[\"listar runs\"].json[\"data\"][\"0\"][\"id\"] }}/cancel",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "09877a7a-d01c-43dc-a57d-be20bb0b0367",
+      "name": "cancelar a run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2920,
+        1820
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {},
+      "id": "ee13244c-d93e-4e10-aa50-d77eef7b119f",
+      "name": "Wait1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2840,
+        2240
+      ],
+      "webhookId": "99a3837d-2964-471d-a012-af2c7bf0dc80"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "16bc574a-f35b-4a15-81a8-8e2a8c96c454",
+              "leftValue": "={{ $item(\"0\").$node[\"listar run novamente\"].json[\"data\"][\"0\"][\"status\"] }}",
+              "rightValue": "cancelling",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9349d503-c247-4941-b4f1-e06421963a63",
+      "name": "verifica se o status é canceling",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -3000,
+        2260
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "55c0daa2-05f8-4872-ac8d-dee2b4c5089e",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/messages?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71bc2b85-b278-42d7-9252-240f30c683f8",
+      "name": "Listar MENSAGENS3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -560,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "0ecd3c35-594e-42fe-a5a0-5fe7a9423e1b",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "completed",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "completed"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "queued",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "queued"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "d5aa58a4-f047-437d-a15b-dc398bee5c11",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "in_progress",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "in_progress"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "3f69b82c-800c-4967-bb34-de97001d9c5b",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "requires_action",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "requires_action"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "6cb4b858-edb0-49a0-882e-d09adbab28cf",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "cancelling",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "cancelling"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "afb38c07-62e9-4137-af53-dca610c3f058",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "cancelled",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "cancelled"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "0673fbee-93c9-42e6-8068-3713b19873b1",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "failed",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "failed"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "e22f9716-0089-4e31-a884-ca3c81957480",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "incomplete",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "incomplete"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "27ea5f0f-70f3-4a50-992a-24e9961d4b1e",
+                    "leftValue": "={{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"status\"] }}",
+                    "rightValue": "expired",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "expired"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "390dfb37-c55f-488f-b1e8-b7ec00f1d9b8",
+      "name": "Verifica qual o status das RUNS",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -1020,
+        2340
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "role",
+              "value": "user"
+            },
+            {
+              "name": "content",
+              "value": "={{ $item(\"0\").$node[\"RECEBE A MESAGEM DAS 3 ROTAS\"].json[\"textMessage\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4945ed33-7d0b-4074-84b0-cf7a563bbdf6",
+      "name": "Criar MENSAGEM",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2600,
+        2280
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8608fe17-e8cf-49e3-84e1-fff90d62f852",
+      "name": "listar runs1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2980,
+        2740
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs/{{ $item(\"0\").$node[\"listar runs1\"].json[\"data\"][\"0\"][\"id\"] }}/cancel",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "66e6c329-e077-485e-b3b0-3a8c3a0077e6",
+      "name": "cancelar a run1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2840,
+        2740
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {},
+      "id": "f7843601-2edd-4d3b-bcb2-5b11020a96cb",
+      "name": "Wait3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2760,
+        3160
+      ],
+      "webhookId": "5952cede-cbc6-4667-bdc4-40d4453e323a"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "16bc574a-f35b-4a15-81a8-8e2a8c96c454",
+              "leftValue": "={{ $item(\"0\").$node[\"listar run novamente1\"].json[\"data\"][\"0\"][\"status\"] }}",
+              "rightValue": "cancelling",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8f1b657b-1d2f-4458-8dc5-a6956339dfe0",
+      "name": "verifica se o status é canceling1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2920,
+        3180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "7ceb0b0a-e274-4baf-8aeb-1a4f153e7106",
+              "leftValue": "={{ $item(\"0\").$node[\"RECEBE A MESAGEM DAS 3 ROTAS\"].json[\"textMessage\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8fcd099c-c033-4a37-ae81-3e195402bcdf",
+      "name": "Verifica se é imagem ou texto",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -3320,
+        2420
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"role\": \"user\",\n  \"content\": [\n    {\n      \"type\": \"image_file\",\n      \"image_file\": {\n        \"file_id\": \"{{ $item(\"0\").$node[\"HTTP Request1\"].json[\"id\"] }}\"\n      }\n    },\n    {\n      \"type\": \"text\",\n      \"text\": \"({{ $item(\"0\").$node[\"RECEBE A MESAGEM DAS 3 ROTAS\"].json[\"textMessage\"] }})\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "492bc032-3a34-4627-961c-73475db93921",
+      "name": "Inserir imagem na thread",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2580,
+        2520
+      ],
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "b9af9d20-9e8d-46ec-8dbe-c389a03f027b",
+              "leftValue": "={{ $item(\"0\").$node[\"Espera para ver se o usuario manda outra mensagem\"].json[\"msgid\"] }}",
+              "rightValue": "={{ $item(\"0\").$node[\"Listar MENSAGENS\"].json[\"data\"][\"0\"][\"id\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "bb65a815-0a6e-45e7-8bb2-92023f71938c",
+      "name": "verifica se o usuario mandou mais de uma mensagem",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1640,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7e63e908-3ba5-4a84-98bf-40bacd60aef3",
+              "name": "msgid",
+              "value": "={{ $('Criar MENSAGEM').item.json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3cc4a1a-c658-4fce-80a4-39bf52acbee1",
+      "name": "Edit Fields2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2260,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "83cde538-dfd7-48fd-a095-de04656a4ab6",
+              "name": "msgid",
+              "value": "={{ $('Inserir imagem na thread').item.json.id}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b1099665-38f0-41f1-8677-abdfc27dcdc2",
+      "name": "Edit Fields3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2260,
+        2480
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f6068778-20fb-4667-ab61-514f0f3d3e95",
+      "name": "listar run novamente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -3040,
+        2020
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"verifica se remoteJid tem THREAD\"].json[\"Thread\"] }}/runs?order=desc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2c94a26e-2fce-4d9f-ad2d-730a39d7db45",
+      "name": "listar run novamente1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2960,
+        2940
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "content": "# Node âncora",
+        "height": 243.24017069420873,
+        "width": 163.3661920592999
+      },
+      "id": "0c9d5ba6-ac2c-4d88-8519-e36e07346c6f",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -4100,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "tool_calls",
+        "options": {
+          "destinationFieldName": "properties"
+        }
+      },
+      "id": "374fa1b4-a133-40d8-afe1-48d6e1a17edf",
+      "name": "Split Out",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $node[\"Loop Over Items\"].context[\"done\"]}}"
+        }
+      },
+      "id": "3a6fa047-7d82-4908-8676-f03a44f3137d",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -280,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "03404dd5-5cf7-4ac4-8c3d-f38d7a3a7d81",
+              "name": "arguments",
+              "value": "={{ $json.properties.function.arguments }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3e157f15-1281-454f-a8d8-7ee2e3364baf",
+      "name": "Edit Fields6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -100,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a474634e-e1de-4f91-882e-ed48cdb15bde",
+              "name": "tool_calls",
+              "value": "={{ $json.data[0].required_action.submit_tool_outputs.tool_calls }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b377f09b-f1c3-4945-97de-3690c5c0e749",
+      "name": "Edit Fields9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -620,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "concatenate",
+              "field": "output"
+            }
+          ]
+        },
+        "options": {
+          "outputFormat": "singleItem"
+        }
+      },
+      "id": "8cabfd27-6c06-4cde-b3a7-6715d0ec4c74",
+      "name": "Summarize",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        900
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "424f6471-5496-4bb3-abb3-139048624da5",
+      "name": "Replace Me",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"tool_call_id\": \"{{ $item(\"0\").$node[\"Loop Over Items\"].json[\"properties\"][\"id\"] }}\",\n  \"output\": \"{{ $item(0).$node['Summarize'].json['concatenated_output'].replace(/\\\\/g, '\\\\\\\\').replace(/\\\"/g, '\\\\\\\"') }}\"\n}\n",
+        "options": {}
+      },
+      "id": "1dc237e4-8406-47f5-98ab-82df67aa5f76",
+      "name": "Edit Fields5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1780,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "3ac990d9-b1ea-49fc-8981-65e8291c7e5a",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        20,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3a9fc20a-7a97-4b63-8b36-3aac472e0306",
+              "name": "tool_outputs",
+              "value": "={{ $item(\"0\").$node[\"Aggregate\"].json[\"data\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "28f592f9-4716-4eeb-baa1-331d9fd93870",
+      "name": "Edit Fields10",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        160,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $item(\"0\").$node[\"Merge2\"].json[\"Thread\"] }}/runs/{{ $item(\"0\").$node[\"Listar as Runs\"].json[\"data\"][\"0\"][\"id\"] }}/submit_tool_outputs",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $item(\"0\").$node[\"credenciais\"].json[\"openAi_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \n  \"tool_outputs\": {{ $item(\"0\").$node[\"Edit Fields10\"].json[\"tool_outputs\"] }}\n}",
+        "options": {}
+      },
+      "id": "5691a1e8-7c1f-459e-9c82-c4beb11db1b5",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        400
+      ],
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"output\": \"response: {{ $item(\"0\").$node[\"Edit Fields\"].json[\"dados\"] }}\"\n }\n",
+        "options": {}
+      },
+      "id": "374f2302-3857-4691-85d6-b2b8e26ae7f9",
+      "name": "output",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        820,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Sistema de buffer de msg recebida",
+        "height": 548.9771216173509,
+        "width": 396.20107516171583,
+        "color": 7
+      },
+      "id": "05f734a1-4cbc-4797-a383-9957b1f5a96b",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2260,
+        2200
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Caso seja colocado legenda na imagem enviada ele colocará aqui ao inserir a mensagem na thread",
+        "height": 314.55382793654655,
+        "width": 183.16530560097178
+      },
+      "id": "8be1f391-75ed-4ce9-9cab-868c19ec7d74",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2580,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Farmacia_leads",
+        "returnAll": true,
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "remoteJid",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "c9d9d352-6b7d-4d6e-88c7-6429f7843a9f",
+      "name": "Busca o numero de telefone na tabela1",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -4640,
+        2600
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "tableId": "Farmacia_leads",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "remoteJid",
+              "fieldValue": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"key\"][\"remoteJid\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "70aaef5c-5418-48e0-b38c-794edd5e0d86",
+      "name": "Se não tiver, insere o remoteJid na base",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -4240,
+        2720
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "Farmacia_leads",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Merge2\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "Thread",
+              "fieldValue": "={{ $item(\"0\").$node[\"se não tiver, Cria a THREAD\"].json[\"id\"] }}"
+            },
+            {
+              "fieldId": "temThread",
+              "fieldValue": "true"
+            }
+          ]
+        }
+      },
+      "id": "cb82c6b0-91ba-4ed0-81c6-f748d3dbacfb",
+      "name": "referencia a THREAD  com o numero de telefone1",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -3440,
+        2720
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4ae42438-a1c2-4ec8-b065-ad7d9f9630bc",
+              "name": "number",
+              "value": "={{ $item(\"0\").$node[\"RECEBE A MESAGEM DAS 3 ROTAS\"].json[\"remoteJid\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f64c4ed6-c5a8-4d40-89c1-dc495daeab5c",
+              "name": "options.delay",
+              "value": 500,
+              "type": "number"
+            },
+            {
+              "id": "50f1440b-9747-4b1c-bfc5-7aa69238b985",
+              "name": "options.presence",
+              "value": "composing",
+              "type": "string"
+            },
+            {
+              "id": "99cfb8eb-ccd4-412e-bebc-55ef1f1d4149",
+              "name": "options.linkPreview",
+              "value": false,
+              "type": "boolean"
+            },
+            {
+              "id": "c801ab48-5225-4b2d-aa12-db3977fa7a04",
+              "name": "textMessage.text",
+              "value": "={{ $json.message }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b5f1b6b4-6dc6-4fdc-bb71-477182aaab7a",
+      "name": "Body do HTTP request",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        620,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "4c752f9c-71cf-4da2-881a-385eab48280a",
+      "name": "Envia cada frase splitada para o whatsapp",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        360,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "[\n  {\n    \"part\": 1,\n    \"message\": \"Primeira parte da mensagem de 50 a 150 palavras.\"\n  },\n  {\n    \"part\": 2,\n    \"message\": \"Segunda parte da mensagem de 80 a 150 palavras.\"\n  },\n{\n    \"part\": 3,\n    \"message\": \"Terceira parte da mensagem de 35 a 150 palavras.\"\n}\n]"
+      },
+      "id": "908422f5-6de0-446c-b3ab-8d71a05f2b9b",
+      "name": "Structured Output Parser1",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -40,
+        2480
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output",
+        "options": {}
+      },
+      "id": "1943b78f-fc9f-4b9c-a18d-641e8bcf0bf0",
+      "name": "Split Out2",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        160,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 0.5
+      },
+      "id": "db503383-a886-4d8c-8f59-fbebeacc0c49",
+      "name": "Wait4",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        980,
+        2320
+      ],
+      "webhookId": "4ae84203-c012-4baf-a59f-4b21ac120df4"
+    },
+    {
+      "parameters": {
+        "content": "# sistema de split de mensagens",
+        "height": 569.594490717535,
+        "width": 1357.3630146850803
+      },
+      "id": "b75bf56e-bcb9-440c-b027-fc454a71a863",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        2080
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "0c0e36c5-2d5f-4106-980f-aa215057224a",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        2480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $item(\"0\").$node[\"credenciais\"].json[\"evolutionApi\"] }}/message/sendText/{{ $item(\"0\").$node[\"credenciais\"].json[\"evolution_nome_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $item(\"0\").$node[\"credenciais\"].json[\"evolution_apikey_instancia\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "id": "a27382d2-5ef0-4d49-90c2-e28ccd8c6f73",
+      "name": "Enviar a resposta para o WP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        800,
+        2320
+      ],
+      "executeOnce": true,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "Clientes",
+        "returnAll": true,
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "CNPJ",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Switch1\"].json[\"arguments\"][\"cnpj\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "83a38a87-af68-4852-ba1c-4649750402a7",
+      "name": "Supabase",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        420,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "content": "{\n  \"name\": \"pesquisar_cliente\",\n  \"description\": \"Pesquisar cliente pelo CNPJ\",\n  \"strict\": true,\n  \"parameters\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"cnpj\": {\n        \"type\": \"string\",\n        \"description\": \"O CNPJ do cliente no formato XXXXXXXXXXXXXX\"\n      }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n      \"cnpj\"\n    ]\n  }\n}\n",
+        "height": 360.4677702064656,
+        "width": 442.1424093499156
+      },
+      "id": "5033ba9c-8144-49a5-944a-a31f0b6e0b05",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cf08b353-5d4a-4797-8f92-bf5e23c36a20",
+              "name": "dados",
+              "value": "=NomedaEmpresa: {{ $json.EMPRESAS }}, atendentedodepartamentoFiscal: {{ $json.FISCAL }}, atendentedodepartamentoPessoal: {{ $json.PESSOAL }}, atendentedodepartamentoContabil: {{ $json.CONTABIL }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3f8dfda-6cb7-4d5c-b086-9e2aa0977c4f",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        620,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $item(\"0\").$node[\"Loop Over Items\"].json[\"properties\"][\"function\"][\"name\"] }}",
+                    "rightValue": "pesquisar_cliente",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "pesquisar_cliente"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "acebb2b4-5f61-4c11-809f-d720cd3ba1ba",
+                    "leftValue": "={{ $item(\"0\").$node[\"Loop Over Items\"].json[\"properties\"][\"function\"][\"name\"] }}",
+                    "rightValue": "direcionamento_de_filas",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "direcionamento_de_filas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "95b9610f-ed98-4040-bfc9-bf0b783e554c",
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        60,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16248b69-f570-41c0-8477-77ef53fedec6",
+              "name": "remoteJid",
+              "value": "={{ $json.body.data.key.remoteJid }}",
+              "type": "string"
+            },
+            {
+              "id": "be31f03c-9689-4e42-89db-d871fd9b072f",
+              "name": "textMessage",
+              "value": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"message\"][\"conversation\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "854583d9-f0bf-468c-88f2-e1282759301c",
+      "name": "Destaca telefone e texto3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5540,
+        2520
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16248b69-f570-41c0-8477-77ef53fedec6",
+              "name": "remoteJid",
+              "value": "={{ $json.body.data.key.remoteJid }}",
+              "type": "string"
+            },
+            {
+              "id": "be31f03c-9689-4e42-89db-d871fd9b072f",
+              "name": "textMessage",
+              "value": "={{ $item(\"0\").$node[\"Recebe mensagem do whatsapp\"].json[\"body\"][\"data\"][\"message\"][\"extendedTextMessage\"][\"text\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "45f8729c-b6a3-4928-9e7c-aff2d0019072",
+      "name": "Destaca telefone e texto4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5540,
+        2420
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Texto a ser quebrado:\n\"{{ $item(\"0\").$node[\"Limit\"].json[\"data\"][\"0\"][\"content\"][\"0\"][\"text\"][\"value\"] }}\"",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Aja como um especialista em estruturação de dados JSON. Quero que vocêresponda as mensagens quebrando-as em partes menores de 30 a 150 palavras em media cada. Cada parte deve ser um objeto JSON. Mesmo se a mensagem for muito curta, coloque no JSON. A resposta deve ser estruturada como uma lista de objetos JSON. caso haja markdows tire o markdow."
+        }
+      },
+      "id": "c5904d49-3a64-4ffe-9fea-3271d90da641",
+      "name": "Bot de quebra de mensagens",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -220,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "contabilidade_leads",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Timestamp",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"2\").$node[\"Code\"].json[\"time\"] }}"
+            },
+            {
+              "keyName": "Lead_Ultima_Mensagem",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"1\").$node[\"Code\"].json[\"lead_message\"] }}"
+            },
+            {
+              "keyName": "Bot_Ultima_Mensagem",
+              "condition": "eq",
+              "keyValue": "={{ $item(\"0\").$node[\"Code\"].json[\"bot_message\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "773246ab-2820-492e-b93f-d63c92300083",
+      "name": "Supabase1",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        800,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Recebe a última mensagem do bot e a última mensagem do lead\nconst botMessage = $item(0).$node[\"Limit\"].json[\"data\"][0][\"content\"][0][\"text\"][\"value\"];\nconst leadMessage = $item(0).$node[\"RECEBE A MESAGEM DAS 3 ROTAS\"].json[\"textMessage\"];\n\n// Função para escapar ou remover caracteres problemáticos (como vírgulas, interrogação, etc.)\nfunction sanitizeMessage(message) {\n  // Remove vírgulas e outros caracteres que possam quebrar a query\n  return message.replace(/[\\,\\?]/g, '').trim(); \n}\n\n// Função para gerar o timestamp no formato correto para o Supabase\nfunction getCurrentTimestamp() {\n  const now = new Date();\n  return now.toISOString().split('.')[0] + '+00:00'; // Remove milissegundos e ajusta para UTC\n}\n\n// Gera os três JSONs: botMessage, leadMessage e time\nconst botJson = {\n  bot_message: sanitizeMessage(botMessage) // Sanitize bot message\n};\n\nconst leadJson = {\n  lead_message: sanitizeMessage(leadMessage) // Sanitize lead message\n};\n\nconst timeJson = {\n  time: getCurrentTimestamp() // Formata no padrão ISO 8601 sem milissegundos\n};\n\n// Retorna os três JSONs\nreturn [\n  {\n    json: botJson\n  },\n  {\n    json: leadJson\n  },\n  {\n    json: timeJson\n  }\n];\n"
+      },
+      "id": "e952a066-0276-4fae-ba0b-64cab8540f0a",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "content": "# Preparativo de FollowUp",
+        "height": 212.34649071753498,
+        "width": 521.3630146850803,
+        "color": 4
+      },
+      "id": "be17e9cb-d934-41f9-a348-ab4ee3dca9eb",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        540,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "id": "91dcd695-92e0-4e92-8935-e504d71ae4e5",
+      "name": "RECEBE A MESAGEM DAS 3 ROTAS",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -4840,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "extendedTextMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "589143b9-27fe-4ca9-b145-b819b2bc1104",
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "conversation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "c2ae982d-b730-4a95-b4aa-3a005919f0d4",
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "ephemeralMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Texto2"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "8e22be1d-5460-4165-8362-b7ceae985194",
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "audioMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "b269ce88-2e9a-4069-a376-0761c85f6773",
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "imageMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "imagem"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "0831f14d-386c-4799-bf8f-e8966ae1bc1c",
+                    "leftValue": "={{ $json.body.data.messageType }}",
+                    "rightValue": "documentMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Document"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "95cce8c0-f1e4-4048-bd46-8bc990dfc2b6",
+      "name": "Verifica o tipo de mensagem enviada",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -5840,
+        2840
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "e43fe669-1fb8-4b9d-a9ef-f61ed6c5eea1",
+                    "leftValue": "={{ $item(\"0\").$node[\"Verificar se a mensagem veio de mim\"].json[\"body\"][\"data\"][\"message\"][\"conversation\"] || $item(\"0\").$node[\"Verificar se a mensagem veio de mim\"].json[\"body\"][\"data\"][\"message\"][\"extendedTextMessage\"][\"text\"] }}",
+                    "rightValue": "***",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Desativar BOT"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "184d7b15-6836-458d-9ba1-3cdde309c311",
+                    "leftValue": "={{ $item(\"0\").$node[\"Verificar se a mensagem veio de mim\"].json[\"body\"][\"data\"][\"message\"][\"conversation\"] || $item(\"0\").$node[\"Verificar se a mensagem veio de mim\"].json[\"body\"][\"data\"][\"message\"][\"extendedTextMessage\"][\"text\"] }}",
+                    "rightValue": "###",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Ativar BOT"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a2928a39-033c-4143-ba76-e310e7caa080",
+      "name": "Verificar a palavra chave pra pausar ou despausar o bot",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -7140,
+        2360
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "20c47105-83f1-4a36-8315-4ff867c800c8",
+        "options": {}
+      },
+      "id": "5d1f473a-161d-4ae4-8754-101b608b244f",
+      "name": "Recebe mensagem do whatsapp",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -7960,
+        2860
+      ],
+      "webhookId": "20c47105-83f1-4a36-8315-4ff867c800c8"
+    },
+    {
+      "parameters": {
+        "content": "Necessário banco de dados com as colunas:\nremoteJid (String)\ntemThread (Bool)\nThread (String)\nTimestamp (String)\nstatusBot (Bool)\nLeadUltimaMensagem (String)\nBotUltimaMensagem (String)",
+        "height": 176.36420519734008,
+        "width": 411.00594431220367,
+        "color": 6
+      },
+      "id": "28261f14-0567-4545-8cba-af1b4aa87afb",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -7980,
+        3060
+      ]
+    }
+  ],
+  "pinData": {
+    "Edit Fields9": [
+      {
+        "json": {
+          "tool_calls": [
+            {
+              "id": "call_pxrI5gQDNSwBOgFlmmPoSWvH",
+              "type": "function",
+              "function": {
+                "name": "verificar_agendamentos",
+                "arguments": "{\"data_inicio\":\"2024-09-13T00:00:00.000-03:00\",\"data_fim\":\"2024-09-13T23:59:00.000-03:00\"}"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Recebe mensagem do whatsapp": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhook.dev.illumiai.com",
+            "user-agent": "axios/1.7.2",
+            "content-length": "535",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "webhook.dev.illumiai.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "367cc3d4f2a5",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "messages.upsert",
+            "instance": "farmacia",
+            "data": {
+              "key": {
+                "remoteJid": "556286228018@s.whatsapp.net",
+                "fromMe": true,
+                "id": "3A6B05EECB0BCC3CF07A"
+              },
+              "pushName": "Yuri Pires",
+              "message": {
+                "conversation": "***"
+              },
+              "messageType": "conversation",
+              "messageTimestamp": 1728408729,
+              "owner": "farmacia",
+              "source": "ios"
+            },
+            "destination": "https://webhook.dev.illumiai.com/webhook/drogariamoderna",
+            "date_time": "2024-10-08T14:32:09.548Z",
+            "sender": "5524999232929@s.whatsapp.net",
+            "server_url": "https://evolution.dev.illumiai.com",
+            "apikey": "dlrzbcomq3mmh5f3n207w"
+          },
+          "webhookUrl": "https://webhook.dev.illumiai.com/webhook/drogariamoderna",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Verificar se a mensagem veio de mim": {
+      "main": [
+        [
+          {
+            "node": "Verificar a palavra chave pra pausar ou despausar o bot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Busca o numero de telefone na tabela",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Busca o numero de telefone na tabela": {
+      "main": [
+        [
+          {
+            "node": "Verifica se pode enviar mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica se pode enviar mensagem": {
+      "main": [
+        [
+          {
+            "node": "carrega o Json do webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "carrega o Json do webhook": {
+      "main": [
+        [
+          {
+            "node": "Verifica o tipo de mensagem enviada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destaca telefone e texto": {
+      "main": [
+        [
+          {
+            "node": "RECEBE A MESAGEM DAS 3 ROTAS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converter para MP3": {
+      "main": [
+        [
+          {
+            "node": "Transcrever o MP3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcrever o MP3": {
+      "main": [
+        [
+          {
+            "node": "Destaca telefone e texto1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destaca telefone e texto1": {
+      "main": [
+        [
+          {
+            "node": "RECEBE A MESAGEM DAS 3 ROTAS",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Converter para JPEG": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destaca telefone e texto2": {
+      "main": [
+        [
+          {
+            "node": "RECEBE A MESAGEM DAS 3 ROTAS",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Destaca telefone e texto2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "credenciais": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Verificar se a mensagem veio de mim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separa base64": {
+      "main": [
+        [
+          {
+            "node": "Converter para MP3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separa base64_1": {
+      "main": [
+        [
+          {
+            "node": "Converter para JPEG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Se não tiver, insere o remoteJid na base",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "verifica se remoteJid tem THREAD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Listar as Runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica se remoteJid tem THREAD": {
+      "main": [
+        [
+          {
+            "node": "Verifica se é imagem ou texto",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "se não tiver, Cria a THREAD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "se não tiver, Cria a THREAD": {
+      "main": [
+        [
+          {
+            "node": "referencia a THREAD  com o numero de telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Faz o RUN da mensagem dentro de uma THREAD especifica": {
+      "main": [
+        [
+          {
+            "node": "Listar as Runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar as Runs": {
+      "main": [
+        [
+          {
+            "node": "Verifica qual o status das RUNS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar MENSAGENS": {
+      "main": [
+        [
+          {
+            "node": "verifica se o usuario mandou mais de uma mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Espera para ver se o usuario manda outra mensagem": {
+      "main": [
+        [
+          {
+            "node": "Listar MENSAGENS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar runs": {
+      "main": [
+        [
+          {
+            "node": "cancelar a run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelar a run": {
+      "main": [
+        [
+          {
+            "node": "Criar MENSAGEM",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "listar run novamente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "listar run novamente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica se o status é canceling": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Criar MENSAGEM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Bot de quebra de mensagens",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar MENSAGENS3": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica qual o status das RUNS": {
+      "main": [
+        [
+          {
+            "node": "Listar MENSAGENS3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Criar MENSAGEM": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "listar runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar runs1": {
+      "main": [
+        [
+          {
+            "node": "cancelar a run1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelar a run1": {
+      "main": [
+        [
+          {
+            "node": "Inserir imagem na thread",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "listar run novamente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "listar run novamente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica se o status é canceling1": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Inserir imagem na thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica se é imagem ou texto": {
+      "main": [
+        [
+          {
+            "node": "Criar MENSAGEM",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Inserir imagem na thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inserir imagem na thread": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "listar runs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica se o usuario mandou mais de uma mensagem": {
+      "main": [
+        [
+          {
+            "node": "Faz o RUN da mensagem dentro de uma THREAD especifica",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "se for mandado o fluxo é encerrado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Espera para ver se o usuario manda outra mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Espera para ver se o usuario manda outra mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar run novamente": {
+      "main": [
+        [
+          {
+            "node": "verifica se o status é canceling",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Criar MENSAGEM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar run novamente1": {
+      "main": [
+        [
+          {
+            "node": "verifica se o status é canceling1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Inserir imagem na thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields9": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Replace Me",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields10": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Listar as Runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "output": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Busca o numero de telefone na tabela1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Se não tiver, insere o remoteJid na base": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "referencia a THREAD  com o numero de telefone1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Body do HTTP request": {
+      "main": [
+        [
+          {
+            "node": "Enviar a resposta para o WP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envia cada frase splitada para o whatsapp": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Body do HTTP request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Bot de quebra de mensagens",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out2": {
+      "main": [
+        [
+          {
+            "node": "Envia cada frase splitada para o whatsapp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Envia cada frase splitada para o whatsapp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Bot de quebra de mensagens",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar a resposta para o WP": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destaca telefone e texto3": {
+      "main": [
+        [
+          {
+            "node": "RECEBE A MESAGEM DAS 3 ROTAS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destaca telefone e texto4": {
+      "main": [
+        [
+          {
+            "node": "RECEBE A MESAGEM DAS 3 ROTAS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bot de quebra de mensagens": {
+      "main": [
+        [
+          {
+            "node": "Split Out2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Supabase1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RECEBE A MESAGEM DAS 3 ROTAS": {
+      "main": [
+        [
+          {
+            "node": "Busca o numero de telefone na tabela1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica o tipo de mensagem enviada": {
+      "main": [
+        [
+          {
+            "node": "Destaca telefone e texto4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Destaca telefone e texto3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Destaca telefone e texto",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Separa base64",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Separa base64_1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verificar a palavra chave pra pausar ou despausar o bot": {
+      "main": [
+        [
+          {
+            "node": "Inseri o telefona na tabela pausando bot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Deleta o telefone da tabela despausando bot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recebe mensagem do whatsapp": {
+      "main": [
+        [
+          {
+            "node": "carrega o Json do webhook",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "credenciais",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1fc016b2-e8b4-45b2-80a5-1842a8dad145",
+  "meta": {
+    "instanceId": "a7ff38881c88867cfd042195efcf2675341020b32314f157e63034a34a6a9763"
+  },
+  "id": "wABk61j0UFPevLr7",
+  "tags": []
+}

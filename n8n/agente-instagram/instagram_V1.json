@@ -1,0 +1,367 @@
+{
+  "name": "Aula-instagram",
+  "nodes": [
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.query['hub.challenge'] }}",
+        "options": {}
+      },
+      "id": "fd67cd88-d7b2-4ef5-925b-2939947bb9a7",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        780,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Setup do webhook do meta",
+        "height": 270,
+        "width": 523
+      },
+      "id": "a081174e-c449-459a-92e5-0cb6ea88d385",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "path": "instagram-webhook",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "30514ada-d133-47f2-a287-344eae3cd47b",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        560,
+        420
+      ],
+      "webhookId": "9ef0a7a6-7842-481e-87db-4101b6a22809",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1391496b-d956-4720-b34b-943ddfb40e9f",
+              "leftValue": "={{ $json.body.object }}",
+              "rightValue": "instagram",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "f722fce8-b0e9-463d-9f60-a9e541aaa41b",
+              "leftValue": "={{ \"is_echo\" in $json.body.entry[0].messaging[0].message }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e7432e90-7b81-4dba-a7f6-93c4e7661d3e",
+      "name": "nova_mensagem",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        780,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "model": "llama-3.1-70b-versatile",
+        "options": {}
+      },
+      "id": "2a2e5533-8dca-4e1a-9106-cd4df502830a",
+      "name": "Groq Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        1000
+      ],
+      "credentials": {
+        "groqApi": {
+          "id": "qh32HmUe9KE1MFNh",
+          "name": "Groq account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.body.entry[0].messaging[0].sender.id }}",
+        "contextWindowLength": 20
+      },
+      "id": "626c9407-739c-43e1-bd2b-974d12f0c8e5",
+      "name": "Redis Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.3,
+      "position": [
+        1200,
+        1000
+      ],
+      "credentials": {
+        "redis": {
+          "id": "LTzsljpp7xcIB2r2",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.instagram.com/v21.0/17841467000283687/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer IGQWRQT3FDNEtDMFphLXBORTNBOVd4Wm5GdEY5N19rTkdXdk11S0JnV3hMRlRCazc2OExGc096TW9Icjg0WC1yLWJTeGl4SWhmWmliZA3cwT3EzTDRweTF6cHBONDE2SjJiSVBqMEFrVlZAIa3lRc0dtSGtjZATA5Vk0ZD"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "recipient.id",
+              "value": "={{ $('nova_mensagem').item.json.body.entry[0].messaging[0].sender.id }}"
+            },
+            {
+              "name": "message.text",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d749f7d0-36d3-475c-b41e-7bae4596ed6e",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.entry[0].messaging[0].message.text }}",
+        "options": {
+          "systemMessage": "=# Configuração Base\nVocê é um Black Knight, um nobre cavaleiro das sombras a serviço do Reino da DinastIA. Sua missão é guiar viajantes pelo caminho da automação com IA, sempre mantendo uma aura de mistério e formalidade obscura.\n\n# Mensagem Inicial\n<welcome>\n*Uma figura sombria emerge das sombras, sua armadura negra refletindo a luz tênue*\n\n\"Bem-vindo ao Reino da DinastIA, viajante. Eu sou um Black Knight, guardião dos segredos da automação. Estou aqui para guiá-lo pelos caminhos da automação com IA.\n\nPosso auxiliá-lo nas seguintes áreas místicas:\n- Atendimento SDR e Prospecção Ativa\n- Marketing Digital (Tráfego e Info produtos)\n- Jurídico (Cartórios)\n- RH\n- Atendimento Especializado (Imobiliárias e Consultórios)\n\nPara iniciar sua jornada, basta compartilhar sua questão.\"\n</welcome>\n\n# Regras de Comportamento\n<behavior>\n1. Mantenha sempre um tom formal e misterioso, como um cavaleiro das sombras\n2. Respostas devem ser curtas, diretas e práticas\n3. Sempre indique o caminho, não a solução completa\n4. Sugira os canais apropriados do Discord quando relevante\n5. Nunca viole as regras da comunidade\n</behavior>\n\n# Áreas de Conhecimento\n<knowledge_areas>\n- Atendimento SDR -> Prospecção Ativa\n- MKT Digital (Tráfego pago/orgânico)\n- MKT Digital (Info produtor)\n- Jurídico (Cartórios)\n- RH\n- Atendimento Imobiliário\n- Atendimento Consultórios\n</knowledge_areas>\n\n# Canais do Discord\n<channels>\n- #geral: Para networking e conversas gerais\n- #duvidas: Suporte técnico sobre Agentes\n- #agentes: Templates gratuitos prontos para uso\n- #do-zero: Tutorial passo a passo para iniciantes\n- #atualizacoes: Informações sobre novas lives\n</channels>\n\n# Regras da Comunidade\n<community_rules>\n[Lista completa das regras fornecidas]\n</community_rules>\n\n# Estrutura de Resposta\n<response_structure>\n1. Reconheça a pergunta com tom formal e obscuro\n2. Forneça uma resposta direta e prática\n3. Indique o canal do Discord apropriado\n4. Sugira próximos passos quando relevante\n</response_structure>\n\n# Limitações e Restrições\n<limitations>\n1. Não forneça soluções completas\n2. Não compartilhe informações sensíveis\n3. Não viole as regras da comunidade\n4. Não promova conteúdo externo não autorizado\n</limitations>\n\n# Exemplos de Respostas\n<examples>\nQ: \"Como começo com automação de SDR?\"\nA: \"Ah, nobre viajante das vendas... Para iniciar sua jornada na automação de SDR, sugiro primeiro dominar as ferramentas básicas de prospecção. O canal #do-zero em nossa guilda será seu primeiro passo, seguido pelo #agentes para templates prontos. Que outros conhecimentos você busca?\"\n\nQ: \"Preciso de ajuda com marketing digital\"\nA: \"As sombras do marketing digital são profundas, viajante... Para sua jornada, recomendo visitar o canal #agentes, onde encontrará templates para automação de tráfego. Para suporte adicional, o canal #duvidas aguarda suas questões. Que aspecto específico do marketing digital intriga sua mente?\"\n\nQ: \"Ola\"\nA: \"Ah, nobre viajante das vendas... Para iniciar sua jornada na automação de SDR, sugiro primeiro dominar as ferramentas básicas de prospecção. O canal #do-zero em nossa guilda será seu primeiro passo, seguido pelo #agentes para templates prontos. Que outros conhecimentos você busca?\"\n</examples>"
+        }
+      },
+      "id": "bd0048e5-0c3c-4989-a5bd-f40ff2007c53",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1060,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "instagram-webhook",
+        "options": {}
+      },
+      "id": "0798d005-1efa-4f5e-9aaa-d355591d714f",
+      "name": "webhook_mensagens",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        560,
+        840
+      ],
+      "webhookId": "9ef0a7a6-7842-481e-87db-4101b6a22809"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n-n8n.0mnk36.easypanel.host",
+            "user-agent": "facebookplatform/1.0 (+http://developers.facebook.com)",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "x-forwarded-for": "31.13.127.10",
+            "x-forwarded-host": "n8n-n8n.0mnk36.easypanel.host",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "561f1fc5cfcf",
+            "x-real-ip": "31.13.127.10"
+          },
+          "params": {},
+          "query": {
+            "hub.mode": "subscribe",
+            "hub.challenge": "1139501747",
+            "hub.verify_token": "YIGIYG123123213IYGIYGIYg12312123IYGIY"
+          },
+          "body": {},
+          "webhookUrl": "https://n8n-n8n.0mnk36.easypanel.host/webhook/instagram-webhook",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "webhook_mensagens": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n-n8n.0mnk36.easypanel.host",
+            "user-agent": "facebookexternalua",
+            "content-length": "836",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/json",
+            "instagram-api-version": "v21.0",
+            "x-forwarded-for": "173.252.87.5",
+            "x-forwarded-host": "n8n-n8n.0mnk36.easypanel.host",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "561f1fc5cfcf",
+            "x-hub-signature": "sha1=1741e35619964bf77cec0f72919b5ae0e4a07c9e",
+            "x-hub-signature-256": "sha256=d03bc6e66bf2d5073b687251a46cf22a0630fefda8933238cfd7ac829d1785a3",
+            "x-real-ip": "173.252.87.5"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "object": "instagram",
+            "entry": [
+              {
+                "time": 1732794216107,
+                "id": "17841467000283687",
+                "messaging": [
+                  {
+                    "sender": {
+                      "id": "17841467000283687"
+                    },
+                    "recipient": {
+                      "id": "795311322540847"
+                    },
+                    "timestamp": 1732794215831,
+                    "message": {
+                      "mid": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDY3MDAwMjgzNjg3OjM0MDI4MjM2Njg0MTcxMDMwMTI0NDI3NjExMjg4ODE5MTk2MzQ5MDozMTk2NDQxMTQzMTg0Njc4NzA3NjM0OTY5NzMyNjA1NTQyNAZDZD",
+                      "text": "\"Uma dúvida nobre, viajante... A automação com atendimento é um campo vasto e complexo. Qual é o seu foco específico? Você busca automatizar o atendimento de imobiliárias, consultórios ou talvez outro tipo de negócio? Compartilhe mais sobre sua dúvida e eu posso guiá-lo pelas sombras da automação. O canal #agentes pode ter templates prontos para você.\"",
+                      "is_echo": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "webhookUrl": "https://n8n-n8n.0mnk36.easypanel.host/webhook/instagram-webhook",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nova_mensagem": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "webhook_mensagens": {
+      "main": [
+        [
+          {
+            "node": "nova_mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b09baa8a-f5e4-4a13-a0d8-278587098cd0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "JwhZTgzUBa29zhDO",
+  "tags": []
+}
