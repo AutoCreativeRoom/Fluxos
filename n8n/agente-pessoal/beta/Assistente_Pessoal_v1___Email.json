@@ -1,0 +1,309 @@
+{
+  "name": "Assistente Pessoal v1 - Email",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1eebd078-01e9-4925-95a1-b61cf0a63b31",
+      "name": "Calculator1",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "14bb95fc-e5b6-4ff0-9014-70030287f9ac",
+      "name": "OpenAI Chat Model5",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        980,
+        660
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.query.numero }}",
+        "tableName": "memoria_chat",
+        "contextWindowLength": 50
+      },
+      "id": "7ef0fad6-1183-45c4-a414-e68478546531",
+      "name": "Postgres Chat Memory1",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.1,
+      "position": [
+        1140,
+        740
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "72f08302-970e-4583-a26a-2c5e4f9dd904",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        780,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "roda para deletar a memoria chat",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 4
+      },
+      "id": "7f8dedc8-c0a2-4aa6-a4ed-b5e1b7ec1c7c",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM memoria_chat;",
+        "options": {}
+      },
+      "id": "00109571-ffb6-4985-8104-15adc07f8795",
+      "name": "Deletar_todas_as_mensagens",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        220
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56060925-7cc8-441b-904a-2fe55ef3ecf0",
+              "name": "response",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd0c084b-b90b-4f60-b0e8-011311a0c58e",
+      "name": "response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1400,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.query.email }}",
+        "subject": "={{ $fromAI(\"assunto\", \"Asssunto do email  Ex.: Reunião sobre alguma coisa\") }}",
+        "message": "={{ $fromAI(\"mensagem\", \"mensagem no formato HTML para ser encaminhado\") }}",
+        "options": {}
+      },
+      "id": "0652a8fe-61cc-4ad0-8758-fcc666a13669",
+      "name": "novo_email",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        1600,
+        740
+      ],
+      "webhookId": "1bea97d5-dfdd-4fd0-bbb7-c960e4eb647b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gRngnRtKklJQeOq8",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "simple": false,
+        "filters": {
+          "receivedAfter": "={{ $fromAI(\"Initital_DateTime\", \"Data e hora inicial para buscar emails  Ex.: 2024-10-17 00:00:00\") }}",
+          "receivedBefore": "={{ $fromAI(\"Final_DateTime\", \"Data e hora final para buscar emails Ex.: 2024-10-17 00:00:00\") }}"
+        },
+        "options": {}
+      },
+      "id": "f00e89fe-f25f-4ba6-8d8a-129ba4879d00",
+      "name": "buscar_emails",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        1460,
+        740
+      ],
+      "webhookId": "d56e53c8-091f-457f-b7f2-8ca93d5c16d3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gRngnRtKklJQeOq8",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<mensagem>{{ $json.query.mensagem }}</mensagem>\n<intencao>{{ $json.query.intencao }}</intencao>",
+        "options": {
+          "systemMessage": "=Não responda nada que não esteja em <INSTRUCAO></INSTRUCAO>. Aja apenas como descrito dentro de <INSTRUCAO></INSTRUCAO>.\n\n<INSTRUCAO> Você é uma secretária virtual projetada para gerenciar de forma eficiente e amigável os emails desta conta.\n\nPara sua referencia use como referencia para a data e hora atual: {{ (() => {\n  const date = new Date(); // Obtém a data atual\n  const days = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado']; // Dias da semana em português\n  const pad = n => n.toString().padStart(2, '0'); // Adiciona zero à esquerda\n  const dayName = days[date.getDay()]; // Obtém o nome do dia\n  const year = date.getFullYear();\n  const month = pad(date.getMonth() + 1); // Mês começa em 0\n  const day = pad(date.getDate());\n  const hours = pad(date.getHours());\n  const minutes = pad(date.getMinutes());\n  const seconds = pad(date.getSeconds());\n  return `${dayName}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; // Retorna no formato desejado\n})() }}\n\n\nCaso a <intencao></intencao> for \"novo_email\", use a ferramenta \"novo_email\" para encaminhar um novo email\n\nCaso a <intencao></intencao> for \"buscar_emails\", use a ferramenta \"buscar_emails\" para realizar uma busca de emails\n\nCaso você não possua todas os dados necessário para redigir um email, peça por mais informações.\n\n</INSTRUCAO>\n\n\n"
+        }
+      },
+      "id": "a5153cbf-dade-4b75-abaf-ced75236dd57",
+      "name": "Secretaria agendamento",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        1060,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 2
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "numero": "447928821569@s.whatsapp.net",
+            "email": "rodrigo@dinastia.uk",
+            "mensagem": "Qual meu último email?",
+            "intencao": "novo_email"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Calculator1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "novo_email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar_emails": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Secretaria agendamento": {
+      "main": [
+        [
+          {
+            "node": "response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0ab04084-2713-4b8e-8ff4-8ef58f5bd56f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "AbT8Ap6sY8iIrAwU",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}

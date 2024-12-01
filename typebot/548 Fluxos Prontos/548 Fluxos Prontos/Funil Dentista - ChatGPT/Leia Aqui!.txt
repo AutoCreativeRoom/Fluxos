@@ -1,9 +1,0 @@
-Acesse o site da OpenAI: Vá para o site oficial da OpenAI em https://www.openai.com/.
-
-Crie uma conta: Se você ainda não tiver uma conta, clique no botão "Sign Up" (Inscrever-se) ou algo similar para criar uma conta.
-
-Faça login na sua conta: Após criar sua conta, faça login no site da OpenAI.
-
-Acesse a plataforma OpenAI: Dentro da sua conta, acesse a API.
-
-Siga as instruções na fotos anexadas aqui!

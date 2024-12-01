@@ -1,0 +1,346 @@
+{
+  "name": "Assistente Pessoal v1 - Atualizar prompt",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b6ecb858-707b-4b63-a405-f818cf13bcfa",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "content": "! roda para deletar todas as mensagens de controle",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 3
+      },
+      "id": "f754f79c-3f4d-4bb9-88f7-01960fac67ea",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM memoria_controle;",
+        "options": {}
+      },
+      "id": "910687b9-f2d3-4311-a4ae-6dd98d24a77c",
+      "name": "Deletar_todas_as_mensagens",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        540,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "rodar para criar tabela \"cerebro\"",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 4
+      },
+      "id": "aaf9894b-1fec-4fc1-be51-794dc57ef739",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "-- Drop the table if it already exists\nDROP TABLE IF EXISTS cerebro;\n\n-- Create the table\nCREATE TABLE cerebro (\n    id SERIAL PRIMARY KEY,\n    prompt TEXT NOT NULL\n);\n\n-- Insert a single row into the table\nINSERT INTO cerebro (prompt) VALUES ('Você é uma assistente virtual, use todas as ferramentas a sua disposição para executar as tarefas solicitadas.');\n",
+        "options": {}
+      },
+      "id": "0eaae4dd-ecfd-4ce2-90a6-078bbbe47e79",
+      "name": "criar_cerebro",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "50bdefab-90b2-44b4-b37b-d494742ea5af",
+              "leftValue": "={{ $json.query.numero }}",
+              "rightValue": "447928821569@s.whatsapp.net",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d55117e1-ef79-4a07-bf55-78facea4f964",
+      "name": "auth",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        680,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "errorMessage": "Accesso não autorizado"
+      },
+      "id": "a4593a30-f52f-451d-8520-c30295d50540",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        880,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "ce793d47-7137-47e4-91ad-5e4d6bb6c701",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        980
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "admin",
+        "tableName": "memoria_controle",
+        "contextWindowLength": 50
+      },
+      "id": "9f3d62bc-bedb-4c3f-acc8-de9b4f5ac642",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.1,
+      "position": [
+        1240,
+        1020
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "salvar_prompt_final",
+        "description": "Use esta ferramenta apenas para atualizar o prompt final.",
+        "workflowId": {
+          "__rl": true,
+          "value": "i8CnJcBpAEJeFEv1",
+          "mode": "list",
+          "cachedResultName": "Assistente Pessoal v1 - Salvar prompt final"
+        },
+        "specifyInputSchema": true,
+        "jsonSchemaExample": "{\n    \"numero\": \"<numero></numero>\",\n    \"prompt\": \"O prompt final gerado\"\n}"
+      },
+      "id": "ed36558a-9b0d-40ac-b7da-837a6ca78860",
+      "name": "salvar_prompt_final",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1440,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56060925-7cc8-441b-904a-2fe55ef3ecf0",
+              "name": "response",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "59377872-fc69-407a-a562-9757e62f34d8",
+      "name": "response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1480,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<numero>{{ $json.query.numero }}</numero>\n\n{{ $json.query.mensagem }}",
+        "options": {
+          "systemMessage": "=# Prompt Gerador de Prompts\n\n## Função Principal\nVocê é um especialista em engenharia de prompts, focado em criar prompts eficientes e eficazes. Sua função é guiar o processo de criação de prompts através de perguntas estruturadas e análise sistemática.\n\n## Processo de Coleta de Informações\nQuando o usuário disser \"prompt\", inicie o seguinte processo:\n\n1. Faça estas perguntas fundamentais:\n   - Qual é o objetivo principal do prompt que você precisa criar?\n   - Que tipo de resposta você espera obter? (texto, análise, código, etc)\n   - Existem exemplos do resultado desejado? (para implementar few-shot learning se necessário)\n   - Há requisitos específicos de formato, precisão ou tempo de resposta?\n   - Existe algum contexto ou documento que precise ser considerado?\n\n2. Baseado nas respostas, faça perguntas específicas sobre:\n   - Personas ou papéis específicos necessários\n   - Restrições ou limitações importantes\n   - Formato desejado da resposta\n   - Nível de formalidade ou tom de comunicação\n   - Ferramentas ou APIs disponíveis\n\n## Análise e Seleção de Técnicas\nApós coletar as informações, analise e identifique quais técnicas de prompt engineering são mais apropriadas:\n\n<techniques>\n- Zero-shot vs Few-shot\n- Chain of Thought (para raciocínio passo a passo)\n- Role prompting (definição de personas)\n- Structured Output (formatação específica)\n- Task Decomposition (divisão em subtarefas)\n- XML tags para organização\n- Markdown para formatação\n</techniques>\n\n## Geração do Prompt Final\nCrie o prompt final seguindo esta estrutura:\n\n1. Definição clara da persona/papel\n2. Contexto e informações relevantes\n3. Instruções específicas e restrições\n4. Exemplos (se necessário)\n5. Formato esperado da resposta\n6. Critérios de sucesso\n\n## Verificação de Qualidade\nAntes de apresentar o prompt final, verifique:\n\n- Clareza das instruções\n- Completude das informações\n- Adequação das técnicas escolhidas\n- Potencial de alucinações ou erros\n- Alinhamento com o objetivo original\n\n## Apresentação do Resultado\nApresente o prompt final com:\n\n1. Explicação das técnicas utilizadas\n2. Justificativa das escolhas feitas\n3. Sugestões de ajustes se necessário\n\n## Melhoria Contínua\nSolicite feedback do usuário e sugira possíveis otimizações baseadas na resposta recebida.\n\n# Nota de Uso\nUse tags XML quando apropriado para organizar seções específicas do prompt:\n- <context> para informações contextuais\n- <instructions> para instruções específicas\n- <examples> para exemplos fornecidos\n- <output_format> para formato esperado da resposta\n\n# Acesso a banco de dados para conhecimento:\nVoce tem acesso a um banco de dados de conhecimento seguindo a estrutura abaixo:\nTABLE conhecimento (\n    id SERIAL PRIMARY KEY,\n    categoria VARCHAR NOT NULL,\n    texto TEXT NOT NULL\n)\nCaso for necessário guardar alguma informação recorrente, instrua o prompt a usar o banco de dados de conhecimento usando categoria para buscar e texto para adicionar informações."
+        }
+      },
+      "id": "878136fe-e857-451b-89fa-a0745f765367",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1120,
+        820
+      ]
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "numero": "447928821569@whatsapp.us",
+            "mensagem": "Altere o prompt para ser uma secretária apenas de agendamentos para a clínica Viver mais"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "auth",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "auth": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvar_prompt_final": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a987daeb-13c5-468f-bd1f-78f8b1239540",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "tjjLZNYPDhXZjLtb",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}

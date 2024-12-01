@@ -1,0 +1,232 @@
+{
+  "name": "Assistente Pessoal v1 - Salvar conhecimento",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "18c2944e-3cb2-46c8-b67f-c5b543a40f96",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "content": "! roda para deletar o conhecimento",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 3
+      },
+      "id": "385f3cf6-a56c-4199-8fbf-0cba5326e0ec",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "content": "rodar para criar tabela \"conhecimento\"",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 4
+      },
+      "id": "e79b366f-94c4-44a4-bc2c-c7ef1c573032",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56060925-7cc8-441b-904a-2fe55ef3ecf0",
+              "name": "response",
+              "value": "=Prompt atualizado.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6bf5308a-8a2c-407b-b254-719eb99139b1",
+      "name": "response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        840,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "-- Drop the table if it already exists\nDROP TABLE IF EXISTS conhecimento;\n\n-- Create the table\nCREATE TABLE conhecimento (\n    id SERIAL PRIMARY KEY,\n    categoria VARCHAR NOT NULL,\n    texto TEXT NOT NULL\n);\n\n",
+        "options": {}
+      },
+      "id": "9a22c466-c45f-4806-bd06-68036e4a3d8e",
+      "name": "criar_conhecimento",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM conhecimento;",
+        "options": {}
+      },
+      "id": "c713ae6b-9a32-45f5-aecc-bd216d71d855",
+      "name": "deletar_conhecimento",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        540,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "value": "public",
+          "mode": "list",
+          "cachedResultName": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "conhecimento",
+          "mode": "list",
+          "cachedResultName": "conhecimento"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "categoria": "={{ $json.query.categoria }}",
+            "texto": "={{ $json.query.texto }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "categoria",
+              "displayName": "categoria",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "texto",
+              "displayName": "texto",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "efa34e42-15f6-4be9-9320-3d2e032e1eb9",
+      "name": "Postgres",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        840,
+        800
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "categoria": "endereco",
+            "texto": "Na cidade de Londrina, é Rua teste, 200, 86050-400"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "response",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Postgres",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b7070df0-e5bc-4f16-95c3-cdbe8f962b54",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "bSify1momJX7vGHg",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}

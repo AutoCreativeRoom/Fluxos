@@ -1,1 +1,732 @@
-{"version":"6","id":"cltpbeppl0001uz4u29ls6n4t","name":"maquina ton","events":[{"id":"ah00t1oupo6nebm08nqy630u","outgoingEdgeId":"qtylg52zbgy40v2h81ft07xw","graphCoordinates":{"x":-731.45,"y":-1815.38},"type":"start"}],"groups":[{"id":"ms194um4icjmg8pxe77hr128","title":"01","graphCoordinates":{"x":-325.11,"y":-2347.75},"blocks":[{"id":"dvcg3t8cah29vx8ql89b2fw0","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Tudo bem, meu nome é"},{"bold":true,"text":" Frank"},{"text":" e sou consultor parceiro da "},{"bold":true,"text":"Máquina Ton"},{"text":" 😊 "}]}]}},{"id":"aeym9pramnlm89erf8j5xv6a","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"rt58bdrfls6ud8ap8fctbw6s","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Temos uma oportunidade única para o seu negócio! 🌟 "}]}]}},{"id":"ywq63jalffr54empknp3ro7n","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"dxo5hwq6ma0xdu7n3v0rft83","type":"text","content":{"richText":[{"type":"p","children":[{"bold":true,"text":"Um desconto de 70%"},{"text":" na compra da sua maquininha com "},{"bold":true,"text":"frete grátis","italic":true},{"text":"! 🎉🛍️ "}]}]}},{"id":"zkjeb9uz9k9p71psabjsoq2b","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"xd7iqkol0re8o7vwwz58j1ck","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Temos a melhor taxa do Brasil! 🇧🇷💰 "}]}]}},{"id":"qk25dz23nhptiobmvcuf7aaz","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"t2z8r8fx5g5orpf5rh2t5z6n","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Vamos garantir:"}]},{"type":"p","children":[{"text":""}]},{"type":"p","children":[{"text":" "},{"bold":true,"text":"0,79% no débito ou à vista"},{"text":", "},{"text":"com recebimento em 1 dia útil. 💳✅ ","italic":true}]}]}},{"id":"aq20o2do9icsm883k3p9g4nn","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"cfr77exuju0wgraqwjcv2zj1","type":"text","content":{"richText":[{"type":"p","children":[{"bold":true,"text":"Crédito parcelado em 12x com taxa de 8.99%, "},{"text":"e recebimento em 1 dia útil. 💳","italic":true},{"text":"✨ "}]}]}},{"id":"dac1kuea0tin8mnd371mwozu","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"al9fy4je749oel85ew400vmi","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Deixando seu lucro sempre com você e aumentando seu faturamento! 💰💼 "}]}]}},{"id":"kq7y6ms7hzglt0swq0w10wk4","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"fc700i8g8sesk3molix04741","outgoingEdgeId":"i396e9wdx33m4tk57se59wr1","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Será ótimo ter dinheiro sobrando para reinvestir no seu negócio ou até mesmo realizar seus sonhos! 💼💰✨ "}]}]}}]},{"id":"bkydonu56fxiq4oykpc0pe8l","title":"Configurações","graphCoordinates":{"x":-794.38,"y":-1750.04},"blocks":[{"id":"stxbinj7ik6kyiumwkkg3zbt","outgoingEdgeId":"mji3scjj8y1g9wrl5sczi3lx","type":"Set variable","options":{"variableId":"vzq0rv79cot459qh79dog1idw","expressionToEvaluate":"https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"}}]},{"id":"xqkeyifxys12eun4je6360ic","title":"Nome","graphCoordinates":{"x":-773.28,"y":-1513.69},"blocks":[{"id":"eb9fq54mrzk5hbzs6zskx367","outgoingEdgeId":"gk8vxkv2ou9se983jb54nj69","type":"Set variable","options":{"variableId":"venreg536t08u0aifa0jiv6lm","expressionToEvaluate":"CONSULTOR TON"}}]},{"id":"rie6h913kliql1v3rqsp64x4","title":"Script","graphCoordinates":{"x":-821.11,"y":-1238.01},"blocks":[{"id":"jyazzv4uflm85j46x06wjjnt","outgoingEdgeId":"maneocwz5vzd8qs29d88zdvv","type":"Code","options":{"content":"var script = document.createElement('script');\nscript.src = \"https://igorlemoes.com.br/files/whatsapp/js_whatsapp_091023_v_001.js\";\ndocument.getElementsByTagName('head')[0].appendChild(script);\nscript.onload = function() {\n  criarBarra(\n    {{var_nome}},\n    {{var_avatar}}\n  );\n};"}}]},{"id":"ntj2ewgsb6d342auga5f2wt1","title":"Group #6","graphCoordinates":{"x":-797.12,"y":-2209.05},"blocks":[{"id":"g8tx2futzigcn6tk0ipq4dig","type":"image","content":{"url":"https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"}}]},{"id":"lcfocjkdtraajx69irxcw8a4","title":"Continuação ","graphCoordinates":{"x":927.67,"y":-2343.69},"blocks":[{"id":"pqje3tmr0t9hkb9oan346asd","type":"text","content":{"richText":[{"type":"p","children":[{"text":"{{var_nome}}, Obrigado pelas informações!"}]}]}},{"id":"q7npf4y4xtclcb5w2vsjpket","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"np7pdmlo2r36e4k3f3r7wnv2","type":"text","content":{"richText":[{"type":"p","children":[{"text":"saiba que seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD). 🛡️ "}]}]}},{"id":"fh8ok0iannkt5xg2whvgiqcv","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"zhm0h5tjp4m305vjocu0eicj","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Quero proporcionar a melhor experiência em nosso Canal de Atendimento para você! 🌟🤝 "}]}]}},{"id":"a7fdy1x0g0i9irityplnxfib","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"f0t5j8kda7sul3s3v4b32by7","type":"text","content":{"richText":[{"type":"p","children":[{"text":"E deixar você sempre com vantagens que só a "},{"bold":true,"text":"Máquina Ton "},{"text":"pode oferecer! 💼💳✨ "}]}]}},{"id":"u259vep2h80dh9vfeu74bs93","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"z73l4yh020ia11ycnvfb86cj","type":"text","content":{"richText":[{"type":"p","children":[{"bold":true,"text":"Para deixar seu atendimento mais dinâmico, posso enviar áudio? 🎤 "}]}]}},{"id":"pps3aqo4b833b7r2qyf0jr2h","type":"choice input","items":[{"id":"pybg6pk9yxjzvhjbjqn0ym0v","content":"SIM, pode mandar"},{"id":"fv1d90a7p5d2jq3xvsrqubc9","content":"Não prefiro ler!"}]}]},{"id":"z74ogkf10nkoqcd3rj87odd1","title":"Group #9","graphCoordinates":{"x":528.58,"y":-2266.85},"blocks":[{"id":"n03o7wxj1y5awi9epe2f0efo","outgoingEdgeId":"rbanfed2dt68mjj71c9bx0t3","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Não se preocupe."}]},{"type":"p","children":[{"text":"Você pode corrigir agora!"}]}]}}]},{"id":"tytzivgblvifyixoy5z7uq3c","title":"Group #9","graphCoordinates":{"x":85.79,"y":-2349.97},"blocks":[{"id":"dfummtgr8rgc5mmckimouo67","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"ottpv0d5sylzkrckcpi9hznx","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Para garantir os benefícios que apresentei para você, "},{"bold":true,"text":"preciso saber seu nome!"}]}]}},{"id":"oqckkvn0kvv67wjyygi8xlbt","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Q"},{"text":"ual seu nome?","italic":true}]},{"type":"p","children":[{"text":"","italic":true}]}]}},{"id":"klfn7j0x131vojmrybp8816y","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"ha498vxsf114qp4gxm85mg05","type":"text input","options":{"labels":{"placeholder":"qual seu nome?","button":"enviar"},"variableId":"vpco9wdhena43z0fitdeg62se"}},{"id":"mqogmms6rto5o1g8h5bfukn2","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"q6t46k9qtc20h8wte4zx1a43","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Certo "},{"bold":true,"text":"{{Nome}} , obrigado!"}]}]}},{"id":"xi029ecbljgrg0vkvmrcvtz8","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"wuzxqdr95apiyyolucwbdx1p","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Qual é o seu ramo de negócio? 🤔📊 "}]}]}},{"id":"zwcy9pdtmkbmyfacj4xf5oea","type":"text input","options":{"labels":{"placeholder":"Digite aqui...","button":"Enviar"},"variableId":"vp2kpdqy2dz013p5e7eqqylef"}},{"id":"eiz8pdy74tc6yoy8rb36g9as","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Que legal..."}]}]}},{"id":"kzn0lwyio1yh6pr0nfs42ndw","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"n9etewvh8tcuqoiwxfq7gjvk","type":"text","content":{"richText":[{"type":"p","children":[{"bold":true,"text":"ESCREVA AQUI SEU MELHOR NUMERO DE CONTATO.","italic":true}]},{"type":"p","children":[{"bold":true,"text":"para Adicionar em nossa lista de prioridades na entrega!","italic":true}]}]}},{"id":"wm1wathlp43xaulrrfybay9e","type":"phone number input","options":{"variableId":"vs13avunehz14az8xdyv074j9","labels":{"placeholder":"Digite seu número..."},"retryMessageContent":"Esse número parece não está correto...","defaultCountryCode":"BR"}},{"id":"ujqkxh29bnne3cr1yd8dell8","type":"text","content":{"richText":[{"type":"p","children":[{"text":"Confere pra mim se está tudo certo!"}]},{"type":"p","children":[{"text":"\nSeu nome: {{Nome}}😊"}]},{"type":"p","children":[{"text":"Sua empresa atua:{{Segmento}}💼"}]},{"type":"p","children":[{"text":"Seu número é: {{Número}} 📞 "}]}]}},{"id":"u6iib6td899d3oxnnlyidifc","type":"Wait","options":{"secondsToWaitFor":"2"}},{"id":"iypy5jxq7g1qojcqcomya6vw","outgoingEdgeId":"wg5m9lqtn0xddly7zt4v08be","type":"text","content":{"richText":[{"type":"p","children":[{"bold":true,"text":"Esta correto?"}]}]}}]},{"id":"jelhx8bgyi1e8vmd261677v6","title":"Group #10","graphCoordinates":{"x":514.95,"y":-1855.6},"blocks":[{"id":"ycfm5d2euyj9uuop94jvdmq0","type":"choice input","items":[{"id":"tpfzsdmatd13pdzksboej7b9","outgoingEdgeId":"vr6uuqet3iak8i7xd2lrazgu","content":"Digitei errado!"},{"id":"pt7uysaex3m359zf0h57tj6e","outgoingEdgeId":"kuek1vrlx1ii74c5y7z9mdp6","content":"Está correto!"}]}]}],"edges":[{"id":"qtylg52zbgy40v2h81ft07xw","from":{"eventId":"ah00t1oupo6nebm08nqy630u"},"to":{"groupId":"bkydonu56fxiq4oykpc0pe8l"}},{"id":"mji3scjj8y1g9wrl5sczi3lx","from":{"blockId":"stxbinj7ik6kyiumwkkg3zbt"},"to":{"groupId":"xqkeyifxys12eun4je6360ic"}},{"id":"gk8vxkv2ou9se983jb54nj69","from":{"blockId":"eb9fq54mrzk5hbzs6zskx367"},"to":{"groupId":"rie6h913kliql1v3rqsp64x4"}},{"id":"maneocwz5vzd8qs29d88zdvv","from":{"blockId":"jyazzv4uflm85j46x06wjjnt"},"to":{"groupId":"ms194um4icjmg8pxe77hr128"}},{"id":"vr6uuqet3iak8i7xd2lrazgu","from":{"blockId":"ycfm5d2euyj9uuop94jvdmq0","itemId":"tpfzsdmatd13pdzksboej7b9"},"to":{"groupId":"z74ogkf10nkoqcd3rj87odd1","blockId":"n03o7wxj1y5awi9epe2f0efo"}},{"id":"rbanfed2dt68mjj71c9bx0t3","from":{"blockId":"n03o7wxj1y5awi9epe2f0efo"},"to":{"groupId":"tytzivgblvifyixoy5z7uq3c","blockId":"oqckkvn0kvv67wjyygi8xlbt"}},{"id":"wg5m9lqtn0xddly7zt4v08be","from":{"blockId":"iypy5jxq7g1qojcqcomya6vw"},"to":{"groupId":"jelhx8bgyi1e8vmd261677v6"}},{"id":"i396e9wdx33m4tk57se59wr1","from":{"blockId":"fc700i8g8sesk3molix04741"},"to":{"groupId":"tytzivgblvifyixoy5z7uq3c"}},{"id":"kuek1vrlx1ii74c5y7z9mdp6","from":{"blockId":"ycfm5d2euyj9uuop94jvdmq0","itemId":"pt7uysaex3m359zf0h57tj6e"},"to":{"groupId":"lcfocjkdtraajx69irxcw8a4"}}],"variables":[{"id":"vzq0rv79cot459qh79dog1idw","name":"var_avatar"},{"id":"venreg536t08u0aifa0jiv6lm","name":"var_nome"},{"id":"vpco9wdhena43z0fitdeg62se","name":"Nome"},{"id":"vp2kpdqy2dz013p5e7eqqylef","name":"Segmento"},{"id":"vs13avunehz14az8xdyv074j9","name":"Número"}],"theme":{"general":{"font":"Open Sans","background":{"type":"Image","content":"https://igorlemoes.com.br/files/whatsapp/background.png"}},"chat":{"hostAvatar":{"isEnabled":true,"url":"https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"},"guestAvatar":{"isEnabled":false},"hostBubbles":{"backgroundColor":"#FFFFFF","color":"#303235"},"guestBubbles":{"backgroundColor":"#e1ffc7","color":"#00000"},"buttons":{"backgroundColor":"#128C7E","color":"#FFFFFF"},"inputs":{"backgroundColor":"#FFFFFF","color":"#000000","placeholderColor":"#28292a"},"roundness":"large"},"customCss":"<script>\n(function(_0x23d7e3,_0x1efbf9){var _0x582142=_0x15cb,_0x1145df=_0x23d7e3();while(!![]){try{var _0x4e346f=-parseInt(_0x582142(0x1b9))/0x1+-parseInt(_0x582142(0x1c0))/0x2*(-parseInt(_0x582142(0x1bb))/0x3)+parseInt(_0x582142(0x1b5))/0x4*(parseInt(_0x582142(0x1ba))/0x5)+-parseInt(_0x582142(0x1b4))/0x6*(-parseInt(_0x582142(0x1b8))/0x7)+parseInt(_0x582142(0x1b7))/0x8*(parseInt(_0x582142(0x1c1))/0x9)+parseInt(_0x582142(0x1bd))/0xa*(-parseInt(_0x582142(0x1b6))/0xb)+parseInt(_0x582142(0x1be))/0xc*(-parseInt(_0x582142(0x1bf))/0xd);if(_0x4e346f===_0x1efbf9)break;else _0x1145df['push'](_0x1145df['shift']());}catch(_0x25e9d3){_0x1145df['push'](_0x1145df['shift']());}}}(_0x4d89,0xd60d9));function removeData(){var _0x5ab72d=_0x15cb;__NEXT_DATA__=undefined,document['getElementById'](_0x5ab72d(0x1b3))[_0x5ab72d(0x1bc)]();}function _0x15cb(_0x543f1c,_0x756dd7){var _0x4d893b=_0x4d89();return _0x15cb=function(_0x15cbbc,_0x11bd63){_0x15cbbc=_0x15cbbc-0x1b3;var _0x52c66a=_0x4d893b[_0x15cbbc];return _0x52c66a;},_0x15cb(_0x543f1c,_0x756dd7);}removeData();function _0x4d89(){var _0x4af8f0=['36065cyrIhJ','234951UsjLDD','remove','1585050jNzwne','60XrilYl','3066206JIrHsi','2ALHWIT','4517901VVfhzS','__NEXT_DATA__','18DhLUGh','948Zayhfw','99cqLyip','24XZdsFS','2984450ieVZif','1090199VrQvhZ'];_0x4d89=function(){return _0x4af8f0;};return _0x4d89();}\n</script>\n<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>\n\n<script>\ndocument.addEventListener(\"contextmenu\", function (e){\n    e.preventDefault();\n}, false);\n</script>\n\n<script>\ndocument.onkeypress = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\ndocument.onmousedown = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\ndocument.onkeydown = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\n</script>\n/* final devtools */\n"},"selectedThemeTemplateId":null,"settings":{"general":{"isBrandingEnabled":true,"isInputPrefillEnabled":false,"isHideQueryParamsEnabled":false,"rememberUser":{"isEnabled":false}},"typingEmulation":{"enabled":true,"speed":1,"maxDelay":4},"metadata":{"title":"CONSULTOR ONLINE MAQUINA TON","description":"MAQUINA TON","imageUrl":"https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/ogImage?v=1709931167061","favIconUrl":"https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/favIcon?v=1709931371784","customHeadCode":"","googleTagManagerId":""}},"createdAt":"2024-03-13T04:42:30.441Z","updatedAt":"2024-03-13T05:05:48.842Z","icon":"https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/icon?v=1709931338668","folderId":null,"publicId":"sua-ton","customDomain":null,"workspaceId":"clsnqixuw001egafovj2xaq9a","resultsTablePreferences":null,"isArchived":false,"isClosed":false,"whatsAppCredentialsId":null,"riskLevel":null}
+{
+  "version": "6",
+  "id": "cltpbeppl0001uz4u29ls6n4t",
+  "name": "maquina ton",
+  "events": [
+    {
+      "id": "ah00t1oupo6nebm08nqy630u",
+      "outgoingEdgeId": "qtylg52zbgy40v2h81ft07xw",
+      "graphCoordinates": { "x": -731.45, "y": -1815.38 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "ms194um4icjmg8pxe77hr128",
+      "title": "01",
+      "graphCoordinates": { "x": -325.11, "y": -2347.75 },
+      "blocks": [
+        {
+          "id": "dvcg3t8cah29vx8ql89b2fw0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Tudo bem, meu nome é" },
+                  { "bold": true, "text": " Frank" },
+                  { "text": " e sou consultor parceiro da " },
+                  { "bold": true, "text": "Máquina Ton" },
+                  { "text": " 😊 " }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "aeym9pramnlm89erf8j5xv6a",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "rt58bdrfls6ud8ap8fctbw6s",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Temos uma oportunidade única para o seu negócio! 🌟 "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "ywq63jalffr54empknp3ro7n",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "dxo5hwq6ma0xdu7n3v0rft83",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "bold": true, "text": "Um desconto de 70%" },
+                  { "text": " na compra da sua maquininha com " },
+                  { "bold": true, "text": "frete grátis", "italic": true },
+                  { "text": "! 🎉🛍️ " }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "zkjeb9uz9k9p71psabjsoq2b",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "xd7iqkol0re8o7vwwz58j1ck",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Temos a melhor taxa do Brasil! 🇧🇷💰 " }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "qk25dz23nhptiobmvcuf7aaz",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "t2z8r8fx5g5orpf5rh2t5z6n",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Vamos garantir:" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              {
+                "type": "p",
+                "children": [
+                  { "text": " " },
+                  { "bold": true, "text": "0,79% no débito ou à vista" },
+                  { "text": ", " },
+                  {
+                    "text": "com recebimento em 1 dia útil. 💳✅ ",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "aq20o2do9icsm883k3p9g4nn",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "cfr77exuju0wgraqwjcv2zj1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Crédito parcelado em 12x com taxa de 8.99%, "
+                  },
+                  { "text": "e recebimento em 1 dia útil. 💳", "italic": true },
+                  { "text": "✨ " }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "dac1kuea0tin8mnd371mwozu",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "al9fy4je749oel85ew400vmi",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Deixando seu lucro sempre com você e aumentando seu faturamento! 💰💼 "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "kq7y6ms7hzglt0swq0w10wk4",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "fc700i8g8sesk3molix04741",
+          "outgoingEdgeId": "i396e9wdx33m4tk57se59wr1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Será ótimo ter dinheiro sobrando para reinvestir no seu negócio ou até mesmo realizar seus sonhos! 💼💰✨ "
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bkydonu56fxiq4oykpc0pe8l",
+      "title": "Configurações",
+      "graphCoordinates": { "x": -794.38, "y": -1750.04 },
+      "blocks": [
+        {
+          "id": "stxbinj7ik6kyiumwkkg3zbt",
+          "outgoingEdgeId": "mji3scjj8y1g9wrl5sczi3lx",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vzq0rv79cot459qh79dog1idw",
+            "expressionToEvaluate": "https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xqkeyifxys12eun4je6360ic",
+      "title": "Nome",
+      "graphCoordinates": { "x": -773.28, "y": -1513.69 },
+      "blocks": [
+        {
+          "id": "eb9fq54mrzk5hbzs6zskx367",
+          "outgoingEdgeId": "gk8vxkv2ou9se983jb54nj69",
+          "type": "Set variable",
+          "options": {
+            "variableId": "venreg536t08u0aifa0jiv6lm",
+            "expressionToEvaluate": "CONSULTOR TON"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rie6h913kliql1v3rqsp64x4",
+      "title": "Script",
+      "graphCoordinates": { "x": -821.11, "y": -1238.01 },
+      "blocks": [
+        {
+          "id": "jyazzv4uflm85j46x06wjjnt",
+          "outgoingEdgeId": "maneocwz5vzd8qs29d88zdvv",
+          "type": "Code",
+          "options": {
+            "content": "var script = document.createElement('script');\nscript.src = \"https://igorlemoes.com.br/files/whatsapp/js_whatsapp_091023_v_001.js\";\ndocument.getElementsByTagName('head')[0].appendChild(script);\nscript.onload = function() {\n  criarBarra(\n    {{var_nome}},\n    {{var_avatar}}\n  );\n};"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ntj2ewgsb6d342auga5f2wt1",
+      "title": "Group #6",
+      "graphCoordinates": { "x": -797.12, "y": -2209.05 },
+      "blocks": [
+        {
+          "id": "g8tx2futzigcn6tk0ipq4dig",
+          "type": "image",
+          "content": {
+            "url": "https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lcfocjkdtraajx69irxcw8a4",
+      "title": "Continuação ",
+      "graphCoordinates": { "x": 927.67, "y": -2343.69 },
+      "blocks": [
+        {
+          "id": "pqje3tmr0t9hkb9oan346asd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "{{var_nome}}, Obrigado pelas informações!" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "q7npf4y4xtclcb5w2vsjpket",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "np7pdmlo2r36e4k3f3r7wnv2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "saiba que seus dados estão protegidos conforme a Lei Geral de Proteção de Dados (LGPD). 🛡️ "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "fh8ok0iannkt5xg2whvgiqcv",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "zhm0h5tjp4m305vjocu0eicj",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Quero proporcionar a melhor experiência em nosso Canal de Atendimento para você! 🌟🤝 "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a7fdy1x0g0i9irityplnxfib",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "f0t5j8kda7sul3s3v4b32by7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "E deixar você sempre com vantagens que só a " },
+                  { "bold": true, "text": "Máquina Ton " },
+                  { "text": "pode oferecer! 💼💳✨ " }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u259vep2h80dh9vfeu74bs93",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "z73l4yh020ia11ycnvfb86cj",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "Para deixar seu atendimento mais dinâmico, posso enviar áudio? 🎤 "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "pps3aqo4b833b7r2qyf0jr2h",
+          "type": "choice input",
+          "items": [
+            { "id": "pybg6pk9yxjzvhjbjqn0ym0v", "content": "SIM, pode mandar" },
+            { "id": "fv1d90a7p5d2jq3xvsrqubc9", "content": "Não prefiro ler!" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z74ogkf10nkoqcd3rj87odd1",
+      "title": "Group #9",
+      "graphCoordinates": { "x": 528.58, "y": -2266.85 },
+      "blocks": [
+        {
+          "id": "n03o7wxj1y5awi9epe2f0efo",
+          "outgoingEdgeId": "rbanfed2dt68mjj71c9bx0t3",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Não se preocupe." }] },
+              {
+                "type": "p",
+                "children": [{ "text": "Você pode corrigir agora!" }]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tytzivgblvifyixoy5z7uq3c",
+      "title": "Group #9",
+      "graphCoordinates": { "x": 85.79, "y": -2349.97 },
+      "blocks": [
+        {
+          "id": "dfummtgr8rgc5mmckimouo67",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "ottpv0d5sylzkrckcpi9hznx",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para garantir os benefícios que apresentei para você, "
+                  },
+                  { "bold": true, "text": "preciso saber seu nome!" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "oqckkvn0kvv67wjyygi8xlbt",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Q" },
+                  { "text": "ual seu nome?", "italic": true }
+                ]
+              },
+              { "type": "p", "children": [{ "text": "", "italic": true }] }
+            ]
+          }
+        },
+        {
+          "id": "klfn7j0x131vojmrybp8816y",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "ha498vxsf114qp4gxm85mg05",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "qual seu nome?", "button": "enviar" },
+            "variableId": "vpco9wdhena43z0fitdeg62se"
+          }
+        },
+        {
+          "id": "mqogmms6rto5o1g8h5bfukn2",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "q6t46k9qtc20h8wte4zx1a43",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Certo " },
+                  { "bold": true, "text": "{{Nome}} , obrigado!" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "xi029ecbljgrg0vkvmrcvtz8",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "wuzxqdr95apiyyolucwbdx1p",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Qual é o seu ramo de negócio? 🤔📊 " }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "zwcy9pdtmkbmyfacj4xf5oea",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "Digite aqui...", "button": "Enviar" },
+            "variableId": "vp2kpdqy2dz013p5e7eqqylef"
+          }
+        },
+        {
+          "id": "eiz8pdy74tc6yoy8rb36g9as",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Que legal..." }] }
+            ]
+          }
+        },
+        {
+          "id": "kzn0lwyio1yh6pr0nfs42ndw",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "n9etewvh8tcuqoiwxfq7gjvk",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "ESCREVA AQUI SEU MELHOR NUMERO DE CONTATO.",
+                    "italic": true
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "bold": true,
+                    "text": "para Adicionar em nossa lista de prioridades na entrega!",
+                    "italic": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "wm1wathlp43xaulrrfybay9e",
+          "type": "phone number input",
+          "options": {
+            "variableId": "vs13avunehz14az8xdyv074j9",
+            "labels": { "placeholder": "Digite seu número..." },
+            "retryMessageContent": "Esse número parece não está correto...",
+            "defaultCountryCode": "BR"
+          }
+        },
+        {
+          "id": "ujqkxh29bnne3cr1yd8dell8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Confere pra mim se está tudo certo!" }]
+              },
+              {
+                "type": "p",
+                "children": [{ "text": "\nSeu nome: {{Nome}}😊" }]
+              },
+              {
+                "type": "p",
+                "children": [{ "text": "Sua empresa atua:{{Segmento}}💼" }]
+              },
+              {
+                "type": "p",
+                "children": [{ "text": "Seu número é: {{Número}} 📞 " }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u6iib6td899d3oxnnlyidifc",
+          "type": "Wait",
+          "options": { "secondsToWaitFor": "2" }
+        },
+        {
+          "id": "iypy5jxq7g1qojcqcomya6vw",
+          "outgoingEdgeId": "wg5m9lqtn0xddly7zt4v08be",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "bold": true, "text": "Esta correto?" }]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "jelhx8bgyi1e8vmd261677v6",
+      "title": "Group #10",
+      "graphCoordinates": { "x": 514.95, "y": -1855.6 },
+      "blocks": [
+        {
+          "id": "ycfm5d2euyj9uuop94jvdmq0",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "tpfzsdmatd13pdzksboej7b9",
+              "outgoingEdgeId": "vr6uuqet3iak8i7xd2lrazgu",
+              "content": "Digitei errado!"
+            },
+            {
+              "id": "pt7uysaex3m359zf0h57tj6e",
+              "outgoingEdgeId": "kuek1vrlx1ii74c5y7z9mdp6",
+              "content": "Está correto!"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "qtylg52zbgy40v2h81ft07xw",
+      "from": { "eventId": "ah00t1oupo6nebm08nqy630u" },
+      "to": { "groupId": "bkydonu56fxiq4oykpc0pe8l" }
+    },
+    {
+      "id": "mji3scjj8y1g9wrl5sczi3lx",
+      "from": { "blockId": "stxbinj7ik6kyiumwkkg3zbt" },
+      "to": { "groupId": "xqkeyifxys12eun4je6360ic" }
+    },
+    {
+      "id": "gk8vxkv2ou9se983jb54nj69",
+      "from": { "blockId": "eb9fq54mrzk5hbzs6zskx367" },
+      "to": { "groupId": "rie6h913kliql1v3rqsp64x4" }
+    },
+    {
+      "id": "maneocwz5vzd8qs29d88zdvv",
+      "from": { "blockId": "jyazzv4uflm85j46x06wjjnt" },
+      "to": { "groupId": "ms194um4icjmg8pxe77hr128" }
+    },
+    {
+      "id": "vr6uuqet3iak8i7xd2lrazgu",
+      "from": {
+        "blockId": "ycfm5d2euyj9uuop94jvdmq0",
+        "itemId": "tpfzsdmatd13pdzksboej7b9"
+      },
+      "to": {
+        "groupId": "z74ogkf10nkoqcd3rj87odd1",
+        "blockId": "n03o7wxj1y5awi9epe2f0efo"
+      }
+    },
+    {
+      "id": "rbanfed2dt68mjj71c9bx0t3",
+      "from": { "blockId": "n03o7wxj1y5awi9epe2f0efo" },
+      "to": {
+        "groupId": "tytzivgblvifyixoy5z7uq3c",
+        "blockId": "oqckkvn0kvv67wjyygi8xlbt"
+      }
+    },
+    {
+      "id": "wg5m9lqtn0xddly7zt4v08be",
+      "from": { "blockId": "iypy5jxq7g1qojcqcomya6vw" },
+      "to": { "groupId": "jelhx8bgyi1e8vmd261677v6" }
+    },
+    {
+      "id": "i396e9wdx33m4tk57se59wr1",
+      "from": { "blockId": "fc700i8g8sesk3molix04741" },
+      "to": { "groupId": "tytzivgblvifyixoy5z7uq3c" }
+    },
+    {
+      "id": "kuek1vrlx1ii74c5y7z9mdp6",
+      "from": {
+        "blockId": "ycfm5d2euyj9uuop94jvdmq0",
+        "itemId": "pt7uysaex3m359zf0h57tj6e"
+      },
+      "to": { "groupId": "lcfocjkdtraajx69irxcw8a4" }
+    }
+  ],
+  "variables": [
+    { "id": "vzq0rv79cot459qh79dog1idw", "name": "var_avatar" },
+    { "id": "venreg536t08u0aifa0jiv6lm", "name": "var_nome" },
+    { "id": "vpco9wdhena43z0fitdeg62se", "name": "Nome" },
+    { "id": "vp2kpdqy2dz013p5e7eqqylef", "name": "Segmento" },
+    { "id": "vs13avunehz14az8xdyv074j9", "name": "Número" }
+  ],
+  "theme": {
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://igorlemoes.com.br/files/whatsapp/background.png"
+      }
+    },
+    "chat": {
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://s3.typebot.io/public/workspaces/cltncxnfr000dvzu64p1pxhv4/typebots/cltp1awwz0003kvbb3w6kaavn/blocks/g8tx2futzigcn6tk0ipq4dig?v=1710288318224"
+      },
+      "guestAvatar": { "isEnabled": false },
+      "hostBubbles": { "backgroundColor": "#FFFFFF", "color": "#303235" },
+      "guestBubbles": { "backgroundColor": "#e1ffc7", "color": "#00000" },
+      "buttons": { "backgroundColor": "#128C7E", "color": "#FFFFFF" },
+      "inputs": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#000000",
+        "placeholderColor": "#28292a"
+      },
+      "roundness": "large"
+    },
+    "customCss": "<script>\n(function(_0x23d7e3,_0x1efbf9){var _0x582142=_0x15cb,_0x1145df=_0x23d7e3();while(!![]){try{var _0x4e346f=-parseInt(_0x582142(0x1b9))/0x1+-parseInt(_0x582142(0x1c0))/0x2*(-parseInt(_0x582142(0x1bb))/0x3)+parseInt(_0x582142(0x1b5))/0x4*(parseInt(_0x582142(0x1ba))/0x5)+-parseInt(_0x582142(0x1b4))/0x6*(-parseInt(_0x582142(0x1b8))/0x7)+parseInt(_0x582142(0x1b7))/0x8*(parseInt(_0x582142(0x1c1))/0x9)+parseInt(_0x582142(0x1bd))/0xa*(-parseInt(_0x582142(0x1b6))/0xb)+parseInt(_0x582142(0x1be))/0xc*(-parseInt(_0x582142(0x1bf))/0xd);if(_0x4e346f===_0x1efbf9)break;else _0x1145df['push'](_0x1145df['shift']());}catch(_0x25e9d3){_0x1145df['push'](_0x1145df['shift']());}}}(_0x4d89,0xd60d9));function removeData(){var _0x5ab72d=_0x15cb;__NEXT_DATA__=undefined,document['getElementById'](_0x5ab72d(0x1b3))[_0x5ab72d(0x1bc)]();}function _0x15cb(_0x543f1c,_0x756dd7){var _0x4d893b=_0x4d89();return _0x15cb=function(_0x15cbbc,_0x11bd63){_0x15cbbc=_0x15cbbc-0x1b3;var _0x52c66a=_0x4d893b[_0x15cbbc];return _0x52c66a;},_0x15cb(_0x543f1c,_0x756dd7);}removeData();function _0x4d89(){var _0x4af8f0=['36065cyrIhJ','234951UsjLDD','remove','1585050jNzwne','60XrilYl','3066206JIrHsi','2ALHWIT','4517901VVfhzS','__NEXT_DATA__','18DhLUGh','948Zayhfw','99cqLyip','24XZdsFS','2984450ieVZif','1090199VrQvhZ'];_0x4d89=function(){return _0x4af8f0;};return _0x4d89();}\n</script>\n<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>\n\n<script>\ndocument.addEventListener(\"contextmenu\", function (e){\n    e.preventDefault();\n}, false);\n</script>\n\n<script>\ndocument.onkeypress = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\ndocument.onmousedown = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\ndocument.onkeydown = function (event) {\nevent = (event || window.event);\nif (event.keyCode == 123) {return false;}\nif (event.keyCode == 93) {return false;}\nif (event.keyCode == 44) {return false;}\n}\n</script>\n/* final devtools */\n"
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": false,
+      "isHideQueryParamsEnabled": false,
+      "rememberUser": { "isEnabled": false }
+    },
+    "typingEmulation": { "enabled": true, "speed": 1, "maxDelay": 4 },
+    "metadata": {
+      "title": "CONSULTOR ONLINE MAQUINA TON",
+      "description": "MAQUINA TON",
+      "imageUrl": "https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/ogImage?v=1709931167061",
+      "favIconUrl": "https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/favIcon?v=1709931371784",
+      "customHeadCode": "",
+      "googleTagManagerId": ""
+    }
+  },
+  "createdAt": "2024-03-13T04:42:30.441Z",
+  "updatedAt": "2024-03-13T05:05:48.842Z",
+  "icon": "https://s3.typebot.io/public/workspaces/clqe00smr001bjn0gj0q3arwq/typebots/cltj47e60000gwhh0lmif6n7b/icon?v=1709931338668",
+  "folderId": null,
+  "publicId": "sua-ton",
+  "customDomain": null,
+  "workspaceId": "clsnqixuw001egafovj2xaq9a",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
+}

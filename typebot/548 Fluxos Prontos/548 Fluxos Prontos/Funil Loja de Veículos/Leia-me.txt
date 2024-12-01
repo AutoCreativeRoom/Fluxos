@@ -1,7 +1,0 @@
-O arquivo "Tabela FIBE.zip" contém o site necessário para o fluxo atual. Para prosseguir, siga os passos abaixo:
-
-Faça o upload do conteúdo do arquivo "Tabela FIBE.zip" para uma hospedagem de sua escolha.
-
-Após o upload, copie o link.
-
-Em seguida, insira o link no fluxo no bloco "Incorporar".

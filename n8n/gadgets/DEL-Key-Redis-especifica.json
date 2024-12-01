@@ -1,0 +1,131 @@
+{
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "keys",
+        "keyPattern": "=fix{{ $now.format('MMddyyyy') }}*"
+      },
+      "name": "Get Redis Keys1",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        400,
+        640
+      ],
+      "id": "3a035938-45ad-492a-84e5-a61398cd73e2",
+      "credentials": {
+        "redis": {
+          "id": "WTOLPGqu79GgLbXA",
+          "name": "Redis VPS"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "keys",
+              "value": "={{ Object.keys($json) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Transform Keys to Array1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        600,
+        640
+      ],
+      "id": "105cde3c-ab8d-4114-bc97-435dba03fcbd"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {
+          "reset": false
+        }
+      },
+      "name": "Split Keys in Batches1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        800,
+        640
+      ],
+      "id": "69b951f5-3f2d-4156-812c-8c248b542c25",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "={{ $json.keys }}"
+      },
+      "name": "Delete Redis Key1",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        640
+      ],
+      "id": "521bae86-082f-4054-aa6b-dc1189fe031b",
+      "credentials": {
+        "redis": {
+          "id": "WTOLPGqu79GgLbXA",
+          "name": "Redis VPS"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get Redis Keys1": {
+      "main": [
+        [
+          {
+            "node": "Transform Keys to Array1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transform Keys to Array1": {
+      "main": [
+        [
+          {
+            "node": "Split Keys in Batches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Keys in Batches1": {
+      "main": [
+        [
+          {
+            "node": "Delete Redis Key1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "be7aa21e-d517-4d7f-a00b-24cd18446415",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fd06b448d6fad37c04b7efd6c534f2419e15b841674324565af54008b6ec9d36"
+  },
+  "id": "t6C8ewC8KpEQfyBh",
+  "tags": []
+}

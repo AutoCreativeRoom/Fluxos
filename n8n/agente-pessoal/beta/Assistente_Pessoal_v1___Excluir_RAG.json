@@ -1,0 +1,168 @@
+{
+  "name": "Assistente Pessoal v1 - Excluir RAG",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "cc7bf4a3-d51e-4bbd-8623-d50d604543e1",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        720,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "documents",
+        "filterType": "string",
+        "filterString": "=metadata->>file_id=like.*{{ $json.query.arquivoId }}*"
+      },
+      "id": "a1efaa8a-587b-4968-bbe8-ce02fd631a20",
+      "name": "deletar_arquivos_antigos",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        920,
+        520
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "sDdwTIdUo5pclHpr",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "rag_controle",
+          "mode": "list",
+          "cachedResultName": "rag_controle"
+        },
+        "deleteCommand": "delete",
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $('gatilho').item.json.query.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "af0b70a3-d710-4536-8869-275ef8b69c7d",
+      "name": "Postgres",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1120,
+        520
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c7db60f9-91a3-4a1c-9fe2-cd265d0aa987",
+              "name": "response",
+              "value": "Arquivo excluido",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "30c5d5f4-e9fd-4be4-8507-05ffca302b16",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1300,
+        520
+      ]
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "numero": "447928821569@whatsapp.us",
+            "arquivoId": "arquivoId",
+            "id": 1
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "deletar_arquivos_antigos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "deletar_arquivos_antigos": {
+      "main": [
+        [
+          {
+            "node": "Postgres",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f72749bc-d33d-4ff8-873c-5d36f845c90c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "cko37cfbKVcUOTD9",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}

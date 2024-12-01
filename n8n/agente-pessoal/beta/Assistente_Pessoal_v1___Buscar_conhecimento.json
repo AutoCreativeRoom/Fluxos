@@ -1,0 +1,197 @@
+{
+  "name": "Assistente Pessoal v1 - Buscar conhecimento",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "cef5714d-779f-4291-8d19-4d88af41c95b",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "content": "! roda para deletar o conhecimento",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 3
+      },
+      "id": "249877a2-f2c7-42de-93b5-67796383b904",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "content": "rodar para criar tabela \"conhecimento\"",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 4
+      },
+      "id": "71294c2b-a767-4284-8573-f9992125c7ad",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "-- Drop the table if it already exists\nDROP TABLE IF EXISTS conhecimento;\n\n-- Create the table\nCREATE TABLE conhecimento (\n    id SERIAL PRIMARY KEY,\n    categoria VARCHAR NOT NULL,\n    texto TEXT NOT NULL\n);\n\n",
+        "options": {}
+      },
+      "id": "7c81ff5d-e536-4554-adaa-60d5d0ef9da8",
+      "name": "criar_conhecimento",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM conhecimento;",
+        "options": {}
+      },
+      "id": "09fb05d5-1194-438f-9af2-ec16bed42bb4",
+      "name": "deletar_conhecimento",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        540,
+        540
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "conhecimento",
+          "mode": "list",
+          "cachedResultName": "conhecimento"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "categoria",
+              "value": "={{ $json.query.categoria }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "252d24ff-aa5e-47b8-9679-6727a88f42c1",
+      "name": "Postgres",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        680,
+        900
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "response",
+        "options": {}
+      },
+      "id": "8c5af295-5230-45d8-8f18-72c9a7a34da3",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        900,
+        900
+      ]
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "categoria": "endereco"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "Postgres",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "20f97245-f149-453d-a474-f67dec0e84f1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "yDSWUQusDWOYLCn0",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}

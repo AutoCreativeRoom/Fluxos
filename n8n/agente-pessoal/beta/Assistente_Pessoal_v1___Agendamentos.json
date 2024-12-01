@@ -1,0 +1,359 @@
+{
+  "name": "Assistente Pessoal v1 - Agendamentos",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "delete",
+        "calendar": {
+          "__rl": true,
+          "value": "imperador@dinastia.uk",
+          "mode": "list",
+          "cachedResultName": "imperador@dinastia.uk"
+        },
+        "eventId": "={{ $fromAI(\"Event_ID\",\"Id do evento que deve ser excluído\") }}",
+        "options": {}
+      },
+      "id": "a8b48b79-9031-4efb-b3a1-16f5d7b8b4f1",
+      "name": "Deletar Evento1",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.1,
+      "position": [
+        1460,
+        740
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "2I4vOtEeTJtlwGjy",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "imperador@dinastia.uk",
+          "mode": "list",
+          "cachedResultName": "imperador@dinastia.uk"
+        },
+        "start": "={{ $fromAI(\"Start_Time\",\"Horário inicial do evento ex.:2024-10-08 00:00:00\") }}",
+        "end": "={{ $fromAI(\"End_Time\",\"Horário final do evento ex.:2024-10-08 00:01:00\") }}",
+        "additionalFields": {
+          "attendees": [
+            "={{ $fromAI(\"email\", \"Email do recipiente caso haja um\", \"string\", \"\") }}"
+          ],
+          "summary": "=Reunião agendada com  {{ $fromAI(\"nome\", \"Nome do recipiente da reuniao\", \"string\", \"Cliente\") }}, telefone {{ $json.query.numero.split(\"@\")[0] }}\n"
+        }
+      },
+      "id": "046b5b9b-d4b6-40cd-98ee-7baec7129cbb",
+      "name": "Criar Eventos1",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.1,
+      "position": [
+        1760,
+        740
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "2I4vOtEeTJtlwGjy",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "9b85e756-b55a-432b-834d-fab0a6ceb4be",
+      "name": "Calculator1",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "3962660b-3e81-47c0-bf71-a23613a9df25",
+      "name": "OpenAI Chat Model5",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        980,
+        660
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "ebKEn93edccu9ZTd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.query.numero }}",
+        "tableName": "memoria_chat",
+        "contextWindowLength": 50
+      },
+      "id": "35389f06-3ecb-4c15-8021-4fe4781e2b47",
+      "name": "Postgres Chat Memory1",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.1,
+      "position": [
+        1140,
+        740
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "f8ccb0a3-84c4-430c-9e23-878e510d36cf",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        780,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "roda para deletar a memoria chat",
+        "height": 274.7923843700217,
+        "width": 273.1627906976745,
+        "color": 4
+      },
+      "id": "eed0e6e6-ce9f-4a5d-91c6-8462ca6804bf",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM memoria_chat;",
+        "options": {}
+      },
+      "id": "0e5653ba-378a-4ed6-8a25-ba6043d0e730",
+      "name": "Deletar_todas_as_mensagens",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        220
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "V4H81KJg7g08tfTK",
+          "name": "SUPABASE_Postgress"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56060925-7cc8-441b-904a-2fe55ef3ecf0",
+              "name": "response",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5e5b1e8b-27a0-4ac8-bb1a-df348efe73b8",
+      "name": "response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1400,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "imperador@dinastia.uk",
+          "mode": "list",
+          "cachedResultName": "imperador@dinastia.uk"
+        },
+        "returnAll": true,
+        "options": {
+          "timeMin": "={{ $fromAI(\"Initital_DateTime\", \"Data e hora inicial da consulta Ex.: 2024-10-17 00:00:00\") }}",
+          "timeMax": "={{ $fromAI(\"Final_DateTime\", \"Data e hora final da consulta Ex.: 2024-10-17 00:00:00\") }}"
+        }
+      },
+      "id": "959c2dca-c7ec-4783-a052-d0cdbb6aec61",
+      "name": "get_many",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.2,
+      "position": [
+        1620,
+        740
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "2I4vOtEeTJtlwGjy",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<numero>{{ $json.query.numero }}</numero>\n<mensagem>{{ $json.query.mensagem }}</mensagem>\n<email>{{ $json.query.email }}</email>\n<nome>{{ $json.query.nome }}</nome>",
+        "options": {
+          "systemMessage": "=Não responda nada que não esteja em <INSTRUCAO></INSTRUCAO>. Aja apenas como descrito dentro de <INSTRUCAO></INSTRUCAO>.\n\n<INSTRUCAO> Você é uma secretária virtual projetada para gerenciar de forma eficiente e amigável os agendamentos e cancelamentos de reuniões e visitas. Seu nome é \"Dama IA\" e você trabalha para a construtora \"Plaenge\".\n\n Focado em oferecer uma experiência prática e personalizada, o assistente exibe horários disponíveis, pergunta se o cliente concorda com a data e hora antes de confirmar o agendamento e fornece todos os detalhes essenciais após a marcação. O assistente também respeita o formato brasileiro de data e hora (DD/MM/AAAA e HH) e opera no fuso horário \"America/Sao_Paulo\".\n\nSempre verifica as datas disponiveis no calendário antes de oferecer ao cliente.\n\nhorário de funcionamento:\nSegunda a sexta: das 8h às 21h.\nSábado: das 8h às 12h. nunca agende fora do horario de funcionamento.\nPara sua referencia use como referencia para a data e hora atual: {{ (() => {\n  const date = new Date(); // Obtém a data atual\n  const days = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado']; // Dias da semana em português\n  const pad = n => n.toString().padStart(2, '0'); // Adiciona zero à esquerda\n  const dayName = days[date.getDay()]; // Obtém o nome do dia\n  const year = date.getFullYear();\n  const month = pad(date.getMonth() + 1); // Mês começa em 0\n  const day = pad(date.getDate());\n  const hours = pad(date.getHours());\n  const minutes = pad(date.getMinutes());\n  const seconds = pad(date.getSeconds());\n  return `${dayName}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; // Retorna no formato desejado\n})() }}\n\n\nfaça agendamentos de 30 minutos de duração.\nse o horario pedido pelo cliente ja tiver alguma reuniao marcada, sugira o mais proximo 30 minutos antes ou 30 minutos depois da reunião  existente, mas esta proibido marcar em um horario que ja exista reuniao\nPergunte se o cliente pode confirmar, mas não confirme diretamente o agendamento.\n\nSempre utilize o timezone \"America/Sao_Paulo\" para todas as operações.\n\n<REAGENDAMENTO>\nDe acordo com o histórico de mensagens, siga o processo de reagendamento nesta ordem:\n1. use a calculadora(apenas some numeros inteiros, sem usar textos) para identificar a data e hora especifica que o cliente gostaria de marcar o <NOVO_AGENDAMENTO>.\n2. Busque todos os eventos apartir do horario do <NOVO_AGENDAMENTO> até para os próximos 2 dias.\n2.1 Caso já houver um agendamento o mesmo horário, sugira uma data mais próxima.\n2.2 Caso não houver nenhum agendamento no mesmo horário, confirme com o usuário o <NOVO_AGENDAMENTO>.\n3. Quando o usário confirmar, delete o agendamento anterior usando o eventId. Crie o <NOVO_AGENDAMENTO>.\n</REAGENDAMENTO>\n\n<CANCELAMENTO>\nBaseado no histórico de mensagens, extraia as informações do evento a ser cancelado (data, hora e eventId).\nCaso não localize o evento, retorne false com uma mensagem de erro.\n</CANCELAMENTO>\n\n<CONFIRMACAO>\nEscreva mensagens breves e cordiais confirmando a reunião com base no evento já agendado, respeitando o timezone America/Sao_Paulo.\n</CONFIRMACAO>\n\n\nExceções:\n\nCaso identifique uma situação específica de exceção, retorne a mensagem correspondente definida na exceção (<EXCESSAO></EXCESSAO>).\n\nRegras Importantes:\n\nSeja cordial e direta.\nResponda sempre no timezone: America/Sao_Paulo.\nNunca confirme agendamentos automaticamente; peça confirmação ao cliente.\nApenas responda sobre agendamentos; ignore qualquer outro contexto.\nRetorne mensagens no formato texto, sem códigos ou informações adicionais.\n\nExemplo de Resposta:\n\nUser: \"Pode marcar uma reunião para terça às 14h?\"\nResposta: \"Terça-feira às 14h está disponível. Poderia confirmar esse horário?\"\n\nUtilize a calculadora para calcular diferença de datas, horarios e dias.\n\n<OUTPUT>\nExemplo com eventId:\n\nsua mensagem aqui (eventId: 87aw898ad807d80s)\n\nExemplo sem eventId:\n\nsua mensagem aqui\n</OUTPUT>\n\n</INSTRUCAO>\n\n\n"
+        }
+      },
+      "id": "d1b87ad8-c3ec-4a9c-9e5c-70a1c37f3810",
+      "name": "Secretaria agendamento",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        1060,
+        500
+      ],
+      "retryOnFail": true,
+      "maxTries": 2
+    }
+  ],
+  "pinData": {
+    "gatilho": [
+      {
+        "json": {
+          "query": {
+            "numero": "447928821569@s.whatsapp.net",
+            "mensagem": "Agendamento confirmado para visita ao empreendimento Bossanova na segunda-feira às 10h.",
+            "email": "guilherme.reis@example.com",
+            "nome": "Guilherme Reis 👑"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Deletar Evento1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Criar Eventos1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_many": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretaria agendamento",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Secretaria agendamento": {
+      "main": [
+        [
+          {
+            "node": "response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4f8c3271-391b-492a-a7e8-06c389c977fc",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60ba38bdcb00805daa215f1c8dc28a4b888781775c49d00c08637a33e1295695"
+  },
+  "id": "25pGS5ZRjZsuEI4z",
+  "tags": [
+    {
+      "createdAt": "2024-11-30T09:32:21.806Z",
+      "updatedAt": "2024-11-30T09:32:21.806Z",
+      "id": "d08vRVA7kBoLdnLe",
+      "name": "AP-v1"
+    }
+  ]
+}
